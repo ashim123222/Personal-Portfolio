@@ -4,7 +4,7 @@
   width: fit-content;
   margin: auto;
   position: sticky;
-  top: 87vh;
+  top: 2vh;
   padding: 10px;
   border-radius: 10px;
   background: var(--icon-bg);
@@ -49,4 +49,5 @@
 
 .skkkk {
   color: red;
+
 }
