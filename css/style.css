@@ -1,0 +1,403 @@
+/* font one  */
+.monsieur-la-doulaise-regular {
+  font-family: "Monsieur La Doulaise", cursive;
+  font-weight: weight;
+  font-style: normal;
+}
+
+/* font two  */
+.asul-regular {
+  font-family: "Asul", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.asul-bold {
+  font-family: "Asul", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.oswald-uniquifier {
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+
+:root {
+  --bg-body: #0b0f19;
+  --bg-card: #0d111eec;
+
+  --card-border: rgb(59, 90, 143);
+  --icon-border: rgba(120, 180, 255, 0.4);
+
+  --text-primary: #add8e6;
+  --text-secondary: #173053;
+
+  --icon-hover: #9cabce53;
+
+  --btn-primary-bg: #add8e6;
+  --btn-secondary-bg: #1e2a44;
+
+  --icon-bg: rgba(120, 181, 255, 0.063);
+  --name-line: rgba(120, 180, 255, 0.5);
+
+  --image-white: #ffffffe8;
+
+  --shadow-card: rgba(0, 0, 0, 0.5);
+  --shadow-hover: rgba(60, 118, 255, 0.234);
+
+  --bg-sp: #153833;
+  --opacity: 0.5;
+}
+
+[data-theme="dark"] {
+  --bg-body: #add8e6;
+  --bg-card: #a3daf8dd;
+
+  --card-border: #3b7bc4;
+  --icon-border: #2a87f8;
+
+  --text-primary: #233563;
+  --text-secondary: #add8e6;
+
+  --icon-hover: #111e3e;
+
+  --btn-primary-bg: #0048ff;
+  --btn-secondary-bg: #9cccf4;
+
+  --icon-bg: #87c0d853;
+
+  --name-line: #3b7bc4;
+
+  --image-white: #0435bcba;
+
+  --shadow-card: #021c2231;
+  --shadow-hover: #ffffff5d;
+
+  --bg-sp: #6bdecf;
+  --opacity: 0.7;
+}
+
+* {
+  text-decoration: none;
+  font-family: "Asul", serif;
+  margin: 0;
+  padding: 0;
+  transition: 0.3s ease-in-out;
+}
+img {
+  height: 60vh;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--text-primary);
+  background: var(--bg-body);
+  font-size: 1rem;
+}
+
+section#skill,
+section#about-me,
+section#contact-me,
+section#project {
+  padding: 10vw 10vw;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+section {
+  scroll-margin-top: -20vh;
+}
+
+.enter {
+  animation: appearNavShort linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 20%;
+}
+
+@keyframes appearNavShort {
+  from {
+    opacity: 0;
+    transform: scale(0.5) translateY(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@media (max-width: 1250px) {
+  section#skill,
+  section#about-me,
+  section#contact-me,
+  section#project {
+    padding: 10vw 5vw;
+  }
+  header,
+  section#landing {
+    padding: 0 5vw;
+  }
+  header .logo {
+    font-size: 1.75rem;
+  }
+  .go-live {
+    opacity: 1;
+    gap: 4rem;
+  }
+  .go-live:hover,
+  .go-live:active {
+    transform: none;
+  }
+  .skill-card:hover {
+    transform: none;
+  }
+  .top:hover,
+  .about-right:hover {
+    transform: none;
+  }
+  .image-showcase {
+    grid-template-columns: 0.3fr 1.4fr;
+    gap: 1rem;
+  }
+  .image-thumbs {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+  }
+  .thumb {
+    height: 6vw;
+  }
+  .image-preview {
+    height: 40vw;
+  }
+}
+
+@media (max-width: 1000px) {
+  body {
+    font-size: 1rem;
+  }
+  header {
+    height: 60px;
+  }
+  .landing-right {
+    display: none;
+  }
+  .landing-left h1 {
+    font-size: 6rem;
+  }
+  .logo {
+    font-size: 1.4rem !important;
+  }
+  .nav-links a {
+    font-size: 0.9rem;
+    padding: 5px 7px;
+  }
+  .contact-me-btn,
+  .imp-btns .download,
+  .imp-btns .works-btn {
+    padding: 7px 12px;
+    font-size: 0.9rem;
+  }
+  .contact-me-btn:hover,
+  .imp-btns .download:hover,
+  .imp-btns .works-btn:hover {
+    padding: 5px 7px;
+    font-size: 0.9rem;
+  }
+  .skills-list {
+    gap: 7px;
+  }
+  .attract-point {
+    height: 70px;
+  }
+  .point {
+    padding: 0.5rem 1rem;
+  }
+  .point.left {
+    opacity: 0.5;
+    transform: translateX(-100px) scale(0.8);
+    z-index: 2;
+  }
+
+  .point.right {
+    opacity: 0.5;
+    transform: translateX(100px) scale(0.8);
+    z-index: 2;
+  }
+  .about-right {
+    padding: 1rem;
+  }
+  .form {
+    padding: 1rem;
+    font-size: 1rem;
+    font-size: 1rem;
+  }
+  .input {
+    flex-direction: column;
+  }
+  input,
+  textarea,
+  .send {
+    padding: 0.65rem;
+  }
+  .go-live {
+    opacity: 1;
+    gap: 4rem;
+  }
+  .go-live:hover,
+  .go-live:active {
+    transform: none;
+  }
+}
+
+@media (max-width: 800px) {
+  .logo {
+    letter-spacing: -2px;
+  }
+  header .header-right {
+    gap: 10px;
+  }
+  .landing-left h1 {
+    font-size: 5rem;
+  }
+  .about-card {
+    flex-wrap: wrap;
+  }
+  .contact-contain {
+    flex-direction: column;
+  }
+  .lists {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .lists a {
+    width: 270px;
+    flex-grow: 1;
+  }
+  .go-live {
+    opacity: 1;
+    gap: 4rem;
+  }
+  .go-live:hover,
+  .go-live:active {
+    transform: none;
+  }
+}
+
+@media (max-width: 700px) {
+  .nav-links {
+    display: none;
+  }
+  .landing-left h1 {
+    font-size: 4rem;
+  }
+  .bio-det {
+    flex-direction: column;
+  }
+  .go-live {
+    opacity: 1;
+    gap: 4rem;
+  }
+  .go-live:hover,
+  .go-live:active {
+    transform: none;
+  }
+  .image-showcase {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 0.25rem 0.5rem;
+  }
+  .image-thumbs {
+    display: flex;
+  }
+}
+
+@media (max-width: 500px) {
+  body {
+    font-size: 4vw;
+  }
+  #landing {
+    height: 60vh;
+  }
+  header {
+    height: 70px;
+    background: var(--bg-card);
+    box-shadow: none;
+  }
+  #home .logo {
+    font-size: 6vw !important;
+  }
+  .landing-left h1 {
+    font-size: 13vw;
+  }
+  .landing-left h3 {
+    font-size: 4vw;
+    text-align: center;
+  }
+  .landing-left p {
+    font-size: 4vw;
+  }
+  .imp-btns {
+    gap: 2vh;
+  }
+  .nav-btn-links {
+    /* position: fixed; */
+    animation-range: entry 0% cover 1%;
+    top: 1vh;
+  }
+  section {
+    scroll-margin-top: 5vh;
+  }
+  .det-proj {
+    flex-direction: column !important;
+  }
+  .bio-topic a {
+    width: 90%;
+  }
+  .social {
+    justify-content: center !important;
+  }
+  .social a {
+    font-size: 1.2rem;
+  }
+  .skill-card {
+    padding: 0.5rem;
+  }
+  .skill-name {
+    font-size: 1rem !important;
+  }
+  .about-card .about-left-card,
+  .about-card .about-right {
+    padding: 0.5rem;
+  }
+  .used {
+    gap: 4px;
+  }
+  .card-project {
+    gap: 2vw;
+    padding: 0.5rem;
+  }
+  .go-live {
+    opacity: 1;
+    gap: 4rem;
+  }
+  .go-live:hover,
+  .go-live:active {
+    transform: none;
+  }
+  .proj-left {
+    gap: 2vw;
+  }
+  .form {
+    padding: 0.5rem;
+  }
+}

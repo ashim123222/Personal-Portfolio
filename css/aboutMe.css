@@ -1,0 +1,212 @@
+.about-contain {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 2vw;
+}
+
+.attract-point {
+  position: relative;
+  height: 80px;
+  /* padding: 1rem; */
+  /* width: 0%; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.point {
+  position: absolute;
+  width: fit-content;
+  padding: 1rem 1.5rem;
+  background: var(--icon-bg);
+  border: 1px solid var(--card-border);
+  backdrop-filter: blur(10px);
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  transition:
+    transform 0.6s ease,
+    opacity 0.6s ease;
+  opacity: 0;
+  transform: scale(0.6);
+  transition: 0.3s ease-in-out;
+}
+
+.point.active {
+  opacity: 1;
+  transform: scale(1);
+  z-index: 3;
+  box-shadow: 0 0 40px var(--shadow-card);
+  background: var(--btn-secondary-bg);
+}
+
+.point.left {
+  opacity: 0.5;
+  transform: translateX(-1050px) scale(0.8);
+  z-index: 2;
+}
+
+.point.right {
+  opacity: 0.5;
+  transform: translateX(150px) scale(0.8);
+  z-index: 2;
+}
+.bio {
+  display: flex;
+  flex-direction: column;
+  gap: 2vw;
+}
+.bio-det {
+  display: flex;
+  gap: 2vw;
+  flex-direction: row;
+  /* align-items: center; */
+}
+.top {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2vw;
+  flex-grow: 1;
+  border-radius: 1rem;
+  background: var(--bg-card);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--card-border);
+  overflow: hidden;
+}
+.top .detail {
+  /* letter-spacing: 1px; */
+  font-size: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1vw;
+  padding: 1rem;
+}
+
+.social-about {
+  margin-top: 1rem;
+}
+
+.bio-topic {
+  display: flex;
+  align-items: center;
+  gap: 2vw;
+}
+.about-contain img {
+  height: 2rem;
+  padding: 7px;
+  border-radius: 10px;
+  background: var(--icon-bg);
+  transition: 0.3s ease-in-out;
+  border: 1px solid var(--icon-border);
+}
+.bio img:hover {
+  transform: rotate(20deg);
+}
+.img-my:hover {
+  transform: rotate(0deg) !important;
+}
+.about-card {
+  backdrop-filter: blur(10px);
+  display: flex;
+  /* flex-wrap: wrap; */
+  gap: 2vw;
+}
+.about-card .about-left-card,
+.about-card .about-right {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  min-width: 280px;
+  /* flex-shrink: 0; */
+  gap: 1rem;
+  border-radius: 10px;
+  padding: 1rem;
+  background: var(--bg-card);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--card-border);
+  color: var(--text-primary);
+}
+.about-left-card:hover {
+  transform: none;
+}
+.about-left-card a {
+  padding: 3px 10px;
+  font-size: 0.9rem;
+  border-radius: 5px;
+}
+.about-left-card .first a:hover {
+  padding: 3px 10px;
+  box-shadow: 0 0 10px var(--card-border);
+}
+.proj-about {
+  justify-content: space-between;
+}
+.proj-about a {
+  background: var(--icon-bg);
+  flex-grow: 1;
+  border-radius: 10px;
+  padding: 5px;
+  color: var(--text-primary);
+  opacity: 0.9;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+.proj-about a:hover {
+  text-decoration: underline;
+  box-shadow: 0 0 10px var(--shadow-card);
+  opacity: 1;
+}
+.first {
+  margin-top: 0;
+  justify-content: space-between;
+  align-items: center;
+}
+.first i {
+  transform: rotate(-45deg);
+}
+.used {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.used span {
+  padding: 5px 10px;
+  border: 1px solid var(--card-border);
+  border-radius: 20px;
+  font-size: 0.9rem;
+  color: var(--text-primary);
+  opacity: 0.9;
+  background: var(--icon-bg);
+  transition: all 0.3s ease;
+}
+.used span:hover {
+  opacity: 1;
+  background: var(--icon-bg);
+  border-color: var(--card-border);
+  box-shadow: 0 0 12px var(--icon-bg);
+}
+
+/* right side  */
+
+.about-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  background: var(--bg-card);
+  gap: 0.5rem;
+  border: 1px solid var(--card-border);
+}
+.about-right img {
+  height: 200px;
+  border-radius: 50%;
+}

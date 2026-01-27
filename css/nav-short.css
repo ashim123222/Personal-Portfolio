@@ -1,0 +1,52 @@
+.nav-btn-links {
+  display: flex;
+  gap: 15px;
+  width: fit-content;
+  margin: auto;
+  position: sticky;
+  top: 87vh;
+  padding: 10px;
+  border-radius: 10px;
+  background: var(--icon-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 2px solid var(--bg-card);
+  box-shadow:
+    0 0 20px var(--shadow-card);
+  z-index: 999;
+  animation-range: entry 0% cover 10%;
+}
+
+.nav-btn-links a {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.nav-btn-links a img {
+  height: 1.5rem;
+  border: 1px solid var(--icon-border);
+}
+.nav-btn-links a img:hover {
+  background: var(--shadow-hover);
+  box-shadow: 0 0 25px var(--icon-bg);
+}
+.nav-btn-links a::before {
+  top: 120%;
+  height: 8%;
+  width: 0%;
+}
+.nav-btn-links a:hover::before,
+.nav-btn-links a.active::before {
+  opacity: 1;
+  width: 50%;
+  border-radius: 10px;
+}
+.nav-btn-links a.active img {
+  background: var(--shadow-hover);
+  box-shadow: 0 0 25px var(--shadow-hover);
+  transform: rotate(-25deg);
+}
+
+.skkkk {
+  color: red;
+}

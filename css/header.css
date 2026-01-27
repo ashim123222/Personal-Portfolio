@@ -1,0 +1,87 @@
+header {
+  height: 70px;
+  box-shadow: 0 0px 2px var(--text-primary);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10vw;
+  font-weight: 700;
+}
+
+.logo {
+  font-size: 2rem;
+}
+.logo span {
+  font-family: "Oswald", sans-serif;
+  font-weight: 900;
+}
+
+.nav-links {
+  display: flex;
+}
+.nav-links a {
+  padding: 5px 10px;
+  opacity: 0.9;
+  color: var(--text-primary);
+  z-index: 1;
+}
+.nav-links a:hover {
+  opacity: 1;
+}
+.link-hover {
+  position: relative;
+}
+
+.link-hover::before {
+  position: absolute;
+  content: "";
+  top: 100%;
+  left: 50%;
+  translate: -50% -50%;
+  height: 8%;
+  width: 30%;
+  background: var(--text-primary);
+  opacity: 0.5;
+  transition: 0.3s ease-in-out;
+}
+.link-hover:hover::before {
+  opacity: 1;
+  width: 70%;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.rotate-icon {
+  border: 1px solid var(--text-primary);
+  color: var(--text-primary);
+  background: var(--bg-body) ;
+  padding: 6px;
+  border-radius: 50%;
+  transition: 0.3s ease-in-out;
+  z-index: 1;
+}
+.rotate-icon:hover {
+  transform: rotate(-35deg) scale(1.1);
+}
+.rotate-icon:active {
+  transform: rotate(360deg);
+}
+.contact-me-btn {
+  padding: 7px 15px;
+  color: var(--text-secondary);
+  background-color: var(--text-primary);
+  transition: 0.3s ease-in-out;
+  z-index: 1;
+}
+.contact-me-btn:hover {
+  /* border: 2px solid #233563; */
+  background: var(--text-secondary);
+  color: var(--text-primary);
+  box-shadow: 0 0 15px var(--text-secondary);
+}
+.header-right .contact-me-btn:hover {
+  transform: none;
+}

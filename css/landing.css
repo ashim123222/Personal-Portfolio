@@ -1,0 +1,167 @@
+section#landing {
+  height: 90vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10vw;
+}
+.landing-left {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 5vh;
+  justify-content: center;
+}
+
+.landing-left h3 {
+  font-size: 1.2rem;
+  color: red;
+}
+
+.landing-left h1 {
+  font-size: min(7rem, 7vw);
+  font-family: "Monsieur La Doulaise", cursive;
+  font-weight: 900;
+}
+
+.imp-btns {
+  display: flex;
+  gap: 2vw;
+}
+
+.imp-btns a {
+  border: 1px solid var(--text-primary);
+  color: var(--text-primary);
+  font-weight: 700;
+  padding: 9px 16px;
+  i {
+    padding: 2px;
+    border: 2px solid transparent;
+  }
+}
+.imp-btns a:hover {
+  padding: 9px 20px 9px 16px;
+  box-shadow: 0 0 20px var(--text-secondary);
+  transform: translateY(-3px);
+  i {
+    transform: translateX(10px);
+    border-radius: 50%;
+  }
+}
+.imp-btns .works-btn::after {
+  background:
+    linear-gradient(45deg, var(--text-primary), var(--text-primary)) padding-box,
+    radial-gradient(
+        200px circle at var(--x) var(--y),
+        #6bdecf,
+        #9cccf4 10%,
+        rgb(254, 0, 0) 60%
+      )
+      border-box;
+}
+.imp-btns .works-btn:hover {
+  i {
+    border-left: 2px solid var(--text-secondary);
+  }
+}
+.imp-btns .download:hover {
+  i {
+    border-bottom: 2px solid var(--text-primary);
+  }
+}
+.imp-btns .works-btn {
+  background: var(--text-primary);
+  color: var(--text-secondary);
+  border: 1px solid var(--text-secondary);
+}
+.imp-btns .download {
+  background: var(--text-secondary);
+}
+.landing-left {
+  margin-top: 5vh;
+}
+.social {
+  margin-top: 10vh;
+}
+
+.fade-left,
+.fade-right {
+  opacity: 0;
+  transform: translateY(20px);
+}
+.fade-left.animate {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.fade-right.animate {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-left {
+  animation: fadeLeft 0.8s ease-out 0.2s forwards;
+}
+
+.fade-right {
+  animation: fadeRight 0.8s ease-out 0.4s forwards;
+}
+
+@keyframes fadeLeft {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeRight {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* landing-right side  */
+.landing-right .image img {
+  transform: rotateY(180deg);
+  position: relative;
+  opacity: var(--opacity);
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.float {
+  animation: float 4s ease-in-out infinite;
+}
+
+.social {
+  display: flex;
+  /* margin: auto; */
+  gap: 20px;
+}
+
+.social a {
+  z-index: 1;
+  font-size: 1.5rem;
+  color: var(--text-primary);
+}
+.social a:active {
+  box-shadow: 0 0 20px var(--image-white);
+  background: var(--image-white);
+  transform: rotate(360deg);
+}
