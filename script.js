@@ -143,6 +143,13 @@ goLiveBtns.forEach((btn) => {
     alert("Live demo link coming soon!");
   });
 });
+const resumeBtns = document.querySelectorAll(".download");
+resumeBtns.forEach((btn) => {
+  btn.addEventListener("click", (e) => {
+    e.preventDefault();
+    alert("Resume is not coming yet!");
+  });
+});
 
 // form relatred
 
@@ -163,3 +170,4 @@ form.addEventListener("submit", function (e) {
     successMsg.classList.remove("show");
   }, 3000);
 });
+
