@@ -1,0 +1,183 @@
+@media (max-width: 1100px) {
+  .cards {
+    gap: 10px;
+  }
+  .card {
+    padding: 15px;
+  }
+  section {
+    padding: 12% 5% !important;
+  }
+  .left h1 {
+    font-size: 7vw;
+    margin-top: 3rem;
+  }
+
+  /* about  */
+  section.personal .cards {
+    padding: 5% 10%;
+  }
+
+  /* contact  */
+  section.con-sec {
+    gap: 1.5rem;
+  }
+  form {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 860px) {
+  section#home {
+    gap: 3rem;
+    grid-template-columns: 1fr;
+  }
+  section#home .right {
+    display: flex;
+    justify-content: center;
+  }
+  section#home .img {
+    width: 220px;
+  }
+  section#home .left {
+    align-items: center;
+  }
+  .left h1 {
+    font-size: 7vw;
+    text-align: center;
+    margin-top: 0rem;
+  }
+  .left h4 {
+    text-align: left;
+  }
+  .left .top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .left .top span {
+    display: block;
+    text-align: center;
+  }
+  .cards {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  .card {
+    padding: 15px;
+  }
+  section {
+    padding: 12% 10% !important;
+  }
+  section.skill .card {
+    width: 30vw !important;
+  }
+
+  /* about  */
+  section.personal .cards {
+    padding: 5% 0%;
+  }
+
+  /* contact  */
+  section.contact .cards {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  section.contact .cards .card {
+    flex-grow: 1;
+    width: 45%;
+  }
+  section.con-sec {
+    gap: 5rem;
+    grid-template-columns: 1fr;
+  }
+  form {
+    padding: 25px;
+  }
+}
+
+@media (max-width: 620px) {
+  section {
+    padding: 20% 4% !important;
+  }
+  header {
+    padding: 4%;
+  }
+  * {
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 550px) {
+  section {
+    padding: 20% 5% !important;
+  }
+  nav {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    top: 70px; /* Adjust based on your header height */
+    right: -100%; /* Start completely off-screen to the right */
+    width: 200px;
+    height: 50vh;
+    border-radius: 10px !important;
+    /* background: rgba(5, 5, 5, 0.95); */
+    backdrop-filter: blur(5px); /* Glassmorphism effect */
+    transition: 0.4s ease-in-out; /* Smooth sliding animation */
+    z-index: 1000;
+  }
+  nav a {
+    padding: 1rem;
+  }
+
+  /* When the "active" class is toggled on via JS */
+  nav.active {
+    right: 0; /* Slide into view */
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.5);
+  }
+  .mode {
+    margin-left: 30vw;
+  }
+  #menu {
+    display: flex;
+    opacity: 0.8;
+  }
+  .go-to-links {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+  .go-to-links a {
+    flex-grow: 1;
+    width: 70%;
+    align-items: center;
+  }
+  .card .go-to {
+    opacity: 1;
+  }
+  .cards {
+    grid-template-columns: 1fr;
+  }
+  section.personal .cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  section.personal .cards .card {
+    flex-grow: 1 !important;
+    width: 100%;
+  }
+  section.skill .cards .card {
+    width: 80vw !important;
+  }
+  section.contact .cards .card {
+    flex-grow: 1;
+    width: 80%;
+  }
+  form {
+    padding: 15px;
+  }
+}

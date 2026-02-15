@@ -1,0 +1,157 @@
+section.contact {
+  padding: 5% 20%;
+  text-align: center;
+}
+section.contact .cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+section.contact .cards .card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+section.contact .cards .card > * {
+  margin: 0px;
+}
+.card-contact i {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+  opacity: 0.8;
+  padding: 7px;
+  /* border: 1px solid var(--border); */
+  box-shadow: inset 3px 0 6px var(--border);
+}
+.card-contact:hover i {
+  color: var(--text-sec);
+  box-shadow: inset 0 3px 6px var(--border-hover);
+}
+.card a {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+.card .note {
+  font-weight: 400 !important;
+  opacity: 0.8;
+  font-size: 0.8rem;
+}
+section.con-sec {
+  padding: 5% 10%;
+  display: grid;
+  align-items: start;
+  gap: 3rem;
+  grid-template-columns: 1fr 1fr;
+}
+
+.left,
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+form {
+    padding: 2rem;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+}
+.left h2 {
+  font-size: 2rem;
+  margin-bottom: 1vw;
+}
+label {
+  font-weight: 700;
+}
+form div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+input,
+textarea,
+.left button {
+  padding: 15px 13px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  resize: vertical;
+  background: var(--card-bg);
+  /* border: 3px solid transparent; */
+  outline: 5px solid transparent;
+}
+input::placeholder,
+textarea::placeholder {
+  font-family: monospace;
+  color: var(--text-sec);
+  opacity: 0.7;
+}
+input:focus,
+textarea:focus {
+  outline: 5px solid var(--border);
+}
+textarea {
+  min-height: 150px;
+}
+.left button {
+  background: var(--border-hover);
+  border: 1px solid var(--text-pri);
+  cursor: pointer;
+}
+.left button:hover {
+  color: var(--text-sec);
+  background: var(--card-bg);
+  border: 1px solid var(--text-sec);
+}
+.left button:hover i {
+  color: var(--text-sec);
+  transform: rotate(45deg) translateX(10px) translateY(-8px);
+}
+.right {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.right h2 {
+    font-size: 2rem;
+}
+
+.right h4 {
+  font-size: 1.5rem;
+}
+.right li {
+  position: relative;
+  /* margin-left: 1rem; */
+  padding-left: 35px;
+}
+
+.right li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 22px;
+  height: 22px;
+  /* Direct SVG for the "double-circle" checkmark look */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='2' stroke='%234ade80'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z' /%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.card h5.subtext {
+    margin: 0px;
+    color: var(--live);
+    border: 1px solid var(--live);
+    background: var(--live-bg);
+}
+.card b, ul {
+    color: var(--text-sec);
+}
+.card b ul {
+    font-weight: 200;
+    font-size: 0.8rem;
+    opacity: 0.8;
+}
+.quick {
+    background: linear-gradient(235deg, var(--border), var(--card-bg) );
+}
+.quick:hover {
+    background: linear-gradient(255deg, var(--border), var(--card-bg) );
+}

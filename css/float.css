@@ -1,0 +1,87 @@
+.float-element {
+  position: fixed;
+  height: 80vh;
+  width: 80vh;
+  border: 20px solid var(--float-border);
+  border-radius: 50%;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  animation: float-element 20s ease-in-out infinite alternate;
+  filter: blur(10px);
+}
+@keyframes float-element {
+  0% {
+    opacity: 0.7;
+    transform: scale(2.2) translateY(-60%);
+    border: 50px solid var(--float-border);
+
+  }
+  25% {
+    opacity: 0.8;
+    transform: scale(2.2)  translateY(-60%) rotate(45deg);
+    border-radius: 0px;
+    border: 70px solid var(--section-color);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.4);
+    border-radius: 50%;
+    border: 60px solid var(--section-color);
+  }
+  75% {
+    opacity: 0.8;
+    transform: scale(1.6) translateY(60%);
+    border: 60px solid var(--float-border);
+  }
+  100% {
+    opacity: 0.2;
+    transform: scale(5) translateY(60%);
+    border: 100px solid var(--section-two-color);
+  }
+}
+.float-one {
+  height: 30vh;
+  width: 30vh;
+  filter: blur(0px);
+}
+.float-two {
+  position: fixed;
+  background: var(--cursor);
+  z-index: -1;
+  rotate: 45deg;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  height: 5px;
+  width: 5px;
+  box-shadow: 0 0 10px var(--cursor);
+  transition: 0.2s ease-in-out;
+  animation: float-curser 2s ease-in-out infinite alternate;
+}
+@keyframes float-curser {
+  from {
+    transform: translateY(2px) scale(0.8);
+    filter: blur(0px);
+  }
+  to {
+    filter: blur(2px);
+    transform: translateY(-2px) scale(1);
+  }
+}
+
+
+
+
+/* Hide the follower by default */
+.cursor-follower {
+  display: none;
+}
+
+/* Only show it if the user has a mouse/trackpad */
+@media (pointer: fine) {
+  .cursor-follower {
+    display: block;
+  }
+}

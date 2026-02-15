@@ -1,0 +1,181 @@
+:root {
+  --bg-color: #07090f;
+  --text-pri: #dffffd;
+  --text-sec: #06a6dc;
+
+  --card-bg: #0b192a4e;
+  --card-bg-hover: #0a1b2f60;
+
+  --border: rgba(0, 204, 255, 0.267);
+  --border-hover: rgba(0, 204, 255, 0.599);
+  --icon-border: #dffffd30;
+
+  --live: rgb(2, 205, 2);
+  --live-bg: rgba(15, 44, 15, 0.823);
+
+  --accent-bg-hover: #1c2c326f;
+
+  --glass-border: rgba(0, 0, 0, 0.507);
+  --glass-bg: rgba(8, 13, 26, 0.444);
+
+  --shadow: rgb(0, 0, 0);
+}
+[data-theme="dark"] {
+  --bg-color: #f0f3f5; /* soft cool white */
+  --text-pri: #072644; /* deep navy for readability */
+  --text-sec: #3d66ae; /* refined cyan accent */
+
+  --card-bg: rgba(221, 239, 248, 0.549);
+  --card-bg-hover: rgba(227, 249, 250, 0.647);
+
+  --border: rgba(0, 136, 204, 0.25);
+  --border-hover: rgb(111, 207, 255);
+  --icon-border: rgba(11, 28, 45, 0.15);
+
+  --live: #0aa60a;
+  --live-bg: rgba(10, 166, 10, 0.08);
+
+  --accent-bg-hover: rgba(0, 119, 166, 0.08);
+
+  --glass-border: rgba(255, 255, 255, 0.507);
+  --glass-bg: rgba(255, 255, 255, 0.318);
+
+  --shadow: rgba(35, 71, 86, 0.138);
+}
+body {
+  background-color: var(--bg-color);
+  overflow-x: hidden;
+}
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style-type: none;
+  color: var(--text-pri);
+  background: transparent;
+  border: none;
+  font-family: "PT Sans", sans-serif;
+  font-family: "Playwrite NZ Basic", cursive;
+  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Montserrat", sans-serif;
+  font-family: "Open Sans", sans-serif;
+  letter-spacing: 0.5px;
+  font-size: 1rem;
+  box-sizing: border-box;
+  transition: 0.5s ease-in-out;
+}
+
+section {
+    padding:7% 10% !important;
+}
+
+
+
+.enter {
+  animation: enter ease-in-out;
+  animation-timeline: view();
+  animation-range: entry 0% cover 20%;
+}
+@keyframes enter {
+  0% {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0px);
+  }
+}
+
+.subtext {
+  font-size: 0.8rem;
+  width: fit-content;
+  padding: 5px 15px;
+  border-radius: 40px;
+  border: 1px solid var(--border-hover);
+  margin-bottom: 2vw;
+  color: var(--text-sec);
+}
+
+.end {
+  height: 1px;
+  width: 100%;
+  background: linear-gradient(45deg, transparent, var(--border), var(--border-hover), var(--border), transparent);
+}
+
+.social-links {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1vw;
+}
+.social-links a i {
+  box-shadow: inset 3px 0 6px var(--border);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 45px;
+  width: 45px;
+  font-size: 1.2rem;
+  opacity: 0.7;
+}
+.social-links a i:hover {
+  background: var(--card-bg);
+  color: var(--text-sec);
+  opacity: 1;
+  box-shadow: inset 0 3px 6px var(--border-hover);
+  scale: 1.1;
+}
+
+.common {
+  padding: 5% 10%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+/* 1. The scrollbar width */
+::-webkit-scrollbar {
+  width: 8px; /* Slim and modern */
+}
+
+/* 2. The background of the scrollbar (Track) */
+::-webkit-scrollbar-track {
+  background: #050505; /* Matches your body background */
+}
+
+/* 3. The moving part (Thumb) */
+::-webkit-scrollbar-thumb {
+  background: rgba(9, 36, 73, 0.847); /* Subtle dark grey */
+  border-radius: 10px;
+  border: 2px solid #01024e; /* Adds "padding" around the thumb */
+}
+
+/* 4. The Hover Effect: Glow when touched */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--cursor); /* Uses your star/cursor color */
+  box-shadow: 0 0 10px var(--cursor); /* Adds the neon glow */
+}
+
+/* Firefox Support (Limited styling) */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent-bg-hover) var(--card-bg-hover);
+}
+
+
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+button:focus {
+    outline: none;
+}
+
+button:focus-visible {
+    outline: 2px solid var(--text-sec);
+    outline-offset: 3px;
+}

@@ -1,0 +1,168 @@
+header {
+  height: 50px;
+  padding: 0 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 999;
+  background: var(--card-bg);
+  /* box-shadow: 1px 0 0.75px var(--text-pri); */
+}
+
+#menu {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  box-shadow: inset 3px 0 6px var(--border);
+  padding: 10px;
+  border-radius: 7px;
+  cursor: pointer;
+}
+.line {
+    background-color: var(--text-pri);
+    height: 2px;
+    width: 18px;
+    border-radius: 20px;
+  }
+#menu:hover line {
+  background: var(--text-sec);
+}
+#menu:hover {
+  box-shadow: inset 0 3px 6px var(--border-hover);
+}
+
+header.shrunk {
+  position: sticky;
+  top: -10px;
+  transform: translateY(20px);
+  justify-content: flex-end;
+  background-color: transparent;
+  box-shadow: none;
+  animation: move 0.5s ease-in-out;
+  gap: 3vw;
+}
+header.shrunk nav {
+  border: 1px solid var(--glass-border);
+  -webkit-backdrop-filter: blur(5px) saturate(10%);
+  backdrop-filter: blur(5px);
+  background: var(--glass-bg);
+  border-radius: 30px;
+  padding: 5px;
+  box-shadow:  0 5px 10px var(--shadow);
+  /* border: 2px solid rgba(137, 194, 244, 0.279); */
+  a {
+    opacity: 1;
+  }
+}
+
+header.shrunk .logo {
+  display: none;
+}
+header.shrunk nav a {
+  opacity: 0.7;
+  box-shadow: inset 3px 0 6px var(--border);
+}
+header.shrunk nav a:hover, header.shrunk nav a.active {
+  opacity: 1;
+  color: var(--text-pri);
+  box-shadow: inset 0 3px 6px var(--border-hover);
+}
+header.shrunk .mode {
+  -webkit-backdrop-filter: blur(10px) saturate(120%);
+  backdrop-filter: blur(5px);
+}
+
+@keyframes move {
+  from {
+    gap: 20vw;
+  }
+  to {
+    gap: 3vw;
+  }
+}
+
+.logo {
+  font-family: "Monsieur La Doulaise", cursive;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding-top: 10px;
+  font-size: 2rem;
+  font-weight: 900;
+  /* text-shadow: 1px 1px 2px var(--text-sec); */
+}
+nav {
+  display: flex;
+  gap: 1vw;
+}
+nav a {
+  padding: 9px 15px;
+  border-radius: 20px;
+  color: var(--text-pri);
+  opacity: 0.7;
+  font-weight: 550;
+  position: relative;
+  font-size: 0.9rem;
+}
+nav a:hover, nav a.active {
+  opacity: 1;
+  background: var(--accent-bg-hover);
+  transform: translateY(-2px);
+}
+nav a::before,
+nav a::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  transition: 0.5s ease-in-out;
+}
+nav a::before {
+  top: 100%;
+  left: 50%;
+  translate: -50% -50%;
+  background: var(--text-sec);
+  width: 0%;
+}
+nav a:hover::before {
+  width: 60%;
+  height: 5%;
+  opacity: 0.7;
+}
+nav a::after {
+  top: 115%;
+  left: 50%;
+  translate: -50% -50%;
+  background: var(--text-pri);
+  width: 0%;
+}
+nav a:hover::after {
+  height: 4%;
+  width: 30%;
+  opacity: 0.5;
+}
+.mode {
+  box-shadow: inset 3px 0 6px var(--border);
+  padding: 7px;
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0.7;
+}
+.mode i {
+  font-size: 0.9rem;
+}
+.mode:hover {
+  box-shadow: inset 0 3px 6px var(--border-hover);
+  opacity: 1;
+  i {
+    color: var(--text-sec);
+    transform: rotate(-45deg);
+  }
+}
+.mode:active i {
+  rotate: 90deg;
+}
