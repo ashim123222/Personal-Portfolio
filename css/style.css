@@ -1,6 +1,6 @@
 :root {
   --bg-color: #07090f;
-  --text-pri: #dffffd;
+  --text-pri: #c9f3ff;
   --text-sec: #06a6dc;
 
   --card-bg: #0b192a4e;
@@ -19,11 +19,15 @@
   --glass-bg: rgba(8, 13, 26, 0.444);
 
   --shadow: rgb(0, 0, 0);
+
+  
+  --bg-home: url(../assest/bg-home.jpg);
+  --bg: url(../assest/bg-card.png);
 }
 [data-theme="dark"] {
-  --bg-color: #f0f3f5; /* soft cool white */
-  --text-pri: #072644; /* deep navy for readability */
-  --text-sec: #3d66ae; /* refined cyan accent */
+  --bg-color: #f0f3f5; 
+  --text-pri: #041b30; 
+  --text-sec: #0143b7; 
 
   --card-bg: rgba(221, 239, 248, 0.549);
   --card-bg-hover: rgba(227, 249, 250, 0.647);
@@ -41,10 +45,14 @@
   --glass-bg: rgba(255, 255, 255, 0.318);
 
   --shadow: rgba(35, 71, 86, 0.138);
+
+  --bg-home: url(../assest/bg-home-white.jpg);
+  --bg: url(../assest/bg-card-white.png);
 }
 body {
   background-color: var(--bg-color);
   overflow-x: hidden;
+  align-items: center;
 }
 * {
   padding: 0;
@@ -54,41 +62,145 @@ body {
   color: var(--text-pri);
   background: transparent;
   border: none;
-  font-family: "PT Sans", sans-serif;
-  font-family: "Playwrite NZ Basic", cursive;
-  font-family: Arial, Helvetica, sans-serif;
   font-family: "Montserrat", sans-serif;
-  font-family: "Open Sans", sans-serif;
-  letter-spacing: 0.5px;
   font-size: 1rem;
   box-sizing: border-box;
-  transition: 0.5s ease-in-out;
+  /* transition: 0.5s ease-in-out; */
 }
+
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 1s ease;
+}
+
+/* When visible */
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.enter-reload {
+  animation: entry 1s ease-in-out;
+}
+.enter-bottom {
+  animation: entry-bottom 1s ease-in-out;
+}
+.enter-top {
+  animation: entry-top 1s ease-in-out;
+}
+.enter-left {
+  animation: entry-left 1s ease-in-out;
+}
+.enter-right {
+  animation: entry-right 1s ease-in-out;
+}
+
+@keyframes entry-bottom {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@keyframes entry-top {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@keyframes entry-right {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@keyframes entry-left {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
 
 section {
-    padding:7% 10% !important;
+  padding: 7% 10% !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-
-
-.enter {
-  animation: enter ease-in-out;
-  animation-timeline: view();
-  animation-range: entry 0% cover 20%;
+.animate-border {
+  position: relative;
 }
-@keyframes enter {
-  0% {
-    opacity: 0;
-    transform: translateX(30px);
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+.animate-border::before,
+.animate-border::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  width: 0%;
+  height: 0%;
+  padding: 2px;
+  background-image: conic-gradient(
+    from var(--angle),
+    transparent 50%,
+    var(--text-sec),
+    var(--text-pri)
+  );
+  opacity: 0.4;
+  border-radius: 10px;
+  transition: 0.4s ease-in-out;
+  z-index: -1;
+  animation: spin 3s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    --angle: 0deg;
   }
-  100% {
-    opacity: 1;
-    transform: translate(0px);
+  to {
+    --angle: 360deg;
   }
+}
+.animate-border:hover::before,
+.animate-border:hover::after {
+  opacity: 1;
+  bottom: 0%;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.animate-border:hover::after {
+  filter: blur(10px);
+  opacity: 0.7;
+  z-index: -1;
 }
 
 .subtext {
   font-size: 0.8rem;
+  font-weight: 500;
   width: fit-content;
   padding: 5px 15px;
   border-radius: 40px;
@@ -100,7 +212,14 @@ section {
 .end {
   height: 1px;
   width: 100%;
-  background: linear-gradient(45deg, transparent, var(--border), var(--border-hover), var(--border), transparent);
+  background: linear-gradient(
+    45deg,
+    transparent,
+    var(--border),
+    var(--border-hover),
+    var(--border),
+    transparent
+  );
 }
 
 .social-links {
@@ -117,7 +236,9 @@ section {
   height: 45px;
   width: 45px;
   font-size: 1.2rem;
-  opacity: 0.7;
+  backdrop-filter: blur(5px);
+  transition: 0.5s linear;
+  /* opacity: 0.7; */
 }
 .social-links a i:hover {
   background: var(--card-bg);
@@ -134,7 +255,6 @@ section {
   flex-direction: column;
   align-items: center;
 }
-
 
 /* 1. The scrollbar width */
 ::-webkit-scrollbar {
@@ -165,17 +285,20 @@ section {
   scrollbar-color: var(--accent-bg-hover) var(--card-bg-hover);
 }
 
-
 button,
 a {
-    -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: transparent;
 }
 
 button:focus {
-    outline: none;
+  outline: none;
 }
 
 button:focus-visible {
-    outline: 2px solid var(--text-sec);
-    outline-offset: 3px;
+  outline: 2px solid var(--text-sec);
+  outline-offset: 3px;
+}
+
+.imp {
+   background: var(--bg);
 }

@@ -30,22 +30,22 @@
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
       <link
-        href="https://fonts.googleapis.com/css2?family=Asul:wght@400;700&family=Monsieur+La+Doulaise&family=Oswald:wght@200..700&family=Playwrite+NZ+Basic:wght@100..400&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Asul:wght@400;700&family=Iceberg&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Italianno&family=Leckerli+One&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
         rel="stylesheet"
       />
     </head>
     <body>
       <header>
-        <div class="logo">M. ashim</div>
+        <div class="logo enter-left">M. ashim</div>
 
-        <nav>
-          <a class="active" href="index.html">Home</a>
-          <a href="about.html">About</a>
-          <a href="project.html">Projects</a>
-          <a href="contact.html">Contact</a>
+        <nav class="enter-top">
+          <a class="active animate-border" href="index.html">Home</a>
+          <a class="animate-border" href="about.html">About</a>
+          <a class="animate-border" href="project.html">Projects</a>
+          <a class="animate-border" href="contact.html">Contact</a>
         </nav>
 
-        <button class="mode" id="theme-toggle">
+        <button class="mode enter-right" id="theme-toggle">
           <i class="fa-regular fa-sun"></i>
         </button>
         <div id="menu">
@@ -54,44 +54,50 @@
           <div class="line three-l"></div>
         </div>
       </header>
-      <div class="end"></div>
+      <div class="end reveal"></div>
 
       <section id="home">
-        <div class="right">
+        <div class="right enter-left">
           <div class="img">
             <img src="./assest/darker_version.png" alt="" />
           </div>
         </div>
         <div class="left">
           <div class="top">
-            <p class="subtext">Available for Work</p>
-            <h1>Moinam Ashim</h1>
-            <h4>Frontend Developer | <span>Persuing MERN Stack</span></h4>
+            <p class="subtext reveal">Available for Work</p>
+            <h1 class="reveal">Moinam Ashim</h1>
+            <h4 class="reveal">
+              Frontend Developer |
+              <span class="enter-right">Pursuing MERN Stack</span>
+            </h4>
           </div>
 
-          <p class="intro">
-            I am a
-            passionate frontend web developer focused on building modern, 
+          <p class="intro reveal">
+            I am a passionate frontend web developer focused on building modern,
             interactive, and user-centric web experiences. Currently Learning
             backend to become a full stack developer.
           </p>
 
-          <div class="go-to-links">
-            <a class="go-to go-to-t" href="">
+          <div class="go-to-links reveal">
+            <a class="go-to go-to-t animate-border" href="contact.html">
               Let's Talk
               <span
                 ><i class="one fa-solid fa-arrow-right"></i>
                 <i class="two fa-solid fa-arrow-right"></i
               ></span>
             </a>
-            <a class="go-to go-to-d" href="">
+            <a
+              class="go-to go-to-d animate-border"
+              target="_blank"
+              href="./assest/resume/Moinam-Ashim-Resume.pdf"
+            >
               Download CV
               <span>
                 <i class="one-d fa-solid fa-arrow-down"></i
                 ><i class="two-d fa-solid fa-arrow-down"></i>
               </span>
             </a>
-            <a class="go-to" href="">
+            <a class="go-to animate-border" href="project.html">
               View Works
               <span>
                 <i class="one fa-solid fa-arrow-right"></i>
@@ -100,27 +106,34 @@
             </a>
           </div>
 
-          <div class="social-links">
-            <a class="icon" href="">
+          <div class="social-links reveal">
+            <a class="icon" href="https://github.com/ashim123222">
               <i class="fa-brands fa-github"></i>
             </a>
-            <a class="icon" href=""><i class="fa-brands fa-linkedin-in"></i></a>
-            <a class="icon" href=""><i class="fa-regular fa-envelope"></i></a>
-            <a class="icon" href=""><i class="fa-brands fa-facebook"></i></a>
+            <a
+              class="icon"
+              href="https://www.linkedin.com/in/moinam-ashim-786brr/"
+              ><i class="fa-brands fa-linkedin-in"></i
+            ></a>
+            <a class="icon" href="mailto:moinamashim123@gmail.com"
+              ><i class="fa-regular fa-envelope"></i
+            ></a>
+            <a class="icon" href="https://www.facebook.com/moimam.ashim"
+              ><i class="fa-brands fa-facebook"></i
+            ></a>
           </div>
         </div>
       </section>
-      <div class="end"></div>
+      <div class="end reveal"></div>
 
       <section class="second">
-        <h1 class="name enter">Explore More</h1>
-        <p class="intro enter">
+        <h1 class="name reveal">Explore More</h1>
+        <p class="intro reveal">
           Discover more about my experience, projects, and how I can help bring
-          
           your ideas to life
         </p>
         <div class="cards">
-          <div class="card enter">
+          <div class="card reveal">
             <div class="card-top">
               <i class="fa-regular fa-user"></i>
               <h3>About Me</h3>
@@ -137,7 +150,7 @@
               </span>
             </a>
           </div>
-          <div class="card enter">
+          <div class="card reveal">
             <div class="card-top">
               <i class="fa-solid fa-bolt"></i>
               <h3>Projects</h3>
@@ -151,7 +164,7 @@
               </span>
             </a>
           </div>
-          <div class="card enter">
+          <div class="card reveal">
             <div class="card-top">
               <i class="fa-solid fa-address-book"></i>
               <h3>Get in Touch</h3>
@@ -159,7 +172,7 @@
                 Let's dicucss about your project and 'll help in your solution
               </p>
             </div>
-            <a class="go-to" href="">
+            <a class="go-to" href="contact.html">
               Reached out
               <span>
                 <i class="one fa-solid fa-arrow-right"></i>
@@ -167,13 +180,13 @@
               </span>
             </a>
           </div>
-          <div class="card enter">
+          <div class="card reveal">
             <div class="card-top">
               <i class="fa-solid fa-briefcase"></i>
               <h3>Services</h3>
               <p>Services that i offer for startup and businesses</p>
             </div>
-            <a class="go-to" href="">
+            <a class="go-to" href="service.html">
               Check
               <span>
                 <i class="one fa-solid fa-arrow-right"></i>
@@ -183,17 +196,17 @@
           </div>
         </div>
       </section>
-      <div class="end"></div>
+      <div class="end reveal"></div>
 
-      <section>
-        <div class="common enter">
-          <h2 class="name">Ready to start a project</h2>
-          <p class="intro">
-            I'm always excited to work on new challenges and help   bring innovative ideas to life. Let's discuss 
-            how we can work together.
+      <section class="imp reveal">
+        <div class="common reveal">
+          <h2 class="name reveal">Ready to start a project</h2>
+          <p class="intro reveal">
+            I'm always excited to work on new challenges and help bring
+            innovative ideas to life. Let's discuss how we can work together.
           </p>
-          <div class="go-to-links">
-            <a class="go-to go-to-t" href="contact.html">
+          <div class="go-to-links reveal">
+            <a class="go-to go-to-t animate-border" href="contact.html">
               Let's Talk
               <span
                 ><i class="one fa-solid fa-arrow-right"></i>
@@ -204,7 +217,7 @@
         </div>
       </section>
 
-      <div class="end"></div>
+      <div class="end reveal"></div>
 
       <footer>
         <p>

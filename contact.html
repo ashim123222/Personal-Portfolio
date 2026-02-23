@@ -33,22 +33,22 @@
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
       <link
-        href="https://fonts.googleapis.com/css2?family=Asul:wght@400;700&family=Monsieur+La+Doulaise&family=Oswald:wght@200..700&family=Playwrite+NZ+Basic:wght@100..400&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Asul:wght@400;700&family=Iceberg&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Italianno&family=Leckerli+One&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
         rel="stylesheet"
       />
     </head>
     <body>
       <header>
-        <div class="logo">M. ashim</div>
+        <div class="logo enter-left">M. ashim</div>
 
-        <nav>
-          <a href="index.html">Home</a>
-          <a href="about.html">About</a>
-          <a href="project.html">Projects</a>
-          <a class="active" href="contact.html">Contact</a>
+        <nav class="enter-top">
+          <a class="animate-border" href="index.html">Home</a>
+          <a class="animate-border" href="about.html">About</a>
+          <a class="animate-border" href="project.html">Projects</a>
+          <a class="active animate-border" href="contact.html">Contact</a>
         </nav>
 
-        <button class="mode" id="theme-toggle">
+        <button class="mode enter-right" id="theme-toggle">
           <i class="fa-regular fa-sun"></i>
         </button>
         <div id="menu">
@@ -60,36 +60,37 @@
       <div class="end"></div>
 
       <section class="about">
-        <p class="subtext">Get in touch</p>
-        <h2 class="heading">Let's Work Together</h2>
-        <p class="intro">
-          Ready to bring your ideas to life? I'm here to help
-          something amazing. Let's discuss your project and see how
-          we can work together.
+        <p class="subtext reveal">Get in touch</p>
+        <h2 class="heading reveal">Let's Work Together</h2>
+        <p class="intro reveal">
+          Ready to bring your ideas to life? I'm here to help something amazing.
+          Let's discuss your project and see how we can work together.
         </p>
       </section>
-      <div class="end"></div>
+      <div class="end reveal"></div>
 
       <section class="contact">
-        <h2 class="heading">Methods of Reach out</h2>
-        <p class="intro">Choose the best way to reach me based on your needs</p>
+        <h2 class="heading reveal">Methods of Reach out</h2>
+        <p class="intro reveal">
+          Choose the best way to reach me based on your needs
+        </p>
 
         <div class="cards">
-          <div class="card card-contact">
+          <div class="card reveal card-contact">
             <i class="fa-regular fa-envelope"></i>
             <h3>Email</h3>
             <p>Best for detail discussion</p>
-            <a href="">moinamashim123@gmail.com</a>
+            <a href="mailto:moinamashim123@gmail.com">moinamashim123@gmail.com</a>
             <p class="note">24/7 - Response within 12 hours</p>
           </div>
-          <div class="card card-contact">
+          <div class="card reveal card-contact">
             <i class="fa-solid fa-phone"></i>
             <h3>Phone</h3>
             <p>For urgents only</p>
-            <a href="">+91 7627993511</a>
+            <a href="tel:+917627993511">+91 7627993511</a>
             <p class="note">Sat-Thur, 9AM - 6PM</p>
           </div>
-          <div class="card card-contact">
+          <div class="card reveal card-contact">
             <i class="fa-solid fa-location-dot"></i>
             <h3>Location</h3>
             <p>Remote work worlwide</p>
@@ -98,54 +99,90 @@
           </div>
         </div>
       </section>
-      <div class="end"></div>
+      <div class="end reveal"></div>
 
       <section class="con-sec">
         <div class="left">
-          <h2>Send Message</h2>
+          <h2 class="reveal">Send Message</h2>
           <form action="">
             <div>
-              <label for="name">Full Name *</label>
-              <input type="text" id="name" required placeholder="Enter name" />
+              <label class="reveal" for="name">Full Name *</label>
+              <input
+                class="reveal"
+                type="text"
+                id="name"
+                required
+                placeholder="Enter name"
+              />
             </div>
             <div>
-              <label for="email">Email Address *</label>
-              <input type="text" id="email" required placeholder="Enter email" />
+              <label class="reveal" for="email">Email Address *</label>
+              <input
+                class="reveal"
+                type="text"
+                id="email"
+                required
+                placeholder="Enter email"
+              />
             </div>
             <div>
-              <label for="email">Subject *</label>
-              <input type="text" id="subject" required placeholder="Project consultation" />
+              <label class="reveal" for="email">Subject *</label>
+              <input
+                class="reveal"
+                type="text"
+                id="subject"
+                required
+                placeholder="Project consultation"
+              />
             </div>
             <div>
-              <label for="email">Details *</label>
-              <textarea name="" id="" required placeholder="Explain what do you want"></textarea>
+              <label class="reveal" for="email">Details *</label>
+              <textarea
+                class="reveal"
+                name=""
+                id=""
+                required
+                placeholder="Explain what do you want"
+              ></textarea>
             </div>
-            <button>Send Message <i class="fa-regular fa-paper-plane"></i> </button>
+            <button class="reveal">
+              Send Message <i class="fa-regular fa-paper-plane"></i>
+            </button>
           </form>
         </div>
         <div class="right">
-          <h2>Let's create something Amazing</h2>
-          <p class="intro">
-            I'm passionate about helping businesses and individuals bring their digital ideas to life. Whether you need a website or technical consultation, I'm here to help.
+          <h2 class="reveal">Let's create something Amazing</h2>
+          <p class="intro reveal">
+            I'm passionate about helping businesses and individuals bring their
+            digital ideas to life. Whether you need a website or technical
+            consultation, I'm here to help.
           </p>
-          <div class="card">
+          <div class="card reveal">
             <h4>What to expect</h4>
             <li>Free Consultation call</li>
             <li>Detailed Project proposal</li>
             <li>Transparent Pricing</li>
             <li>Regular projects update</li>
           </div>
-          <div class="card">
+          <div class="card reveal">
             <h4>Availability</h4>
             <h5 class="subtext">Available for frontent projects</h5>
             <li>Portfolio</li>
             <li>Landing Page</li>
             <li>Showcase Products</li>
           </div>
-          <div class="card quick">
+          <div class="card reveal quick">
             <h4>Quick Start Package</h4>
-            <p>Need to get started quickly? I offer a streamlined process for Portfolio websites and Landing pages.</p>
-            <b>Starting at $80 only<br> <ul> Delivery under 1 week </ul> </b>
+            <p>
+              Need to get started quickly? I offer a streamlined process for
+              Portfolio websites and Landing pages.
+            </p>
+            <b
+              >Starting at $80 only<br />
+              <ul>
+                Delivery under 1 week
+              </ul>
+            </b>
           </div>
         </div>
       </section>

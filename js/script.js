@@ -1,3 +1,24 @@
+const reveals = document.querySelectorAll(".reveal");
+
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("active");
+      } else {
+        entry.target.classList.remove("active");
+      }
+    });
+  },
+  {
+    threshold: 0.15,
+  },
+);
+
+reveals.forEach((reveal) => {
+  observer.observe(reveal);
+});
+
 const header = document.querySelector("header");
 
 window.addEventListener("scroll", () => {
@@ -7,9 +28,6 @@ window.addEventListener("scroll", () => {
     header.classList.remove("shrunk");
   }
 });
-
-
-
 
 const toggleBtn = document.getElementById("theme-toggle");
 const root = document.documentElement;
@@ -35,12 +53,10 @@ toggleBtn.addEventListener("click", () => {
   updateThemeIcon();
 });
 
-
-
 document.getElementById("menu").addEventListener("click", () => {
   // Add [0] to target the first <nav> element found
   const menu = document.getElementsByTagName("nav")[0];
-  
+
   // Now classList.toggle will work perfectly
-  menu.classList.toggle("active"); 
+  menu.classList.toggle("active");
 });
