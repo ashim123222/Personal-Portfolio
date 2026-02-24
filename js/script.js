@@ -63,3 +63,32 @@ toggleMenuBtn.addEventListener("click", () => {
   const expanded = toggleMenuBtn.getAttribute("aria-expanded") === "true";
   toggleMenuBtn.setAttribute("aria-expanded", !expanded);
 });
+
+// ========contact form ======
+
+(function () {
+  emailjs.init("f1WRXs-x2lNCht7v8"); // yaha apna Public Key daalo
+})();
+
+const form = document.getElementById("contact-form");
+
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  emailjs
+    .sendForm(
+      "service_tt1raoj", // yaha Service ID
+      "template_w8owpjo", // yaha Template ID
+      this,
+    )
+    .then(
+      function () {
+        alert("Message sent successfully!");
+        form.reset();
+      },
+      function (error) {
+        alert("Failed to send message.");
+        console.log(error);
+      },
+    );
+});

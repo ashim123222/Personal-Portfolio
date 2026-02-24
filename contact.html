@@ -36,6 +36,8 @@
         href="https://fonts.googleapis.com/css2?family=Asul:wght@400;700&family=Iceberg&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Italianno&family=Leckerli+One&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
         rel="stylesheet"
       />
+
+      <!-- email js skd  -->
     </head>
     <body>
       <header>
@@ -112,11 +114,12 @@
       <section class="con-sec">
         <div class="left">
           <h2 class="reveal">Send Message</h2>
-          <form action="">
+          <form id="contact-form" action="">
             <div>
               <label class="reveal" for="name">Full Name *</label>
               <input
                 class="reveal"
+                name="from_name"
                 type="text"
                 id="name"
                 required
@@ -127,6 +130,7 @@
               <label class="reveal" for="email">Email Address *</label>
               <input
                 class="reveal"
+                name="from_email"
                 type="text"
                 id="email"
                 required
@@ -137,6 +141,7 @@
               <label class="reveal" for="email">Subject *</label>
               <input
                 class="reveal"
+                name="subject"
                 type="text"
                 id="subject"
                 required
@@ -147,13 +152,13 @@
               <label class="reveal" for="email">Details *</label>
               <textarea
                 class="reveal"
-                name=""
+                name="message"
                 id=""
                 required
                 placeholder="Explain what do you want"
               ></textarea>
             </div>
-            <button class="reveal click-btn">
+            <button type="submit" class="reveal click-btn">
               Send Message <i class="fa-regular fa-paper-plane"></i>
             </button>
           </form>
@@ -217,6 +222,7 @@
         </div>
       </footer>
 
+      <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
       <script src="./js/script.js"></script>
     </body>
   </html>
