@@ -53,10 +53,13 @@ toggleBtn.addEventListener("click", () => {
   updateThemeIcon();
 });
 
-document.getElementById("menu").addEventListener("click", () => {
-  // Add [0] to target the first <nav> element found
-  const menu = document.getElementsByTagName("nav")[0];
+const toggleMenuBtn = document.querySelector(".nav-toggle");
+const nav = document.querySelector("nav");
 
-  // Now classList.toggle will work perfectly
-  menu.classList.toggle("active");
+toggleMenuBtn.addEventListener("click", () => {
+  nav.classList.toggle("active");
+  toggleMenuBtn.classList.toggle("active");
+
+  const expanded = toggleMenuBtn.getAttribute("aria-expanded") === "true";
+  toggleMenuBtn.setAttribute("aria-expanded", !expanded);
 });

@@ -42,20 +42,26 @@
         <div class="logo enter-left">M. ashim</div>
 
         <nav class="enter-top">
-          <a class="animate-border" href="index.html">Home</a>
-          <a class="animate-border" href="about.html">About</a>
-          <a class="animate-border" href="project.html">Projects</a>
-          <a class="active animate-border" href="contact.html">Contact</a>
+          <a class="animate-border click-icon" href="index.html">Home</a>
+          <a class="animate-border click-icon" href="about.html">About</a>
+          <a class="animate-border click-icon" href="project.html">Projects</a>
+          <a class="active animate-border click-icon" href="contact.html"
+            >Contact</a
+          >
         </nav>
 
-        <button class="mode enter-right" id="theme-toggle">
+        <button class="mode enter-right click-icon" id="theme-toggle">
           <i class="fa-regular fa-sun"></i>
         </button>
-        <div id="menu">
-          <div class="line one-l"></div>
-          <div class="line two-l"></div>
-          <div class="line three-l"></div>
-        </div>
+        <button
+          class="enter-right nav-toggle"
+          aria-label="Toggle navigation"
+          aria-expanded="false"
+        >
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
       </header>
       <div class="end"></div>
 
@@ -80,14 +86,16 @@
             <i class="fa-regular fa-envelope"></i>
             <h3>Email</h3>
             <p>Best for detail discussion</p>
-            <a href="mailto:moinamashim123@gmail.com">moinamashim123@gmail.com</a>
+            <a class="click-btn" href="mailto:moinamashim123@gmail.com"
+              >moinamashim123@gmail.com</a
+            >
             <p class="note">24/7 - Response within 12 hours</p>
           </div>
           <div class="card reveal card-contact">
             <i class="fa-solid fa-phone"></i>
             <h3>Phone</h3>
             <p>For urgents only</p>
-            <a href="tel:+917627993511">+91 7627993511</a>
+            <a class="click-btn" href="tel:+917627993511">+91 7627993511</a>
             <p class="note">Sat-Thur, 9AM - 6PM</p>
           </div>
           <div class="card reveal card-contact">
@@ -145,7 +153,7 @@
                 placeholder="Explain what do you want"
               ></textarea>
             </div>
-            <button class="reveal">
+            <button class="reveal click-btn">
               Send Message <i class="fa-regular fa-paper-plane"></i>
             </button>
           </form>
@@ -189,17 +197,23 @@
       <div class="end"></div>
 
       <footer>
-        <p>
+        <p class="reveal">
           &copy; 2026: Made with &hearts; by <u>Moinam Ashim</u> <br />
           From scratch with Chai
         </p>
         <div class="social-links">
-          <a class="icon" href="">
+          <a class="icon reveal click-icon" href="">
             <i class="fa-brands fa-github"></i>
           </a>
-          <a class="icon" href=""><i class="fa-brands fa-linkedin-in"></i></a>
-          <a class="icon" href=""><i class="fa-regular fa-envelope"></i></a>
-          <a class="icon" href=""><i class="fa-brands fa-facebook"></i></a>
+          <a class="icon reveal click-icon" href=""
+            ><i class="fa-brands fa-linkedin-in"></i
+          ></a>
+          <a class="icon reveal click-icon" href=""
+            ><i class="fa-regular fa-envelope"></i
+          ></a>
+          <a class="icon reveal click-icon" href=""
+            ><i class="fa-brands fa-facebook"></i
+          ></a>
         </div>
       </footer>
 

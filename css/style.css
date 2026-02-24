@@ -20,14 +20,13 @@
 
   --shadow: rgb(0, 0, 0);
 
-  
   --bg-home: url(../assest/bg-home.jpg);
   --bg: url(../assest/bg-card.png);
 }
 [data-theme="dark"] {
-  --bg-color: #f0f3f5; 
-  --text-pri: #041b30; 
-  --text-sec: #0143b7; 
+  --bg-color: #f0f3f5;
+  --text-pri: #041b30;
+  --text-sec: #1c458b;
 
   --card-bg: rgba(221, 239, 248, 0.549);
   --card-bg-hover: rgba(227, 249, 250, 0.647);
@@ -137,7 +136,6 @@ body {
   }
 }
 
-
 section {
   padding: 7% 10% !important;
   display: flex;
@@ -169,7 +167,7 @@ section {
     var(--text-sec),
     var(--text-pri)
   );
-  opacity: 0.4;
+  opacity: 0;
   border-radius: 10px;
   transition: 0.4s ease-in-out;
   z-index: -1;
@@ -300,5 +298,61 @@ button:focus-visible {
 }
 
 .imp {
-   background: var(--bg);
+  background: var(--bg);
+  background-size: cover;
+}
+
+/* click effect of every button or links  */
+
+.click-icon:active {
+  animation: click-icon 0.2s ease-in-out;
+}
+.click-icon:active::after {
+  height: 100%;
+  width: 100%;
+}
+@keyframes click-icon {
+  from {
+    scale: 0.8;
+  }
+  to {
+    scale: 1.1;
+  }
+}
+
+.click-btn:active {
+  animation: click-btn 0.2s ease-in-out;
+}
+@keyframes click-btn {
+  from {
+    scale: 0.9;
+  }
+  to {
+    scale: 1.05;
+  }
+}
+
+
+/* == SCREEN SIZE LESS THAN 1280PX == */
+/* =====  SCREEN SIZE LESS THAN 600PX ACTIVE OR CLICK STYLE ===== */
+
+@media (max-width: 600px) {
+  .social-links a i {
+    font-size: 1rem;
+    height: 35px;
+    width: 35px;
+  }
+  .social-links a i:hover {
+    background: transparent;
+    color: var(--text-pri);
+    box-shadow: none;
+    box-shadow: inset 3px 0 6px var(--border);
+    scale: 1;
+  }
+}
+
+@media (max-width: 460px) {
+  .social-links {
+    gap: 20px;
+  }
 }

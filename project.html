@@ -38,25 +38,44 @@
     </head>
     <body>
       <header>
-        <div class="logo">M. ashim</div>
+        <div class="logo enter-left">M. ashim</div>
 
         <nav>
-          <a class="animate-border" href="index.html">Home</a>
-          <a class="animate-border" href="about.html">About</a>
-          <a class="active animate-border" href="project.html">Projects</a>
-          <a class="animate-border" href="contact.html">Contact</a>
+          <a class="animate-border click-icon enter-top" href="index.html"
+            >Home</a
+          >
+          <a class="animate-border click-icon enter-top" href="about.html"
+            >About</a
+          >
+          <a
+            class="active animate-border click-icon enter-top"
+            href="project.html"
+            >Projects</a
+          >
+          <a class="animate-border click-icon enter-top" href="contact.html"
+            >Contact</a
+          >
         </nav>
 
-        <button class="mode">
+        <button class="mode enter-right click-icon" id="theme-toggle">
           <i class="fa-regular fa-sun"></i>
         </button>
+        <button
+          class="enter-right nav-toggle"
+          aria-label="Toggle navigation"
+          aria-expanded="false"
+        >
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
       </header>
-      <div class="end"></div>
+      <div class="end reveal"></div>
 
       <section class="about">
-        <p class="subtext">My Projects</p>
-        <h2 class="heading">My Projects</h2>
-        <p class="intro">
+        <p class="subtext reveal">My Projects</p>
+        <h2 class="heading reveal">My Projects</h2>
+        <p class="intro reveal">
           A collection of projects that showcase my skills in MERN Stack, from
           concept to deployment. Each project represents a unique challenge and
           learning experience.
@@ -65,17 +84,23 @@
       <div class="end"></div>
 
       <footer>
-        <p>
+        <p class="reveal">
           &copy; 2026: Made with &hearts; by <u>Moinam Ashim</u> <br />
           From scratch with Chai
         </p>
         <div class="social-links">
-          <a class="icon" href="">
+          <a class="icon reveal click-icon" href="">
             <i class="fa-brands fa-github"></i>
           </a>
-          <a class="icon" href=""><i class="fa-brands fa-linkedin-in"></i></a>
-          <a class="icon" href=""><i class="fa-regular fa-envelope"></i></a>
-          <a class="icon" href=""><i class="fa-brands fa-facebook"></i></a>
+          <a class="icon reveal click-icon" href=""
+            ><i class="fa-brands fa-linkedin-in"></i
+          ></a>
+          <a class="icon reveal click-icon" href=""
+            ><i class="fa-regular fa-envelope"></i
+          ></a>
+          <a class="icon reveal click-icon" href=""
+            ><i class="fa-brands fa-facebook"></i
+          ></a>
         </div>
       </footer>
 

@@ -1,17 +1,41 @@
-
-
 footer {
-    padding: 3% 2%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: var(--card-bg);
+  padding: 5% 2%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--card-bg);
 }
 footer p {
-    font-size: 0.8rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.5px;
 }
 footer p u {
-    text-decoration: underline;
-    font-weight: 200;
-    opacity: 0.7;
+  font-size: 0.8rem;
+  text-decoration: underline;
+  font-weight: 400;
+  opacity: 0.8;
+}
+
+@media (max-width: 600px) {
+  footer p {
+    font-size: 0.7rem;
+  }
+  .social-links {
+    gap: 12px;
+  }
+  .icon i {
+    color: var(--text-sec);
+  }
+}
+@media (max-width: 460px) {
+  footer {
+    display: flex;
+    flex-direction: column;
+  }
+  footer p {
+    text-align: center;
+  }
+  .social-links {
+    gap: 20px;
+  }
 }

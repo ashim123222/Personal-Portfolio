@@ -27,14 +27,13 @@ section.personal {
     text-align: center;
 }
 section.personal .cards {
-    padding: 0% 20%;
+    padding: 0% 10%;
     display: flex;
     flex-wrap: wrap;
 } 
 section.personal .card {
     align-items: start;
     flex-grow: 1;
-    width: 20vw;
 }
 section.personal .card h4 {
     display: flex;
@@ -44,6 +43,7 @@ section.personal .card h4 {
 }
 section.personal .card p {
     margin-top: 0px;
+    text-align: left;
     font-family: "Montserrat", sans-serif;
 }
 section.personal .card i{
@@ -62,15 +62,17 @@ section.personal .card i{
 section.skill {
     padding: 5% 10%;
     text-align: center;
+    /* background: red; */
 }
 section.skill .cards {
     display: flex;
     flex-wrap: wrap;
 }
 section.skill .card {
+    width: 280px;
     align-items: start;
     flex-grow: 1;
-    width: 22vw;
+    /* width: 22vw; */
 }
 
 .cards .card .card-bottom{
