@@ -18,7 +18,11 @@ header {
   cursor: pointer;
   padding: 10px;
   border-radius: 12px;
-  box-shadow: inset 3px 0 6px var(--border);
+  background: var(--glass-bg);
+  box-shadow:
+    0 5px 10px var(--shadow),
+    inset 3px 0 6px var(--border);
+  border: 1px solid var(--glass-border);
 }
 
 .bar {
@@ -27,7 +31,6 @@ header {
   background: var(--text-pri);
   transition: 0.3s ease;
 }
-
 
 header.shrunk {
   position: sticky;
@@ -40,13 +43,15 @@ header.shrunk {
   gap: 3vw;
 }
 header.shrunk nav {
-  border: 1px solid var(--glass-border);
-  -webkit-backdrop-filter: blur(5px) saturate(10%);
-  backdrop-filter: blur(5px);
-  background: var(--glass-bg);
   border-radius: 30px;
   padding: 5px;
-  box-shadow: 0 5px 10px var(--shadow);
+  -webkit-backdrop-filter: blur(5px) saturate(10%);
+  backdrop-filter: blur(4px);
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  box-shadow:
+    inset 0 0 5px var(--glass-border),
+    0 5px 10px var(--shadow);
   a {
     opacity: 1;
   }
@@ -57,14 +62,18 @@ header.shrunk .logo {
 }
 header.shrunk nav a {
   opacity: 1;
-  box-shadow: inset 3px 0 6px var(--border);
+  /* box-shadow: inset 3px 0 6px var(--border); */
   transition: 0.5s linear;
+  background: var(--glass-bg);
+  box-shadow: inset 0 0 5px var(--glass-border);
+  border: 1px solid var(--glass-border);
 }
 header.shrunk nav a:hover,
 header.shrunk nav a.active {
+  background: var(--bg-color);
   opacity: 1;
-  color: var(--text-pri);
-  box-shadow: inset 0 3px 6px var(--border-hover);
+  color: var(--text-sec);
+  /* box-shadow: inset 0 3px 6px var(--border-hover); */
 }
 header.shrunk .mode {
   -webkit-backdrop-filter: blur(10px) saturate(120%);
@@ -108,6 +117,7 @@ nav a {
 nav a:hover,
 nav a.active {
   background: var(--bg-color);
+  color: var(--text-sec);
 }
 nav a::before,
 nav a::after {
@@ -120,7 +130,9 @@ nav a.active::before {
 }
 
 .mode {
-  box-shadow: inset 3px 0 6px var(--border);
+  box-shadow:
+    0 5px 10px var(--shadow),
+    inset 3px 0 6px var(--border);
   padding: 7px;
   height: 35px;
   width: 35px;
@@ -130,14 +142,19 @@ nav a.active::before {
   justify-content: center;
   cursor: pointer;
   transition: 0.5s linear;
+  border: 1px solid var(--glass-border);
+  /* box-shadow: inset 0 0 5px var(--glass-border), 0 5px 10px var(--shadow); */
 }
 .mode i {
   font-size: 0.9rem;
   transition: 0.5s linear;
 }
 .mode:hover {
-  box-shadow: inset 0 3px 6px var(--border-hover);
+  box-shadow:
+    0 5px 10px var(--shadow),
+    inset 0 3px 6px var(--border-hover);
   opacity: 1;
+  transform: scale(1.05);
   i {
     color: var(--text-sec);
     transform: rotate(-45deg);

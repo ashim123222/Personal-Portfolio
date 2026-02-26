@@ -92,7 +92,8 @@
     border-radius: 10px;
   }
 
-  section.con-sec .card, section.contact .card {
+  section.con-sec .card,
+  section.contact .card {
     padding: 15px;
     gap: 7px;
   }
@@ -166,8 +167,6 @@
   section.con-sec .left {
     width: 100% !important;
   }
-  
-  
 }
 
 @media (max-width: 710px) {
@@ -242,8 +241,14 @@
     display: flex;
     position: absolute;
     right: 50px;
-    opacity: 0.8;
+    transition: 0.8s ease;
+    -webkit-backdrop-filter: blur(4px) saturate(120%);
+    backdrop-filter: blur(4px);
   }
+  .nav-toggle .bar {
+    transition: 0.8s ease;
+  }
+
   nav {
     position: absolute;
     top: 100%;
@@ -260,7 +265,8 @@
     border: 1px solid var(--glass-border);
     border-radius: 20px;
     padding: 50px 20px;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(4px);
+    gap: 5px;
   }
   nav.active a {
     text-align: center;
@@ -286,6 +292,7 @@
   .nav-toggle.active .bar:nth-child(3) {
     transform: rotate(-45deg) translateY(-6px) translateX(6px);
   }
+  
 
   .intro {
     line-height: 1.3;
