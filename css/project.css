@@ -1,0 +1,255 @@
+section.project {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  transition: 0.5s linear;
+  padding: 5% !important;
+}
+section.project > *,
+.proj-btns button {
+  transition: 0.5s linear;
+}
+.proj-btns {
+  display: flex;
+  gap: 20px;
+  flex-wrap: nowrap;
+  overflow: auto;
+  padding: 1rem;
+  scrollbar-width: none;
+}
+.proj-btns button {
+  padding: 10px 15px;
+  flex-shrink: 0;
+  /* background: var(--text-sec); */
+  border-radius: 10px;
+  font-weight: 550;
+  position: relative;
+  cursor: pointer;
+  border: 0.5px solid var(--text-pri);
+}
+.proj-btns button::before,
+.proj-btns button::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  border-radius: 10px;
+  height: 0%;
+  width: 10%;
+  padding: 2px;
+  transition: 0.5s linear;
+}
+.proj-btns button.active::after {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, var(--text-sec), var(--text-pri));
+  filter: blur(20px);
+  opacity: 0.5;
+  padding: 5px;
+  z-index: -1;
+  transition: 0.5s ease-in-out;
+}
+.proj-btns button:hover::before,
+.proj-btns button.active::before {
+  background: var(--border-hover);
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+}
+.proj-btns button.active {
+  background: var(--text-sec);
+  color: var(--bg-color);
+  border: 1px solid var(--bg-color);
+}
+.proj-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+.proj-card {
+  width: 28vw;
+  min-width: 380px;
+  max-width: 400px;
+  flex-grow: 1;
+  padding: 16px;
+  background: var(--card-bg);
+  border-radius: 15px;
+  border: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  box-shadow: 0px 0px 15px var(--shadow);
+  transition: 0.3s linear;
+  position: relative;
+}
+.card-det {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+#prog-cont .proj-card {
+  border: 1px solid rgba(255, 213, 0, 0.334);
+}
+#prog-cont .proj-card:hover {
+  border: 1px solid rgba(255, 213, 0, 0.61);
+}
+#prog-cont .proj-card .state {
+  color: rgb(248, 200, 80);
+}
+.proj-card .date,
+.state {
+    position: absolute;
+  z-index: 1;
+  right: 1rem;
+  padding: 3px 7px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  border: 1px solid var(--glass-border);
+  background: var(--glass-bg);
+  backdrop-filter: blur(5px);
+  border-radius: 5px;
+  color: white;
+}
+.state {
+  left: 16px;
+  width: fit-content;
+}
+.proj-card:hover {
+    box-shadow: 5px 5px 10px var(--shadow);
+  transform: translateY(-4px);
+  border: 1px solid var(--border-hover);
+  background: var(--card-bg-hover);
+}
+.proj-card:hover .img img {
+    width: 110%;
+}
+.proj-card .img {
+    width: 100%;
+    height: 235px;
+    border-radius: 15px 15px 0 0;
+    overflow: hidden;
+    position: relative;
+}
+.proj-card .img img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+    transition: 0.3s linear;
+}
+.proj-card .title {
+  font-size: 1.5rem;
+  font-weight: 550;
+}
+.proj-card .proj-intro,
+.key-features li,
+a,
+a i {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  transition: 0.3s linear;
+}
+.proj-card .key-features h4 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 7px;
+}
+.tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+.tech span {
+    padding: 4px 5px;
+    border-radius: 7px;
+    border: 1px solid var(--border);
+    font-size: 0.9rem;
+    background: var(--accent-bg-hover);
+    opacity: 0.8;
+}
+
+.link-btns {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.link-btns a:nth-child(1) {
+    padding: 5px 7px;
+    border: 1px solid var(--text-sec);
+    color: var(--text-sec);
+    border-radius: 7px;
+    font-weight: 550;
+}
+.link-btns a:nth-child(1):hover {
+    border: 1px solid var(--text-pri);
+    color: var(--text-pri);
+    background: var(--text-sec);
+    box-shadow: 0 0 20px var(--border-hover);
+}
+.link-btns a:nth-child(1):hover i {
+    color: var(--text-pri);
+}
+.link-btns a:nth-child(1) i {
+    font-size: 0.8rem;
+    color: var(--text-sec);
+}
+.link-btns a:nth-child(2) i {
+    font-size: 1.2rem;
+}
+.link-btns a:nth-child(2):hover i {
+    color: var(--text-sec);
+    transform: scale(1.2);
+}
+.hide {
+  display: none !important;
+}
+.show {
+    display: flex !important;
+}
+
+.not-now {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+@media (max-width: 600px) {
+  .proj-btns {
+    width: 80vw;
+  }
+  .proj-btns button {
+    font-size: 0.8rem;
+  }
+  .proj-card {
+    width: 90vw !important;
+    min-width: 300px !important;
+  }
+  .proj-card .title {
+    font-size: 1.3rem;
+  }
+  .proj-card .proj-intro,
+  .key-features li,
+  a,
+  a i {
+    font-size: 0.8rem;
+  }
+  .proj-card .key-features h4 {
+    font-size: 1.2rem;
+  }
+  .tech span {
+    font-size: 0.8rem;
+}
+}

@@ -56,9 +56,9 @@ form {
   gap: 20px;
 }
 form {
-    padding: 2rem;
+    /* padding: 2rem; */
     border-radius: 10px;
-    border: 1px solid var(--border);
+    /* border: 1px solid var(--border); */
 }
 .left h2 {
   font-size: 2rem;
@@ -75,7 +75,7 @@ form div {
 input,
 textarea,
 .left button {
-  padding: 15px 13px;
+  padding: 12px 13px;
   border: 1px solid var(--border);
   border-radius: 4px;
   resize: vertical;
@@ -102,19 +102,21 @@ textarea {
 }
 .left button {
   background: var(--border-hover);
-  border: 1px solid var(--text-pri);
+  /* border: 1px solid var(--text-pri); */
+  border: none;
   cursor: pointer;
   font-weight: 500;
   letter-spacing: 0.5px;
+  box-shadow: inset 1px 1px 2px var(--glass-bg), inset 5px 5px 3px var(--card-bg-hover), 10px 10px 10px var(--shadow);
 }
 .left button:hover {
-  color: var(--text-sec);
-  background: var(--card-bg);
-  border: 1px solid var(--text-sec);
+  color: var(--text-pri);
+  background: var(--text-sec);
+  /* border: 1px solid var(--text-sec); */
   z-index: 1;
 }
 .left button:hover i {
-  color: var(--text-sec);
+  color: var(--text-pri);
   transform: rotate(45deg) translateX(10px) translateY(-8px);
 }
 .right {

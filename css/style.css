@@ -1,5 +1,5 @@
 :root {
-  --bg-color: #07090f;
+  --bg-color: rgb(7, 8, 15);
   --text-pri: #c9f3ff;
   --text-sec: #06a6dc;
 
@@ -20,15 +20,15 @@
 
   --shadow: rgb(0, 0, 0);
 
-  --bg-home: url(../assest/bg-home.jpg);
+  --bg-home: url(../assest/image.png);
   --bg: url(../assest/bg-card.png);
 }
 [data-theme="dark"] {
   --bg-color: #f0f3f5;
   --text-pri: #041b30;
-  --text-sec: #1c458b;
+  --text-sec: #194da7;
 
-  --card-bg: rgba(221, 239, 248, 0.549);
+  --card-bg: rgba(212, 230, 238, 0.549);
   --card-bg-hover: rgba(227, 249, 250, 0.647);
 
   --border: rgba(0, 136, 204, 0.25);
@@ -45,7 +45,7 @@
 
   --shadow: rgba(35, 71, 86, 0.138);
 
-  --bg-home: url(../assest/bg-home-white.jpg);
+  --bg-home: url(../assest/image-white.png);
   --bg: url(../assest/bg-card-white.png);
 }
 body {
@@ -205,7 +205,9 @@ section {
   border: 1px solid var(--border-hover);
   margin-bottom: 2vw;
   color: var(--text-sec);
+  box-shadow: 4px 4px 3px var(--shadow);
 }
+
 
 .end {
   height: 1px;
@@ -226,7 +228,7 @@ section {
   gap: 1vw;
 }
 .social-links a i {
-  box-shadow: inset 3px 0 6px var(--border);
+  box-shadow: 4px 4px 5px var(--shadow), inset 3px 0 6px var(--border);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -236,13 +238,12 @@ section {
   font-size: 1.2rem;
   backdrop-filter: blur(5px);
   transition: 0.5s linear;
-  /* opacity: 0.7; */
 }
 .social-links a i:hover {
   background: var(--card-bg);
   color: var(--text-sec);
   opacity: 1;
-  box-shadow: inset 0 3px 6px var(--border-hover);
+  box-shadow: 5px 5px 3px var(--shadow), inset 0 3px 6px var(--border);
   scale: 1.1;
 }
 

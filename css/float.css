@@ -1,4 +1,4 @@
-.float {
+/* .float {
   position: fixed;
   top: 0;
   left: 0;
@@ -6,4 +6,4 @@
   width: 100%;
   background: linear-gradient(90deg, var(--bg-color), transparent, var(--bg-color) ), var(--bg);
   z-index: -9999;
-}
+} */
