@@ -59,11 +59,10 @@ const nav = document.querySelector("nav");
 toggleMenuBtn.addEventListener("click", () => {
   nav.classList.toggle("active");
   toggleMenuBtn.classList.toggle("active");
-
+  
   const expanded = toggleMenuBtn.getAttribute("aria-expanded") === "true";
   toggleMenuBtn.setAttribute("aria-expanded", !expanded);
 });
-
 // ========contact form ======
 
 (function () {

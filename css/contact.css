@@ -1,64 +1,50 @@
 section.contact {
-  padding: 5% 20%;
+  /* padding: 5% 20%; */
   text-align: center;
 }
 section.contact .cards {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  display: flex;
+  flex-wrap: wrap;
 }
 section.contact .cards .card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-  font-family: "Montserrat", sans-serif;
+  gap: 3px;
 }
-section.contact .cards .card > * {
-  margin: 0px;
-}
-.card-contact i {
-  font-size: 1.5rem;
-  margin-bottom: 5px;
-  opacity: 0.8;
-  padding: 7px;
-  /* border: 1px solid var(--border); */
-  box-shadow: inset 3px 0 6px var(--border);
-}
-.card-contact:hover i {
-  color: var(--text-sec);
-  box-shadow: inset 0 3px 6px var(--border-hover);
-}
-.card a {
+
+.card .link {
   font-size: 1rem;
   font-weight: 600;
+  color: var(--text-sec);
 }
 .card .note {
   font-weight: 500;
-  letter-spacing: 0.5px;
-  opacity: 0.8;
+  opacity: 0.7;
   font-size: 0.8rem;
 }
 .right .intro {
   width: 40vw;
+  flex-grow: 1;
 }
 section.con-sec {
-  padding: 5% 10%;
-  display: grid;
-  align-items: start;
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
   gap: 3rem;
-  grid-template-columns: 1fr 1fr;
+  align-items: start;
+}
+
+.left {
+  min-width: 350px;
 }
 
 .left,
 form {
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 form {
-    /* padding: 2rem; */
     border-radius: 10px;
-    /* border: 1px solid var(--border); */
 }
 .left h2 {
   font-size: 2rem;
@@ -102,7 +88,6 @@ textarea {
 }
 .left button {
   background: var(--border-hover);
-  /* border: 1px solid var(--text-pri); */
   border: none;
   cursor: pointer;
   font-weight: 500;
@@ -112,7 +97,6 @@ textarea {
 .left button:hover {
   color: var(--text-pri);
   background: var(--text-sec);
-  /* border: 1px solid var(--text-sec); */
   z-index: 1;
 }
 .left button:hover i {
@@ -120,12 +104,22 @@ textarea {
   transform: rotate(45deg) translateX(10px) translateY(-8px);
 }
 .right {
+  flex-grow: 1;
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+    width: 400px;
+    min-width: 400px !important;
+}
+.right .card-imp {
+  width: 90%;
 }
 .right h2 {
     font-size: 2rem;
+}
+.right .card {
+  display: flex !important;
+  
 }
 
 .right h4 {

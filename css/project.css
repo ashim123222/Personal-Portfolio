@@ -3,7 +3,7 @@ section.project {
   flex-direction: column;
   gap: 3rem;
   transition: 0.5s linear;
-  padding: 5% !important;
+  padding: 100px 5% !important;
 }
 section.project > *,
 .proj-btns button {
@@ -65,13 +65,13 @@ section.project > *,
 .proj-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 16px;
   justify-content: center;
 }
 .container {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 16px;
   justify-content: center;
 }
 .proj-card {
@@ -135,7 +135,7 @@ section.project > *,
 .proj-card .img {
     width: 100%;
     height: 235px;
-    border-radius: 15px 15px 0 0;
+    border-radius: 25px 25px 0 0;
     overflow: hidden;
     position: relative;
 }

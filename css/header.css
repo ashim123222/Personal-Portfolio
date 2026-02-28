@@ -20,9 +20,8 @@ header {
   border-radius: 12px;
   background: var(--glass-bg);
   box-shadow:
-    0 5px 10px var(--shadow),
-    inset 3px 0 6px var(--border);
-  border: 1px solid var(--glass-border);
+    4px 4px 5px var(--shadow),
+    inset 3px 0 6px var(--glass-border);
 }
 
 .bar {
@@ -132,7 +131,9 @@ nav a.active::before {
 }
 
 .mode {
-  box-shadow: 4px 4px 5px var(--shadow), inset 3px 0 6px var(--glass-border);
+  box-shadow:
+    4px 4px 5px var(--shadow),
+    inset 3px 0 6px var(--glass-border);
   padding: 7px;
   height: 40px;
   width: 40px;

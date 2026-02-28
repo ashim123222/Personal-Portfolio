@@ -1,5 +1,5 @@
 section#home {
-  padding: 5% 10%;
+  /* padding: 5% 10%; */
   display: grid;
   grid-template-columns: 0.5fr 2fr;
   gap: 2vw;
@@ -27,21 +27,23 @@ section#home {
 
 .left {
   display: flex;
+  flex-grow: 1;
   flex-direction: column;
   justify-content: center;
   gap: 20px;
 }
 .left h1 {
-  font-size: 4vw;
-  font-weight: 900;
-  font-family: "Oswald", sans-serif;
+  font-size: 3.5rem;
+  font-weight: 700;
 }
 .left h4 {
-  text-align: right;
+  text-align: left;
+  opacity: 0.7;
   font-size: 2rem;
   font-weight: 700;
 }
 .left h4 span {
+  font-size: 1.5rem;
   color: var(--text-sec);
   font-weight: 700;
 }
@@ -60,8 +62,9 @@ a span i {
 }
 .go-to-links {
   display: flex;
-  gap: 1vw;
-  margin-top: 2vw;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
 }
 .go-to {
   padding: 6px 15px;
@@ -70,6 +73,7 @@ a span i {
   color: var(--text-sec);
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 5px;
   font-weight: 500;
   border-radius: 5px;
@@ -89,9 +93,7 @@ a span i {
     var(--live)
   );
 }
-/* .go-to:hover {
-  
-} */
+
 .go-to span {
   border-radius: 50%;
   height: 30px;
@@ -149,7 +151,7 @@ i.two-d {
 /* home second  */
 
 section.second {
-  padding: 5% 10%;
+  /* padding: 5% 10%; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -159,25 +161,23 @@ section.second {
   font-size: 2.5rem;
 }
 .cards {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
   gap: 1.5rem;
   margin-top: 4vw;
 }
 .card {
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
   gap: 1rem;
   justify-content: space-between;
   padding: 1.5rem;
   border-radius: 12px;
-  background-position: top;
-  background-size: 100%;
-  backdrop-filter: blur(2px);
   transition: 0.5s linear;
-  box-shadow: inset 1px 1px 2px var(--glass-bg), inset 5px 5px 3px var(--card-bg-hover), 10px 10px 10px var(--shadow);
+  box-shadow: inset 1px 1px 2px var(--glass-bg), 10px 10px 7px var(--shadow), -2px -2px 4px var(--card-bg-hover), -7px -7px 10px var(--accent-bg-hover);
   background: var(--card-bg);
+  width: 280px;
 }
 .card .go-to {
   opacity: 0;
@@ -228,9 +228,9 @@ section.second {
 }
 .card:hover {
   border-radius: 15px;
-  transform: translateY(-4px);
+  transform: scale(1.02);
   background: var(--card-bg-hover);
-  box-shadow: inset 1px 1px 2px var(--glass-bg), inset 5px 5px 3px var(--card-bg-hover), 15px 13px 12px var(--shadow);
+  box-shadow: inset 1px 1px 2px var(--glass-bg), 13px 13px 15px var(--shadow), -3px -3px 6px var(--card-bg-hover), -7px -7px 15px var(--accent-bg-hover);
 }
 .card:hover h3,
 .card a {
@@ -244,4 +244,3 @@ section.second {
 .card:hover .go-to {
   opacity: 1;
 }
-
