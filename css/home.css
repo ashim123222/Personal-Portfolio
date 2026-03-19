@@ -4,24 +4,46 @@ section#home {
   grid-template-columns: 0.5fr 2fr;
   gap: 2vw;
 }
-.right {
-  margin: auto;
+.clock {
+  font-family: "Iceberg", sans-serif;
+  text-align: center;
+  padding: 5px 2vw;
+  background: linear-gradient(270deg, transparent, var(--glass-bg));
+  border: 1px solid var(--glass-border);
+  border-radius: 10px;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 9999;
+  backdrop-filter: blur(10px);
+  font-size: 0.8rem;
 }
 
 .right .img {
   height: 250px;
-  border-radius: 50%;
+  width: 200px;
+  border-radius: 10%;
+  corner-end-end-shape: bevel;
+  /* corner-left-shape: scoop; */
   overflow: hidden;
-  border: 5px solid var(--accent-bg-hover);
+  border-right: 5px solid var(--accent-bg-hover);
+  border-bottom: 5px solid var(--accent-bg-hover);
   padding: 10px;
-  box-shadow: 0px 0px 20px var(--card-bg);
+  box-shadow: 0px 0px 20px var(--shadow);
   backdrop-filter: blur(10px);
+  z-index: -1;
+  position: relative;
 }
 .right .img img {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
   height: 100%;
+  object-fit: cover;
+  filter: drop-shadow(0 0 10px var(--border));
 }
 .right .img:hover {
-  box-shadow: -10px 10px 20px var(--card-bg);
+  box-shadow: -10px 10px 20px var(--shadow);
   transform: translateY(-4px);
 }
 
@@ -35,16 +57,21 @@ section#home {
 .left h1 {
   font-size: 3.5rem;
   font-weight: 700;
+  /* background: url(../assest/5330558.jpg);
+  background-position: right;
+  background-size: contain;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; */
 }
 .left h4 {
   text-align: left;
   opacity: 0.7;
   font-size: 2rem;
   font-weight: 700;
+  color: var(--text-sec);
 }
 .left h4 span {
   font-size: 1.5rem;
-  color: var(--text-sec);
   font-weight: 700;
 }
 .intro {
@@ -53,7 +80,9 @@ section#home {
   line-height: 1.7;
   width: 600px;
   font-weight: 500;
-  opacity: 0.9;
+  opacity: 0.1;
+  text-align: center;
+  z-index: -1;
 }
 a span i {
   font-size: 0.9rem;
@@ -69,7 +98,7 @@ a span i {
 .go-to {
   padding: 6px 15px;
   font-size: 1rem;
-  border: 1px solid var(--border-hover);
+  border: 1px solid var(--border);
   color: var(--text-sec);
   display: flex;
   align-items: center;
@@ -79,18 +108,22 @@ a span i {
   border-radius: 5px;
   transition: 0.5s linear;
   box-shadow: 4px 4px 6px var(--shadow);
+  /* background: var(--glass-bg); */
 }
 .go-to-links .go-to:hover {
   background: var(--bg-color);
+  box-shadow: none;
   border-radius: 10px;
 }
 .go-to-links .go-to::before,
 .go-to-links .go-to::after {
-  background: conic-gradient(
+  background-image: conic-gradient(
     from var(--angle),
-    transparent 50%,
+    transparent,
     var(--text-sec),
-    var(--live)
+    transparent,
+    var(--border-hover),
+    transparent
   );
 }
 
@@ -159,6 +192,8 @@ section.second {
 }
 .name {
   font-size: 2.5rem;
+  font-family: "Playfair Display", serif;
+  letter-spacing: 1px;
 }
 .cards {
   display: flex;
@@ -174,10 +209,18 @@ section.second {
   justify-content: space-between;
   padding: 1.5rem;
   border-radius: 12px;
-  transition: 0.5s linear;
-  box-shadow: inset 1px 1px 2px var(--glass-bg), 10px 10px 7px var(--shadow), -2px -2px 4px var(--card-bg-hover), -7px -7px 10px var(--accent-bg-hover);
-  background: var(--card-bg);
+  transition: all 1s cubic-bezier(0.68, -0.6, 0.32, 1.74);
+  box-shadow:
+    5px 5px 12px var(--shadow),
+    inset 3px 3px 5px var(--glass-border),
+    10px 10px 20px var(--shadow),
+    0 0 40px var(--shadow);
+  background: linear-gradient(135deg, transparent, var(--card-bg));
+  border-left: 1px solid var(--border);
+  border-top: 1px solid var(--border);
+  backdrop-filter: blur(10px);
   width: 280px;
+  /* corner-shape: scoop; */
 }
 .card .go-to {
   opacity: 0;
@@ -192,8 +235,9 @@ section.second {
 .card .card-top i,
 .card-contact i {
   margin-bottom: 20px;
-  box-shadow: 4px 4px 5px var(--shadow), inset 3px 0 6px var(--border);
-  background-color: var(--card-bg);
+  box-shadow:
+    4px 4px 5px var(--shadow),
+    inset 3px 0 6px var(--border);
   border-radius: 12px;
   display: flex;
   align-items: center;
@@ -207,7 +251,8 @@ section.second {
   transition: 0.5s linear;
 }
 .card h3 {
-  font-size: 1.5rem;
+  font-size: 20px;
+  letter-spacing: 1px;
   transition: 0.5s linear;
 }
 .card p {
@@ -228,9 +273,11 @@ section.second {
 }
 .card:hover {
   border-radius: 15px;
-  transform: scale(1.02);
-  background: var(--card-bg-hover);
-  box-shadow: inset 1px 1px 2px var(--glass-bg), 13px 13px 15px var(--shadow), -3px -3px 6px var(--card-bg-hover), -7px -7px 15px var(--accent-bg-hover);
+  box-shadow:
+    5px 5px 12px var(--shadow),
+    inset 3px 3px 5px var(--accent-bg-hover),
+    10px 10px 20px var(--shadow),
+    0 0 40px var(--shadow);
 }
 .card:hover h3,
 .card a {
@@ -238,7 +285,9 @@ section.second {
 }
 .card:hover .card-top i {
   color: var(--text-sec);
-  box-shadow:  4px 4px 5px var(--shadow), inset 0 3px 6px var(--border-hover);
+  box-shadow:
+    4px 4px 5px var(--shadow),
+    inset 0 3px 6px var(--border-hover);
 }
 
 .card:hover .go-to {

@@ -4,13 +4,15 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  z-index: 999;
+  z-index: 9999;
   background: var(--card-bg);
+  position: relative;
   /* box-shadow: 1px 0 0.75px var(--text-pri); */
 }
 
 .nav-toggle {
   display: none;
+  justify-content: center;
   flex-direction: column;
   gap: 5px;
   background: none;
@@ -26,7 +28,7 @@ header {
 
 .bar {
   width: 20px;
-  height: 3px;
+  height: 2px;
   background: var(--text-pri);
   transition: 0.3s ease;
 }
@@ -41,18 +43,19 @@ header.shrunk {
   background-color: transparent;
   box-shadow: none;
   animation: move 0.5s linear;
-  gap: 3vw;
+  gap: 1vw;
 }
 header.shrunk nav {
   border-radius: 30px;
   padding: 5px;
   -webkit-backdrop-filter: blur(5px) saturate(10%);
-  backdrop-filter: blur(4px);
+  backdrop-filter: blur(10px);
   background: var(--glass-bg);
   border: 1px solid var(--glass-border);
+  overflow: hidden;
   box-shadow:
     inset 0 0 5px var(--glass-border),
-    0 5px 10px var(--shadow);
+    0 5px 10px var(--shadow), 0 0 50px var(--shadow);
   a {
     opacity: 1;
   }
@@ -67,7 +70,7 @@ header.shrunk nav a {
   transition: 0.5s linear;
   background: var(--glass-bg);
   box-shadow: inset 0 0 5px var(--glass-border);
-  border: 1px solid var(--glass-border);
+  border: 1px solid var(--border);
 }
 header.shrunk nav a:hover,
 header.shrunk nav a.active {
@@ -112,7 +115,7 @@ nav a {
   font-weight: 550;
   position: relative;
   font-size: 0.9rem;
-  background: var(--card-bg);
+  background: var(--card-bg-hover);
   transition: 0.5s ease-in-out;
 }
 nav a:hover,
@@ -124,10 +127,11 @@ nav a::before,
 nav a::after {
   border-radius: 20px !important;
 }
+nav a.active::after,
 nav a.active::before {
   height: 100%;
   width: 100%;
-  opacity: 1;
+  /* opacity: 1; */
 }
 
 .mode {
@@ -143,8 +147,16 @@ nav a.active::before {
   justify-content: center;
   cursor: pointer;
   transition: 0.5s linear;
-  /* border: 1px solid var(--glass-border); */
-  /* box-shadow: inset 0 0 5px var(--glass-border), 0 5px 10px var(--shadow); */
+}
+#theme.active {
+  box-shadow:
+    0 5px 10px var(--shadow),
+    inset 0 3px 6px var(--border-hover);
+  opacity: 1;
+}
+#theme.active i {
+  color: var(--text-sec);
+  transform: rotate(-45deg);
 }
 .mode i {
   font-size: 0.9rem;
@@ -163,4 +175,58 @@ nav a.active::before {
 }
 .mode:active i {
   rotate: 90deg;
+}
+
+.color {
+  display: flex;
+  gap: 1vw;
+  position: relative;
+}
+.show-color {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  border: 1px solid var(--glass-border);
+  border-radius: 10px;
+  height: fit-content;
+  width: 200px;
+  padding: 4rem 2rem;
+  opacity: 0;
+  transform: scale(0);
+  transition: 1s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+}
+.show-color {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background-color: var(--glass-bg);
+  box-shadow: 0 8px 20px var(--shadow);
+  backdrop-filter: blur(10px);
+  z-index: 9999;
+}
+.show-color ul {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.show-color li {
+  padding: 5px 7px;
+  font-size: 0.8rem;
+  text-align: center;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  cursor: pointer;
+  opacity: 0.9;
+}
+.show-color li:hover {
+  opacity: 1;
+  border: 1px solid var(--border-hover);
+}
+.show-color.active {
+  top: 100%;
+  left: 20%;
+  translate: -50% 10%;
+  transform: scale(1);
+  opacity: 1;
 }

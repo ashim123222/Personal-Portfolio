@@ -9,6 +9,9 @@ section.contact .cards {
 section.contact .cards .card {
   gap: 3px;
 }
+section.con-sec .cards {
+  margin-top: 10px;
+}
 
 .card .link {
   font-size: 1rem;
@@ -20,106 +23,129 @@ section.contact .cards .card {
   opacity: 0.7;
   font-size: 0.8rem;
 }
-.right .intro {
-  width: 40vw;
-  flex-grow: 1;
-}
+
 section.con-sec {
   display: flex;
   flex-direction: row-reverse;
   flex-wrap: wrap;
-  gap: 3rem;
   align-items: start;
+  gap: 3rem;
+}
+section.con-sec > * {
+  flex: 1;
+}
+section.con-sec .intro {
+  text-align: left;
 }
 
 .left {
-  min-width: 350px;
+  flex-grow: 1;
+  width: 100%;
 }
 
 .left,
 form {
-  flex-grow: 1;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 35px;
 }
-form {
-    border-radius: 10px;
-}
-.left h2 {
+.left h2,
+.right h2 {
   font-size: 2rem;
   margin-bottom: 1vw;
+  font-family: "Playfair Display", serif;
+  letter-spacing: 1px;
+  text-transform: capitalize;
 }
-label {
-  font-weight: 700;
-}
-form div {
+.input-group {
+  position: relative;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 0;
 }
 input,
 textarea,
-.left button {
-  padding: 12px 13px;
-  border: 1px solid var(--border);
-  border-radius: 4px;
-  resize: vertical;
+select {
   background: var(--card-bg);
-  /* border: 3px solid transparent; */
-  outline: 5px solid transparent;
-  transition: 0.3s linear;
-}
-button i {
-  transition: 0.3s linear;
-}
-input::placeholder,
-textarea::placeholder {
-  font-family: monospace;
-  color: var(--text-sec);
-  opacity: 0.7;
+  padding: 15px;
+  border-bottom: 1px solid var(--border);
 }
 input:focus,
-textarea:focus {
-  outline: 5px solid var(--border);
+textarea:focus, select:focus {
+  outline: none;
+  border-bottom: 1px solid var(--text-sec);
+  box-shadow: 0 2px 5px var(--border);
 }
+label {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  translate: 0% -50%;
+  opacity: 0.5 !important;
+  transition: all 0.2s linear !important;
+}
+
+input:focus ~ label,
+textarea:focus ~ label,
+select:focus ~ label,
+input:not(:placeholder-shown) ~ label,
+textarea:not(:placeholder-shown) ~ label, .lab {
+  top: -10px;
+  left: 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 12px;
+  color: var(--text-sec);
+  opacity: 1 !important;
+}
+option {
+  background: var(--bg-color);
+  color: var(--text-sec);
+}
+.sele {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.sele > * {
+  flex: 1;
+}
+
 textarea {
   min-height: 150px;
 }
 .left button {
   background: var(--border-hover);
   border: none;
+  padding: 10px;
   cursor: pointer;
   font-weight: 500;
   letter-spacing: 0.5px;
-  box-shadow: inset 1px 1px 2px var(--glass-bg), inset 5px 5px 3px var(--card-bg-hover), 10px 10px 10px var(--shadow);
+  border: 1px solid var(--border);
 }
 .left button:hover {
   color: var(--text-pri);
-  background: var(--text-sec);
+  background: var(--card-bg-hover);
+  /* border: 1px solid var(--border-hover); */
   z-index: 1;
 }
-.left button:hover i {
-  color: var(--text-pri);
-  transform: rotate(45deg) translateX(10px) translateY(-8px);
-}
+
 .right {
   flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    width: 400px;
-    min-width: 400px !important;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+  /* max-width: 400px; */
 }
-.right .card-imp {
-  width: 90%;
+.right .intro {
+  width: 100%;
+  /* font-size: 14px; */
+  letter-spacing: 0.5px;
 }
-.right h2 {
-    font-size: 2rem;
-}
-.right .card {
-  display: flex !important;
-  
+
+.right .cards .card {
+  min-width: 300px;
 }
 
 .right h4 {
@@ -127,8 +153,10 @@ textarea {
 }
 .right li {
   position: relative;
-  /* margin-left: 1rem; */
+  font-size: 16px;
+  letter-spacing: 0.5px;
   padding-left: 35px;
+  font-weight: 400 !important;
 }
 
 .right li::before {
@@ -144,23 +172,24 @@ textarea {
 }
 
 .card h5.subtext {
-    margin: 0px;
-    color: var(--live);
-    border: 1px solid var(--live);
-    background: var(--live-bg);
+  margin: 0px;
+  color: var(--live);
+  border: 1px solid var(--live);
+  background: var(--live-bg);
 }
-.card b, ul {
-    color: var(--text-sec);
+.bold {
+  letter-spacing: 1px;
 }
-.card b ul {
-    font-weight: 550;
-    line-height: 1.7;
-    font-size: 0.8rem;
-    opacity: 0.8;
+.card b {
+  color: var(--text-sec);
+}
+.card li {
+  font-weight: 550;
+  line-height: 1.1;
 }
 .quick {
-    background: linear-gradient(235deg, var(--border), var(--card-bg) );
+  background: linear-gradient(235deg, var(--border), var(--card-bg));
 }
 .quick:hover {
-    background: linear-gradient(255deg, var(--border), var(--card-bg) );
+  background: linear-gradient(255deg, var(--border), var(--card-bg));
 }

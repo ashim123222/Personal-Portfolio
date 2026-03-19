@@ -1,11 +1,11 @@
 <!doctype html>
-<body data-theme="light">
-  <html lang="en">
+<html lang="en" data-theme="light">
     <head>
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <title>Portfolio</title>
       <link rel="stylesheet" href="./css/style.css" />
+      <link rel="stylesheet" href="./css/color.css" />
       <link rel="stylesheet" href="./css/header.css" />
       <link rel="stylesheet" href="./css/home.css" />
       <link rel="stylesheet" href="./css/footer.css" />
@@ -40,36 +40,63 @@
         <div class="logo enter-left">M. ashim</div>
 
         <nav class="enter-top glass-icon">
-          <a class="active animate-border click-icon" href="index.html">Home</a>
-          <a class="animate-border click-icon" href="about.html">About</a>
-          <a class="animate-border click-icon" href="project.html">Projects</a>
-          <a class="animate-border click-icon" href="contact.html">Contact</a>
+          <a
+            class="active animate-border click-icon reveal-one"
+            href="index.html"
+            >Home</a
+          >
+          <a class="animate-border click-icon reveal-two" href="about.html"
+            >About</a
+          >
+          <a class="animate-border click-icon reveal-three" href="project.html"
+            >Projects</a
+          >
+          <a class="animate-border click-icon reveal-four" href="service.html"
+            >Service</a
+          >
+          <a class="animate-border click-icon reveal-five" href="contact.html"
+            >Contact</a
+          >
         </nav>
 
-        <button
-          class="mode enter-right click-icon glass-icon"
-          id="theme-toggle"
-        >
-          <i class="fa-regular fa-sun"></i>
-        </button>
-        <button
-          class="enter-right nav-toggle  click-icon"
-          aria-label="Toggle navigation"
-          aria-expanded="false"
-        >
-          <span class="bar one"></span>
-          <span class="bar two"></span>
-          <span class="bar three"></span>
-        </button>
+        <div class="color">
+          <button class="mode click-icon glass-icon" id="theme-toggle">
+            <i class="fa-regular fa-sun"></i>
+          </button>
+          <button class="mode click-icon glass-icon" id="theme">
+            <i class="fa-solid fa-brush"></i>
+          </button>
+
+          <div class="show-color">
+            <ul>
+              <li id="blue" class="click-icon">Blue</li>
+              <li id="red" class="click-icon">Red</li>
+              <li id="green" class="click-icon">Green</li>
+            </ul>
+            <ul>
+              <li id="d-blue" class="click-icon">Dark-Blue</li>
+              <li id="d-red" class="click-icon">Dark-Red</li>
+              <li id="d-green" class="click-icon">Dark-green</li>
+            </ul>
+          </div>
+          <button
+            class="nav-toggle click-icon"
+            aria-label="Toggle navigation"
+            aria-expanded="false"
+          >
+            <span class="bar one"></span>
+            <span class="bar two"></span>
+            <span class="bar three"></span>
+          </button>
+        </div>
       </header>
-      <!-- <div class="end reveal"></div> -->
-      <div class="float"></div>
 
       <section id="home" class="home">
         <div class="right enter-left">
           <div class="img">
             <img src="./assest/darker_version.png" alt="" />
           </div>
+          <p class="clock">00:00:00</p>
         </div>
         <div class="left">
           <div class="top">
@@ -140,7 +167,8 @@
       </section>
       <div class="end reveal"></div>
 
-      <section class="second bg-tech">
+      <section class="second bg-tech sec-card">
+        <div class="before animate-border"></div>
         <h1 class="name reveal">
           Explore <span class="name outline">More</span>
         </h1>
@@ -149,7 +177,7 @@
           your ideas to life
         </p>
         <div class="cards">
-          <div class="card reveal">
+          <div class="card reveal-card reveal-one">
             <div class="card-top">
               <i class="fa-regular fa-user"></i>
               <h3>About Me</h3>
@@ -166,7 +194,7 @@
               </span>
             </a>
           </div>
-          <div class="card reveal">
+          <div class="card reveal-card reveal-two">
             <div class="card-top">
               <i class="fa-solid fa-bolt"></i>
               <h3>Projects</h3>
@@ -180,7 +208,7 @@
               </span>
             </a>
           </div>
-          <div class="card reveal">
+          <div class="card reveal-card reveal-three">
             <div class="card-top">
               <i class="fa-solid fa-address-book"></i>
               <h3>Get in Touch</h3>
@@ -196,7 +224,7 @@
               </span>
             </a>
           </div>
-          <div class="card reveal">
+          <div class="card reveal-card reveal-four">
             <div class="card-top">
               <i class="fa-solid fa-briefcase"></i>
               <h3>Services</h3>
@@ -236,6 +264,9 @@
             </a>
           </div>
         </div>
+        <div class="imp-float f-one reveal"></div>
+        <div class="imp-float f-two reveal"></div>
+        <div class="imp-float f-three reveal"></div>
       </section>
 
       <div class="end reveal"></div>
@@ -271,6 +302,6 @@
       </footer>
 
       <script src="./js/script.js"></script>
+      <script src="./js/main.js"></script>
     </body>
-  </html>
-</body>
+</html>

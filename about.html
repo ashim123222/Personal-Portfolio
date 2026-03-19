@@ -1,15 +1,16 @@
 <!doctype html>
-<body data-theme="light">
-  <html lang="en">
+<html lang="en" data-theme="light">
     <head>
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <title>Portfolio</title>
       <link rel="stylesheet" href="./css/style.css" />
+      <link rel="stylesheet" href="./css/color.css" />
       <link rel="stylesheet" href="./css/header.css" />
       <link rel="stylesheet" href="./css/home.css" />
       <link rel="stylesheet" href="./css/about.css" />
       <link rel="stylesheet" href="./css/footer.css" />
+      <link rel="stylesheet" href="./css/float.css" />
       <link rel="stylesheet" href="./css/screen.css" />
 
       <!-- font awesome cdn  -->
@@ -39,31 +40,61 @@
       <header>
         <div class="logo enter-left">M. ashim</div>
 
-        <nav class="enter-top">
-          <a class="animate-border click-icon" href="index.html">Home</a>
-          <a class="active animate-border click-icon" href="about.html"
+        <nav class="enter-top glass-icon">
+          <a class="animate-border click-icon reveal-one" href="index.html"
+            >Home</a
+          >
+          <a
+            class="active animate-border click-icon reveal-two"
+            href="about.html"
             >About</a
           >
-          <a class="animate-border click-icon" href="project.html">Projects</a>
-          <a class="animate-border click-icon" href="contact.html">Contact</a>
+          <a class="animate-border click-icon reveal-three" href="project.html"
+            >Projects</a
+          >
+          <a class="animate-border click-icon reveal-four" href="service.html"
+            >Service</a
+          >
+          <a class="animate-border click-icon reveal-five" href="contact.html"
+            >Contact</a
+          >
         </nav>
 
-        <button class="mode enter-right click-icon" id="theme-toggle">
-          <i class="fa-regular fa-sun"></i>
-        </button>
-        <button
-          class="enter-right nav-toggle click-icon"
-          aria-label="Toggle navigation"
-          aria-expanded="false"
-        >
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
-        </button>
-      </header>
-      <div class="end reveal"></div>
+        <div class="color">
+          <button class="mode click-icon glass-icon" id="theme-toggle">
+            <i class="fa-regular fa-sun"></i>
+          </button>
+          <button class="mode click-icon glass-icon" id="theme">
+            <i class="fa-solid fa-brush"></i>
+          </button>
 
-      <section class="about">
+          <div class="show-color">
+            <ul>
+              <li id="blue" class="click-icon">Blue</li>
+              <li id="red" class="click-icon">Red</li>
+              <li id="green" class="click-icon">Green</li>
+            </ul>
+            <ul>
+              <li id="d-blue" class="click-icon">Dark-Blue</li>
+              <li id="d-red" class="click-icon">Dark-Red</li>
+              <li id="d-green" class="click-icon">Dark-green</li>
+            </ul>
+          </div>
+          <button
+            class="nav-toggle click-icon"
+            aria-label="Toggle navigation"
+            aria-expanded="false"
+          >
+            <span class="bar one"></span>
+            <span class="bar two"></span>
+            <span class="bar three"></span>
+          </button>
+        </div>
+      </header>
+
+      <p class="clock">00:00:00</p>
+      <section class="about sec-card">
+        <div class="before reveal"></div>
         <p class="subtext reveal">About Me</p>
         <h2 class="heading reveal">
           The Human Behind <span class="heading outline">the Code</span>
@@ -75,7 +106,7 @@
         </p>
         <h4 class="reveal">Focused on</h4>
         <div class="cards">
-          <div class="card reveal">
+          <div class="card reveal-card reveal-one">
             <div class="card-top">
               <i class="fa-solid fa-feather"></i>
               <h3>Minimalist Design</h3>
@@ -84,7 +115,7 @@
               </p>
             </div>
           </div>
-          <div class="card reveal">
+          <div class="card reveal-card reveal-two">
             <div class="card-top">
               <i class="fa-solid fa-mobile"></i>
               <h3>Highly Responsive</h3>
@@ -94,14 +125,14 @@
               </p>
             </div>
           </div>
-          <div class="card reveal">
+          <div class="card reveal-card reveal-three">
             <div class="card-top">
               <i class="fa-solid fa-bolt"></i>
               <h3>Performance-first</h3>
               <p>Work with performance first mindset,</p>
             </div>
           </div>
-          <div class="card reveal">
+          <div class="card reveal-card reveal-four">
             <div class="card-top">
               <i class="fa-solid fa-handshake"></i>
               <h3>Collaborative</h3>
@@ -115,7 +146,8 @@
       </section>
       <div class="end reveal"></div>
 
-      <section class="personal bg-tech">
+      <section class="personal bg-tech sec-card reveal-card">
+        <div class="before reveal"></div>
         <h2 class="name reveal">
           Personal <span class="name outline">Information</span>
         </h2>
@@ -125,7 +157,7 @@
           soluta doloremque.
         </p>
         <div class="cards">
-          <div class="card reveal">
+          <div class="card reveal-card reveal-one">
             <div class="card-top">
               <h3><i class="fa-regular fa-user"></i> Full Name</h3>
             </div>
@@ -134,7 +166,7 @@
               MERN Stack Developer
             </p>
           </div>
-          <div class="card reveal">
+          <div class="card reveal-card reveal-two">
             <div class="card-top">
               <h3><i class="fa-solid fa-location-dot"></i> Location</h3>
             </div>
@@ -143,7 +175,7 @@
               (Open to Remote Opportunities)
             </p>
           </div>
-          <div class="card reveal">
+          <div class="card reveal-card reveal-three">
             <div class="card-top">
               <h3><i class="fa-regular fa-clipboard"></i> Experience</h3>
             </div>
@@ -151,13 +183,13 @@
               Fresher | Actively Building Projects <br />Offering mini services
             </p>
           </div>
-          <div class="card reveal">
+          <div class="card reveal-card reveal-four">
             <div class="card-top">
               <h3><i class="fa-solid fa-check"></i> Specialization</h3>
             </div>
             <p>Frontend Development <br />Pursuing MERN Stack</p>
           </div>
-          <div class="card reveal">
+          <div class="card reveal-card reveal-five">
             <div class="card-top">
               <h3><i class="fa-solid fa-wifi"></i> Availability</h3>
             </div>
@@ -170,7 +202,8 @@
       </section>
       <div class="end reveal"></div>
 
-      <section class="skill bg-tech">
+      <section class="skill bg-tech sec-card">
+        <div class="before reveal"></div>
         <h2 class="name reveal">
           Technical <span class="name outline">Skills</span>
         </h2>
@@ -180,7 +213,7 @@
           Deserunt!
         </p>
         <div class="cards">
-          <div class="card reveal">
+          <div class="card reveal-card reveal-one">
             <div class="card-top">
               <h3><i class="fa-solid fa-laptop"></i> Frontend</h3>
             </div>
@@ -191,7 +224,7 @@
               <span>React</span>
             </div>
           </div>
-          <div class="card reveal">
+          <div class="card reveal-card reveal-two">
             <div class="card-top">
               <h3><i class="fa-solid fa-hashtag"></i> Backend</h3>
             </div>
@@ -201,7 +234,7 @@
               <span>Resy APIs</span>
             </div>
           </div>
-          <div class="card reveal">
+          <div class="card reveal-card reveal-three">
             <div class="card-top">
               <h3><i class="fa-solid fa-database"></i> Database</h3>
             </div>
@@ -211,7 +244,7 @@
               <span>Firebase</span>
             </div>
           </div>
-          <div class="card reveal">
+          <div class="card reveal-card reveal-four">
             <div class="card-top">
               <h3><i class="fa-solid fa-screwdriver-wrench"></i> Tools</h3>
             </div>
@@ -221,7 +254,7 @@
               <span>Hoppscotch</span>
             </div>
           </div>
-          <div class="card reveal">
+          <div class="card reveal-card reveal-five">
             <div class="card-top">
               <h3><i class="fa-brands fa-web-awesome"></i> Important</h3>
             </div>
@@ -231,7 +264,7 @@
               <span>Responsive</span>
             </div>
           </div>
-          <div class="card reveal">
+          <div class="card reveal-card reveal-six">
             <div class="card-top">
               <h3><i class="fa-solid fa-globe"></i> Language</h3>
             </div>
@@ -245,7 +278,7 @@
       </section>
       <div class="end reveal"></div>
 
-      <section class="reveal imp">
+      <section class="imp">
         <div class="common reveal">
           <h2 class="name reveal">Let's Work Together</h2>
           <p class="intro reveal">
@@ -283,7 +316,7 @@
           </div>
         </div>
       </section>
-      <div class="end reveal"></div>
+      <div class="end"></div>
 
       <footer>
         <p class="reveal">
@@ -317,5 +350,4 @@
 
       <script src="./js/script.js"></script>
     </body>
-  </html>
-</body>
+</html>

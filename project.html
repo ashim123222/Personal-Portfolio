@@ -1,16 +1,19 @@
 <!doctype html>
-<body data-theme="light">
-  <html lang="en">
+<html lang="en" data-theme="light">
     <head>
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <title>Portfolio</title>
       <link rel="stylesheet" href="./css/style.css" />
+      <link rel="stylesheet" href="./css/color.css" />
       <link rel="stylesheet" href="./css/header.css" />
       <link rel="stylesheet" href="./css/home.css" />
-      <link rel="stylesheet" href="./css/about.css" />
-      <link rel="stylesheet" href="./css/project.css" />
       <link rel="stylesheet" href="./css/footer.css" />
+      <link rel="stylesheet" href="./css/float.css" />
+      <link rel="stylesheet" href="./css/about.css" />
+      <link rel="stylesheet" href="./css/skill.css" />
+      <link rel="stylesheet" href="./css/project.css" />
+      <link rel="stylesheet" href="./css/contact.css" />
       <link rel="stylesheet" href="./css/screen.css" />
 
       <!-- font awesome cdn  -->
@@ -40,38 +43,58 @@
       <header>
         <div class="logo enter-left">M. ashim</div>
 
-        <nav>
-          <a class="animate-border click-icon enter-top" href="index.html"
+        <nav class="enter-top glass-icon">
+          <a class="animate-border click-icon reveal-one" href="index.html"
             >Home</a
           >
-          <a class="animate-border click-icon enter-top" href="about.html"
+          <a class="animate-border click-icon reveal-two" href="about.html"
             >About</a
           >
           <a
-            class="active animate-border click-icon enter-top"
+            class="active animate-border click-icon reveal-three"
             href="project.html"
             >Projects</a
           >
-          <a class="animate-border click-icon enter-top" href="contact.html"
+          <a class="animate-border click-icon reveal-four" href="service.html"
+            >Service</a
+          >
+          <a class="animate-border click-icon reveal-five" href="contact.html"
             >Contact</a
           >
         </nav>
 
-        <button class="mode enter-right click-icon" id="theme-toggle">
-          <i class="fa-regular fa-sun"></i>
-        </button>
-        <button
-          class="enter-right nav-toggle  click-btn"
-          aria-label="Toggle navigation"
-          aria-expanded="false"
-        >
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
-        </button>
-      </header>
-      <!-- <div class="end reveal"></div> -->
+        <div class="color">
+          <button class="mode click-icon glass-icon" id="theme-toggle">
+            <i class="fa-regular fa-sun"></i>
+          </button>
+          <button class="mode click-icon glass-icon" id="theme">
+            <i class="fa-solid fa-brush"></i>
+          </button>
 
+          <div class="show-color">
+            <ul>
+              <li id="blue" class="click-icon">Blue</li>
+              <li id="red" class="click-icon">Red</li>
+              <li id="green" class="click-icon">Green</li>
+            </ul>
+            <ul>
+              <li id="d-blue" class="click-icon">Dark-Blue</li>
+              <li id="d-red" class="click-icon">Dark-Red</li>
+              <li id="d-green" class="click-icon">Dark-green</li>
+            </ul>
+          </div>
+          <button
+            class="nav-toggle click-icon"
+            aria-label="Toggle navigation"
+            aria-expanded="false"
+          >
+            <span class="bar one"></span>
+            <span class="bar two"></span>
+            <span class="bar three"></span>
+          </button>
+        </div>
+      </header>
+      <p class="clock">00:00:00</p>
       <section class="about">
         <p class="subtext reveal">My Projects</p>
         <h2 class="heading reveal">
@@ -297,5 +320,4 @@
       <script src="./js/script.js"></script>
       <script src="./js/project.js"></script>
     </body>
-  </html>
-</body>
+</html>

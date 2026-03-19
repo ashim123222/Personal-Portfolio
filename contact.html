@@ -1,254 +1,300 @@
 <!doctype html>
-<body data-theme="light">
-  <html lang="en">
-    <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Portfolio</title>
-      <link rel="stylesheet" href="./css/style.css" />
-      <link rel="stylesheet" href="./css/header.css" />
-      <link rel="stylesheet" href="./css/home.css" />
-      <link rel="stylesheet" href="./css/about.css" />
-      <link rel="stylesheet" href="./css/project.css" />
-      <link rel="stylesheet" href="./css/contact.css" />
-      <link rel="stylesheet" href="./css/footer.css" />
-      <link rel="stylesheet" href="./css/screen.css" />
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/color.css" />
+    <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/home.css" />
+    <link rel="stylesheet" href="./css/footer.css" />
+    <link rel="stylesheet" href="./css/float.css" />
+    <link rel="stylesheet" href="./css/contact.css" />
+    <link rel="stylesheet" href="./css/about.css" />
+    <link rel="stylesheet" href="./css/project.css" />
+    <link rel="stylesheet" href="./css/skill.css" />
+    <link rel="stylesheet" href="./css/screen.css" />
 
-      <!-- font awesome cdn  -->
-      <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-        crossorigin="anonymous"
-        referrerpolicy="no-referrer"
-      />
+    <!-- font awesome cdn  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
-      <link
-        rel="stylesheet"
-        type="text/css"
-        href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
-      />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+    />
 
-      <!-- google font  -->
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-      <link
-        href="https://fonts.googleapis.com/css2?family=Asul:wght@400;700&family=Iceberg&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Italianno&family=Leckerli+One&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
-        rel="stylesheet"
-      />
+    <!-- google font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Asul:wght@400;700&family=Iceberg&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Italianno&family=Leckerli+One&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="logo enter-left">M. ashim</div>
 
-      <!-- email js skd  -->
-    </head>
-    <body>
-      <header>
-        <div class="logo enter-left">M. ashim</div>
+      <nav class="enter-top glass-icon">
+        <a class="animate-border click-icon reveal-one" href="index.html"
+          >Home</a
+        >
+        <a class="animate-border click-icon reveal-two" href="about.html"
+          >About</a
+        >
+        <a class="animate-border click-icon reveal-three" href="project.html"
+          >Projects</a
+        >
+        <a class="animate-border click-icon reveal-four" href="service.html"
+          >Service</a
+        >
+        <a
+          class="active animate-border click-icon reveal-five"
+          href="contact.html"
+          >Contact</a
+        >
+      </nav>
 
-        <nav class="enter-top">
-          <a class="animate-border click-icon" href="index.html">Home</a>
-          <a class="animate-border click-icon" href="about.html">About</a>
-          <a class="animate-border click-icon" href="project.html">Projects</a>
-          <a class="active animate-border click-icon" href="contact.html"
-            >Contact</a
-          >
-        </nav>
-
-        <button class="mode enter-right click-icon" id="theme-toggle">
+      <div class="color">
+        <button class="mode click-icon glass-icon" id="theme-toggle">
           <i class="fa-regular fa-sun"></i>
         </button>
+        <button class="mode click-icon glass-icon" id="theme">
+          <i class="fa-solid fa-brush"></i>
+        </button>
+
+        <div class="show-color">
+          <ul>
+            <li id="blue" class="click-icon">Blue</li>
+            <li id="red" class="click-icon">Red</li>
+            <li id="green" class="click-icon">Green</li>
+          </ul>
+          <ul>
+            <li id="d-blue" class="click-icon">Dark-Blue</li>
+            <li id="d-red" class="click-icon">Dark-Red</li>
+            <li id="d-green" class="click-icon">Dark-green</li>
+          </ul>
+        </div>
         <button
-          class="enter-right nav-toggle click-icon"
+          class="nav-toggle click-icon"
           aria-label="Toggle navigation"
           aria-expanded="false"
         >
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
+          <span class="bar one"></span>
+          <span class="bar two"></span>
+          <span class="bar three"></span>
         </button>
-      </header>
-      <div class="end"></div>
+      </div>
+    </header>
 
-      <section class="about">
-        <p class="subtext reveal">Get in touch</p>
-        <h2 class="heading reveal">
-          Let's Work <span class="heading outline">Together</span>
-        </h2>
+    <p class="clock">00:00:00</p>
+    <section class="about">
+      <p class="subtext reveal">Get in touch</p>
+      <h2 class="heading reveal">
+        Let's Work <span class="heading outline">Together</span>
+      </h2>
+      <p class="intro reveal">
+        Ready to bring your ideas to life? I'm here to help you build something
+        exceptional. Let’s discuss your vision and turn it into a powerful
+        digital experience.
+      </p>
+    </section>
+    <div class="end reveal"></div>
+
+    <section class="contact sec-card">
+      <h2 class="heading reveal">
+        Ways to <span class="heading outline">Reach Me</span>
+      </h2>
+      <p class="intro reveal">
+        Choose the best way to reach me based on your needs
+      </p>
+
+      <div class="cards">
+        <a
+          class="card reveal-card card-contact"
+          href="mailto:moinamashim123@gmail.com"
+        >
+          <div class="card-top">
+            <i class="fa-regular fa-envelope"></i>
+            <h3>Email</h3>
+          </div>
+          <p>Best for detailed discussions</p>
+          <p class="link">moinamashim123@gmail.com</p>
+          <p class="note">24/7 - Response within 12 hours</p>
+        </a>
+
+        <a
+          class="card reveal-card card-contact click-btn"
+          href="tel:+917627993511"
+        >
+          <div class="card-top">
+            <i class="fa-solid fa-phone"></i>
+            <h3>Phone</h3>
+          </div>
+          <p>For urgent inquiries only</p>
+          <p class="link">+91 7627993511</p>
+          <p class="note">Sat-Thur, 9AM - 6PM</p>
+        </a>
+        <a class="card reveal-card card-contact click-btn" href="">
+          <div class="card-top">
+            <i class="fa-solid fa-location-dot"></i>
+            <h3>Location</h3>
+          </div>
+          <p>Available for remote work worldwide</p>
+          <p class="link">Manipur, India</p>
+          <p class="note">24/7 - Response within 12 hours</p>
+        </a>
+      </div>
+    </section>
+    <div class="end reveal"></div>
+
+    <section class="con-sec">
+      <div class="right">
+        <h2 class="reveal">Let's create something amazing</h2>
         <p class="intro reveal">
-          Ready to bring your ideas to life? I'm here to help something amazing.
-          Let's discuss your project and see how we can work together.
+          I'm passionate about helping businesses and individuals bring their
+          digital ideas to life. Whether you need a Portfolio, a landing page,
+          or frontend development support, I deliver clean, responsive, and
+          performance-focused solutions.
         </p>
-      </section>
-      <div class="end reveal"></div>
-
-      <section class="contact">
-        <h2 class="heading reveal">Methods of <span class="heading outline">Reach out</span></h2>
-        <p class="intro reveal">
-          Choose the best way to reach me based on your needs
-        </p>
-
         <div class="cards">
-          <a
-            class="card reveal card-contact"
-            href="mailto:moinamashim123@gmail.com"
-          >
-            <div class="card-top">
-              <i class="fa-regular fa-envelope"></i>
-              <h3>Email</h3>
-            </div>
-            <p>Best for detail discussion</p>
-            <p class="link">moinamashim123@gmail.com</p>
-            <p class="note">24/7 - Response within 12 hours</p>
-          </a>
-
-          <a
-            class="card reveal card-contact click-btn"
-            href="tel:+917627993511"
-          >
-            <div class="card-top">
-              <i class="fa-solid fa-phone"></i>
-              <h3>Phone</h3>
-            </div>
-            <p>For urgents only</p>
-            <p class="link">+91 7627993511</p>
-            <p class="note">Sat-Thur, 9AM - 6PM</p>
-          </a>
-          <a class="card reveal card-contact click-btn" href="">
-            <div class="card-top">
-              <i class="fa-solid fa-location-dot"></i>
-              <h3>Location</h3>
-            </div>
-            <p>Remote work worlwide</p>
-            <p class="link">Manipur, India</p>
-            <p class="note">24/7 - Response within 12 hours</p>
-          </a>
-        </div>
-      </section>
-      <div class="end reveal"></div>
-
-      <section class="con-sec">
-        <div class="right">
-          <h2 class="reveal">Let's create something Amazing</h2>
-          <p class="intro reveal">
-            I'm passionate about helping businesses and individuals bring their
-            digital ideas to life. Whether you need a website or technical
-            consultation, I'm here to help.
-          </p>
-          <div class="cards">
-            <div class="card card-imp reveal quick">
-              <h4>Quick Start Package</h4>
-              <p>
-                Need to get started quickly? I offer a streamlined process for
-                Portfolio websites and Landing pages.
-              </p>
-              <b
-                >Starting at $80 only<br />
-                <ul>
-                  Delivery under 1 week
-                </ul>
-              </b>
-            </div>
-            <div class="card reveal">
-              <h4>What to expect</h4>
-              <li>Free Consultation call</li>
-              <li>Detailed Project proposal</li>
-              <li>Transparent Pricing</li>
-              <li>Regular projects update</li>
-            </div>
-            <div class="card reveal">
-              <h4>Availability</h4>
-              <h5 class="subtext">Available for frontent projects</h5>
-              <li>Portfolio</li>
-              <li>Landing Page</li>
-              <li>Showcase Products</li>
-            </div>
+          <div class="card card-imp reveal quick">
+            <h3>Quick Start Package</h3>
+            <p>
+              Need to get started quickly? I offer a streamlined process for
+              portfolio websites and landing pages..
+            </p>
+            <b class="bold">Starting at $50 only<br /> </b>
+            <li>Delivery within 7 days</li>
+          </div>
+          <div class="card reveal-card">
+            <h3>What to expect</h3>
+            <li>Free Consultation call</li>
+            <li>Detailed project proposal</li>
+            <li>Transparent Pricing</li>
+            <li>Regular project updates</li>
+          </div>
+          <div class="card reveal-card">
+            <h3>Availability</h3>
+            <h5 class="subtext">Available for frontend projects</h5>
+            <li>Portfolio</li>
+            <li>Landing Page</li>
+            <li>Showcase Products</li>
           </div>
         </div>
+      </div>
 
-        <div class="left">
-          <h2 class="reveal">Send Message</h2>
-          <form id="contact-form" action="">
-            <div>
-              <label class="reveal" for="name">Full Name *</label>
-              <input
-                class="reveal"
-                name="from_name"
-                type="text"
-                id="name"
-                required
-                placeholder="Enter name"
-              />
+      <div class="left">
+        <h2 class="reveal">Send Message</h2>
+        <form id="contact-form" action="">
+          <div class="input-group">
+            <input
+              class="reveal"
+              name="from_name"
+              type="text"
+              id="name"
+              required
+              placeholder=" "
+            />
+            <label class="reveal" for="name">Full Name</label>
+          </div>
+          <div class="input-group">
+            <input
+              class="reveal"
+              name="from_email"
+              type="text"
+              id="email"
+              required
+              placeholder=" "
+            />
+            <label class="reveal" for="email">Email Address</label>
+          </div>
+          <div class="sele">
+            <div class="input-group">
+              <select name="from_service" id="service-type" class="reveal" required>
+                <option value="" disabled selected></option>
+                <option value="Portfolio">Portfolio</option>
+                <option value="Landing-page">Landing page</option>
+                <option value="Collaboration">Collaborate</option>
+              </select>
+              <label for="service-type" class="lab">Service Type</label>
             </div>
-            <div>
-              <label class="reveal" for="email">Email Address *</label>
-              <input
-                class="reveal"
-                name="from_email"
-                type="text"
-                id="email"
-                required
-                placeholder="Enter email"
-              />
+            <div class="input-group">
+              <select name="from_page" id="page" class="reveal" required>
+                <option value="" disabled selected></option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="5 +">5 +</option>
+              </select>
+              <label for="page" class="lab">Select Pages</label>
             </div>
-            <div>
-              <label class="reveal" for="email">Subject *</label>
-              <input
-                class="reveal"
-                name="subject"
-                type="text"
-                id="subject"
-                required
-                placeholder="Project consultation"
-              />
-            </div>
-            <div>
-              <label class="reveal" for="email">Details *</label>
-              <textarea
-                class="reveal"
-                name="message"
-                id=""
-                required
-                placeholder="Explain what do you want"
-              ></textarea>
-            </div>
-            <button type="submit" class="reveal click-btn">
-              Send Message <i class="fa-regular fa-paper-plane"></i>
-            </button>
-          </form>
-        </div>
-      </section>
-      <div class="end"></div>
+          </div>
+          <div class="input-group">
+            <input
+              class="reveal"
+              name="subject"
+              type="text"
+              id="subject"
+              required
+              placeholder=" "
+            />
+            <label class="reveal" for="subject">Subject</label>
+          </div>
+          <div class="input-group">
+            <textarea
+              class="reveal"
+              name="message"
+              id="message"
+              required
+              placeholder=" "
+            ></textarea>
+            <label class="reveal" for="message">Details</label>
+          </div>
+          <button type="submit" class="reveal click-btn">
+            Submit Project Inquiry
+          </button>
+        </form>
+      </div>
+    </section>
+    <div class="end"></div>
 
-      <footer>
-        <p class="reveal">
-          &copy; 2026: Made with &hearts; by <u>Moinam Ashim</u> <br />
-          From scratch with Chai
-        </p>
-        <div class="social-links">
-          <a
-            class="icon reveal click-icon"
-            href="https://github.com/ashim123222"
-          >
-            <i class="click-icon fa-brands fa-github"></i>
-          </a>
-          <a
-            class="icon reveal click-icon"
-            href="https://www.linkedin.com/in/moinam-ashim-786brr/"
-            ><i class="click-icon fa-brands fa-linkedin-in"></i
-          ></a>
-          <a
-            class="icon reveal click-icon"
-            href="mailto:moinamashim123@gmail.com"
-            ><i class="click-icon fa-regular fa-envelope"></i
-          ></a>
-          <a
-            class="icon reveal click-icon"
-            href="https://www.facebook.com/moimam.ashim"
-            ><i class="click-icon fa-brands fa-facebook"></i
-          ></a>
-        </div>
-      </footer>
+    <footer>
+      <p class="reveal">
+        &copy; 2026: Made with &hearts; by <u>Moinam Ashim</u> <br />
+        From scratch with Chai
+      </p>
+      <div class="social-links">
+        <a class="icon reveal click-icon" href="https://github.com/ashim123222">
+          <i class="click-icon fa-brands fa-github"></i>
+        </a>
+        <a
+          class="icon reveal click-icon"
+          href="https://www.linkedin.com/in/moinam-ashim-786brr/"
+          ><i class="click-icon fa-brands fa-linkedin-in"></i
+        ></a>
+        <a class="icon reveal click-icon" href="mailto:moinamashim123@gmail.com"
+          ><i class="click-icon fa-regular fa-envelope"></i
+        ></a>
+        <a
+          class="icon reveal click-icon"
+          href="https://www.facebook.com/moimam.ashim"
+          ><i class="click-icon fa-brands fa-facebook"></i
+        ></a>
+      </div>
+    </footer>
 
-      <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-      <script src="./js/script.js"></script>
-    </body>
-  </html>
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Portfolio</title>
+      <link rel="stylesheet" href="./css/style.css" />
+      <link rel="stylesheet" href="./css/color.css" />
+      <link rel="stylesheet" href="./css/header.css" />
+      <link rel="stylesheet" href="./css/home.css" />
+      <link rel="stylesheet" href="./css/footer.css" />
+      <link rel="stylesheet" href="./css/float.css" />
+      <link rel="stylesheet" href="./css/service.css" />
+      <link rel="stylesheet" href="./css/screen.css" />
+
+      <!-- font awesome cdn  -->
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+      />
+
+      <link
+        rel="stylesheet"
+        type="text/css"
+        href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+      />
+
+      <!-- google font  -->
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Asul:wght@400;700&family=Iceberg&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Italianno&family=Leckerli+One&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet"
+      />
+    </head>
+    <body>
+      <header>
+        <div class="logo enter-left">M. ashim</div>
+
+        <nav class="enter-top glass-icon">
+          <a class="animate-border click-icon" href="index.html">Home</a>
+          <a class="animate-border click-icon" href="about.html">About</a>
+          <a class="animate-border click-icon" href="project.html">Projects</a>
+          <a class="animate-border active click-icon" href="service.html"
+            >Service</a
+          >
+          <a class="animate-border click-icon" href="contact.html">Contact</a>
+        </nav>
+
+        <div class="color">
+          <button class="mode click-icon glass-icon" id="theme-toggle">
+            <i class="fa-regular fa-sun"></i>
+          </button>
+          <button class="mode click-icon glass-icon" id="theme">
+            <i class="fa-solid fa-brush"></i>
+          </button>
+
+          <div class="show-color">
+            <ul>
+              <li id="blue" class="click-icon">Blue</li>
+              <li id="red" class="click-icon">Red</li>
+              <li id="green" class="click-icon">Green</li>
+            </ul>
+            <ul>
+              <li id="d-blue" class="click-icon">Dark-Blue</li>
+              <li id="d-red" class="click-icon">Dark-Red</li>
+              <li id="d-green" class="click-icon">Dark-green</li>
+            </ul>
+          </div>
+          <button
+            class="nav-toggle click-icon"
+            aria-label="Toggle navigation"
+            aria-expanded="false"
+          >
+            <span class="bar one"></span>
+            <span class="bar two"></span>
+            <span class="bar three"></span>
+          </button>
+        </div>
+      </header>
+
+      <p class="clock">00:00:00</p>
+      <section>
+        <h2 class="name reveal">
+          Services I <span class="name outline">Offer</span>
+        </h2>
+        <p class="intro reveal">
+          I help individuals and businesses build clean, responsive, and
+          performance-focused websites that deliver real results.
+        </p>
+        <div class="service-cards">
+          <div class="ser-card reveal">
+            <div class="top">
+              <h1>Portfolio Website Development</h1>
+              <h3><span>Starting at</span> $20 <span>Only</span></h3>
+              <p>
+                A custom-designed portfolio website crafted to showcase your
+                skills, projects, and professional identity with a clean and
+                responsive layout.
+              </p>
+              <div class="detail-ser">
+                <h4>What’s included:</h4>
+                <li>
+                  Up to 5 pages (Home, About, Projects, Contact, Services)
+                </li>
+                <li>Fully responsive design (mobile, tablet, desktop)</li>
+                <li>Clean UI with smooth interactions</li>
+                <li>Contact form integration (EmailJS)</li>
+                <li>Deployment assistance (GitHub / Vercel / Netlify)</li>
+              </div>
+              <div class="del-ser">
+                <div class="one">
+                  <p>
+                    <b>Best for</b> -- Students, freelancers, developers,
+                    creatives
+                  </p>
+                </div>
+                <div class="one">
+                  <h4>Delivery : <span>5–7 days</span></h4>
+                </div>
+              </div>
+            </div>
+            <a href="contact.html#contact-form" class="animate-border"
+              >Start Project <i class="fa-solid fa-arrow-right"></i
+            ></a>
+          </div>
+          <div class="ser-card reveal">
+            <div class="top">
+              <h1>High-Converting Landing Page</h1>
+              <h3><span>Starting at</span> $70 <span>Only</span></h3>
+              <p>
+                A focused, conversion-driven landing page designed to
+                communicate your offer clearly and turn visitors into leads.
+              </p>
+              <div class="detail-ser">
+                <h4>What’s included:</h4>
+                <li>Single-page conversion-focused layout</li>
+                <li>Strong call-to-action structure</li>
+                <li>Clean UI with smooth interactions</li>
+                <li>Scroll animations & modern UI effects</li>
+                <li>Performance optimization</li>
+              </div>
+              <div class="del-ser">
+                <div class="one">
+                  <p>
+                    <b>Best for</b> -- Product launches, startups, marketing
+                    campaigns
+                  </p>
+                </div>
+                <div class="one">
+                  <h4>Delivery : <span>3–5 days</span></h4>
+                </div>
+              </div>
+            </div>
+            <a href="contact.html#contact-form" class="animate-border"
+              >Star Project <i class="fa-solid fa-arrow-right"></i
+            ></a>
+          </div>
+          <div class="ser-card reveal">
+            <div class="top">
+              <h1>Frontend UI Development</h1>
+              <h3><span>Starting at</span> $100 <span>Only</span></h3>
+              <p>
+                Pixel-perfect frontend implementation from Figma or design
+                systems, built with scalable and maintainable code practices.
+              </p>
+              <div class="detail-ser">
+                <h4>What’s included:</h4>
+                <li>Design-to-code conversion</li>
+                <li>Responsive layout implementation</li>
+                <li>Reusable component structure</li>
+                <li>Cross-browser compatibility</li>
+                <li>Collaboration-ready code (for backend integration)</li>
+              </div>
+              <div class="del-ser">
+                <div class="one">
+                  <p>
+                    <b>Best for</b> -- Startups, agencies, development teams
+                  </p>
+                </div>
+                <div class="one">
+                  <h4>Delivery : <span>Based on project scope</span></h4>
+                </div>
+              </div>
+            </div>
+            <a href="contact.html#contact-form" class="animate-border"
+              >Start Project <i class="fa-solid fa-arrow-right"></i
+            ></a>
+          </div>
+        </div>
+      </section>
+      <div class="end"></div>
+
+      <section class="perser">
+        <h2 class="name reveal">
+          How I Build Digital <span class="name outline">Experiences</span>
+        </h2>
+        <p class="intro reveal">
+          A structured workflow that ensures every project is thoughtfully
+          designed, efficiently developed, and delivered with precision.
+        </p>
+        <div class="pro-cards">
+          <div class="main reveal" id="main"><h3>See How I Work</h3></div>
+          <div class="card c-one">
+            <h1>01</h1>
+            <div>
+              <h5>Consultation</h5>
+              <p>Understanding your goals and requirements</p>
+            </div>
+          </div>
+          <div class="card c-two">
+            <h1>02</h1>
+            <div>
+              <h5>Planning & Design</h5>
+              <p>Structure and layout strategy</p>
+            </div>
+          </div>
+          <div class="card c-three">
+            <h1>03</h1>
+            <div>
+              <h5>Development</h5>
+              <p>Clean and optimized implementation</p>
+            </div>
+          </div>
+          <div class="card c-four">
+            <h1>04</h1>
+            <div>
+              <h5>Review & Launch</h5>
+              <p>Testing, revisions, and deployment</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="end"></div>
+      <footer>
+        <p class="reveal">
+          &copy; 2026: Made with &hearts; by <u>Moinam Ashim</u> <br />
+          From scratch with Chai
+        </p>
+        <div class="social-links">
+          <a
+            class="icon reveal click-icon"
+            href="https://github.com/ashim123222"
+          >
+            <i class="click-icon fa-brands fa-github"></i>
+          </a>
+          <a
+            class="icon reveal click-icon"
+            href="https://www.linkedin.com/in/moinam-ashim-786brr/"
+            ><i class="click-icon fa-brands fa-linkedin-in"></i
+          ></a>
+          <a
+            class="icon reveal click-icon"
+            href="mailto:moinamashim123@gmail.com"
+            ><i class="click-icon fa-regular fa-envelope"></i
+          ></a>
+          <a
+            class="icon reveal click-icon"
+            href="https://www.facebook.com/moimam.ashim"
+            ><i class="click-icon fa-brands fa-facebook"></i
+          ></a>
+        </div>
+      </footer>
+
+      <script src="./js/script.js"></script>
+      <script src="./js/service.js"></script>
+    </body>
+</html>

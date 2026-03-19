@@ -1,0 +1,225 @@
+:root {
+  --bg-color: rgb(1, 15, 11);
+
+  --text-pri: #cdfff7;
+  --text-sec: #3da999;
+
+  --card-bg: rgba(12, 45, 38, 0.256);
+  --card-bg-hover: rgba(15, 58, 47, 0.278);
+
+  --border: rgba(101, 255, 193, 0.25);
+  --border-hover: rgba(60, 255, 203, 0.65);
+  --icon-border: rgba(210, 240, 255, 0.2);
+
+  --live: rgb(0, 210, 255);
+  --live-bg: rgba(10, 40, 60, 0.8);
+
+  --accent-bg-hover: rgba(50, 170, 156, 0.216);
+
+  --glass-border: rgba(18, 59, 93, 0.301);
+  --glass-bg: rgba(9, 41, 31, 0.223);
+
+  --shadow: rgb(0, 0, 0);
+
+  --service: rgba(16, 153, 142, 0.25);
+
+  --bg-home: url(../assest/image.png);
+  --bg: url(../assest/bg-card.png);
+}
+
+[data-theme="white"] {
+  --bg-color: #f0f3f5;
+  --text-pri: #092f53;
+  --text-sec: #2c9180;
+
+  --card-bg: rgba(212, 230, 238, 0.167);
+  --card-bg-hover: rgba(255, 255, 255, 0.46);
+
+  --border: rgba(0, 136, 204, 0.395);
+  --border-hover: rgba(136, 213, 252, 0.642);
+  --icon-border: rgba(11, 28, 45, 0.15);
+
+  --live: #0aa60a;
+  --live-bg: rgba(10, 166, 10, 0.08);
+
+  --accent-bg-hover: rgba(0, 119, 166, 0.08);
+
+  --glass-border: rgba(255, 255, 255, 0.507);
+  --glass-bg: rgba(221, 251, 241, 0.318);
+
+  --shadow: rgba(35, 71, 86, 0.138);
+
+  --service: #70d5e53c;
+
+  --bg-home: url(../assest/image-white.png);
+  --bg: url(../assest/bg-card-white.png);
+}
+
+[data-theme="blue"] {
+  --bg-color: #eef5fb;
+
+  --text-pri: #0b2e4f;
+  --text-sec: #1e8fd1;
+
+  --card-bg: rgba(170, 210, 247, 0.222);
+  --card-bg-hover: rgba(255, 255, 255, 0.55);
+
+  --border: rgba(0, 140, 210, 0.32);
+  --border-hover: rgba(120, 200, 255, 0.55);
+  --icon-border: rgba(20, 45, 70, 0.15);
+
+  --live: #0aa60a;
+  --live-bg: rgba(10, 166, 10, 0.08);
+
+  --accent-bg-hover: rgba(0, 135, 210, 0.08);
+
+  --glass-border: rgba(255, 255, 255, 0.55);
+  --glass-bg: rgba(220, 240, 255, 0.35);
+
+  --shadow: rgba(20, 60, 90, 0.12);
+  
+  --service: #006eff20;
+
+  --bg-home: url(../assest/image-white.png);
+  --bg: url(../assest/bg-card-white.png);
+}
+[data-theme="red"] {
+  --bg-color: #ffffff;
+
+  --text-pri: #4a1f24;
+  --text-sec: #d94a5a;
+
+  --card-bg: rgba(246, 180, 185, 0.296);
+  --card-bg-hover: rgba(255, 255, 255, 0.585);
+
+  --border: rgba(210, 80, 90, 0.32);
+  --border-hover: rgba(255, 150, 160, 0.55);
+  --icon-border: rgba(70, 20, 25, 0.15);
+
+  --live: #0aa60a;
+  --live-bg: rgba(10, 166, 10, 0.08);
+
+  --accent-bg-hover: rgba(210, 80, 90, 0.08);
+
+  --glass-border: rgba(255, 255, 255, 0.55);
+  --glass-bg: rgba(255, 230, 232, 0.35);
+
+  --shadow: rgba(90, 30, 35, 0.12);
+
+  --service: #f4958c3c;
+
+  --bg-home: url(../assest/image-white.png);
+  --bg: url(../assest/bg-card-white.png);
+}
+[data-theme="green"] {
+  --bg-color: #ffffff;
+
+  --text-pri: #0f3a2d;
+  --text-sec: #2fa87a;
+
+  --card-bg: rgba(192, 247, 223, 0.321);
+  --card-bg-hover: rgba(255, 255, 255, 0.55);
+
+  --border: rgba(50, 170, 120, 0.32);
+  --border-hover: rgba(140, 230, 190, 0.55);
+  --icon-border: rgba(20, 60, 45, 0.15);
+
+  --live: #0aa60a;
+  --live-bg: rgba(10, 166, 10, 0.08);
+
+  --accent-bg-hover: rgba(50, 170, 120, 0.08);
+
+  --glass-border: rgba(255, 255, 255, 0.55);
+  --glass-bg: rgba(225, 250, 240, 0.35);
+
+  --shadow: rgba(25, 80, 60, 0.12);
+
+  --service: rgba(0, 150, 20, 0.101);
+
+  --bg-home: url(../assest/image-white.png);
+  --bg: url(../assest/bg-card-white.png);
+}
+[data-theme="d-blue"] {
+  --bg-color: rgb(6, 10, 18);
+
+  --text-pri: #b5dcfb;
+  --text-sec: #2bbcff;
+
+  --card-bg: rgba(12, 28, 45, 0.35);
+  --card-bg-hover: rgba(18, 40, 65, 0.45);
+
+  --border: rgba(60, 180, 255, 0.25);
+  --border-hover: rgba(60, 180, 255, 0.65);
+  --icon-border: rgba(210, 240, 255, 0.2);
+
+  --live: rgb(0, 210, 255);
+  --live-bg: rgba(10, 40, 60, 0.8);
+
+  --accent-bg-hover: rgba(50, 120, 170, 0.25);
+
+  --glass-border: rgba(14, 59, 97, 0.247);
+  --glass-bg: rgba(13, 36, 54, 0.223);
+
+  --shadow: rgb(0, 0, 0);
+
+  --service: rgba(2, 13, 104, 0.244);
+
+  --bg-home: url(../assest/image.png);
+  --bg: url(../assest/bg-card.png);
+}
+[data-theme="d-red"] {
+  --bg-color: rgb(13, 4, 4);
+
+  --text-pri: #ffdcdc;
+  --text-sec: #ff4a4a;
+
+  --card-bg: rgba(69, 19, 19, 0.35);
+  --card-bg-hover: rgba(60, 18, 18, 0.45);
+
+  --border: rgba(255, 80, 80, 0.25);
+  --border-hover: rgba(255, 80, 80, 0.65);
+  --icon-border: rgba(255, 200, 200, 0.2);
+
+  --live: rgb(255, 70, 70);
+  --live-bg: rgba(55, 15, 15, 0.8);
+
+  --accent-bg-hover: rgba(170, 40, 40, 0.25);
+
+  --glass-border: rgba(71, 15, 15, 0.315);
+  --glass-bg: rgba(71, 19, 19, 0.226);
+
+  --shadow: rgb(0, 0, 0);
+
+  --service: rgba(112, 3, 3, 0.25);
+
+  --bg-home: url(../assest/image.png);
+  --bg: url(../assest/bg-card.png);
+}
+[data-theme="d-green"] {
+  --bg-color: rgb(7, 14, 9);
+
+  --text-pri: #cbfdde;
+  --text-sec: #00e676;
+
+  --card-bg: rgba(12, 32, 20, 0.35);
+  --card-bg-hover: rgba(18, 50, 30, 0.45);
+
+  --border: rgba(0, 255, 150, 0.25);
+  --border-hover: rgba(0, 255, 150, 0.65);
+  --icon-border: rgba(200, 255, 230, 0.2);
+
+  --live: rgb(0, 255, 120);
+  --live-bg: rgba(15, 50, 25, 0.8);
+
+  --accent-bg-hover: rgba(30, 120, 70, 0.25);
+
+  --glass-border: rgba(14, 69, 39, 0.296);
+  --glass-bg: rgba(20, 60, 35, 0.174);
+
+  --shadow: rgb(0, 0, 0);
+
+  --service: rgba(1, 89, 10, 0.25);
+
+  --bg-home: url(../assest/image.png);
+  --bg: url(../assest/bg-card.png);
+}

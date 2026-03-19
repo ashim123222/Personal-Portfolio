@@ -11,16 +11,17 @@ section.project > *,
 }
 .proj-btns {
   display: flex;
+  align-items: center;
   gap: 20px;
   flex-wrap: nowrap;
-  overflow: auto;
+  overflow: AUTO;
   padding: 1rem;
   scrollbar-width: none;
+  width: 100%;
 }
 .proj-btns button {
   padding: 10px 15px;
   flex-shrink: 0;
-  /* background: var(--text-sec); */
   border-radius: 10px;
   font-weight: 550;
   position: relative;
@@ -38,7 +39,7 @@ section.project > *,
   height: 0%;
   width: 10%;
   padding: 2px;
-  transition: 0.5s linear;
+  transition: 0.3s ease;
 }
 .proj-btns button.active::after {
   width: 100%;
@@ -48,7 +49,7 @@ section.project > *,
   opacity: 0.5;
   padding: 5px;
   z-index: -1;
-  transition: 0.5s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 .proj-btns button:hover::before,
 .proj-btns button.active::before {
@@ -80,9 +81,9 @@ section.project > *,
   max-width: 400px;
   flex-grow: 1;
   padding: 16px;
-  background: var(--card-bg);
+  background: var(--glass-bg);
   border-radius: 15px;
-  border: 1px solid var(--border);
+  border: 1px solid var(--glass-border);
   display: flex;
   flex-direction: column;
   gap: 13px;
@@ -126,7 +127,7 @@ section.project > *,
 .proj-card:hover {
     box-shadow: 5px 5px 10px var(--shadow);
   transform: translateY(-4px);
-  border: 1px solid var(--border-hover);
+  border: 1px solid var(--glass-border);
   background: var(--card-bg-hover);
 }
 .proj-card:hover .img img {
@@ -196,12 +197,12 @@ a i {
 }
 .link-btns a:nth-child(1):hover {
     border: 1px solid var(--text-pri);
-    color: var(--text-pri);
+    color: var(--bg-color);
     background: var(--text-sec);
-    box-shadow: 0 0 20px var(--border-hover);
+    box-shadow: 0 0 20px var(--border);
 }
 .link-btns a:nth-child(1):hover i {
-    color: var(--text-pri);
+    color: var(--bg-color);
 }
 .link-btns a:nth-child(1) i {
     font-size: 0.8rem;

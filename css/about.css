@@ -7,6 +7,8 @@ section.about {
 }
 .heading {
     font-size: 3rem;
+    font-family: "Playfair Display", serif;
+    z-index: -1;
 }
 section.about p {
     opacity: 0.8;
@@ -76,9 +78,10 @@ section.skill .card {
     display: flex;
     align-items: center;
     gap: 10px;
+    font-weight: 550;
+    text-transform: capitalize;
 }
 .cards .card .card-top h3 i {
-    background: var(--accent-bg-hover);
     font-size: 1rem;
     height: 40px;
     width: 40px;
@@ -95,10 +98,10 @@ section.skill .card {
     opacity: 0.7;
     -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px);
+    transition: 0.2s ease;
 }
 .card-bottom span:hover {
-    background: var(--accent-bg-hover);
     color: var(--text-sec);
-    opacity: 0.8;
+    opacity: 1;
     border: 1px solid var(--border-hover);
 }
