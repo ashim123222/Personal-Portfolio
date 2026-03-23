@@ -19,6 +19,67 @@ body {
   /* transition: 0.5s ease-in-out; */
 }
 
+/* Hide default cursor */
+body,
+a,
+button {
+  cursor: none;
+}
+
+/* Main cursor */
+.cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--text-pri);
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition:
+    width 0.3s ease,
+    height 0.3s ease,
+    background 0.3s ease,
+    transform 0.15s ease;
+  z-index: 99999999;
+  backdrop-filter: blur(4px);
+}
+
+/* Inner indicator */
+.cursor-inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 7px;
+  height: 7px;
+  background: var(--text-sec);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: transform 0.2s ease;
+}
+
+/* 🔥 Link hover state */
+.cursor.link-hover {
+  width: 70px;
+  height: 70px;
+  background: var(--glass-bg);
+  backdrop-filter: blur(0px);
+}
+
+/* 🔥 Button hover state */
+.cursor.button-hover {
+  width: 55px;
+  height: 55px;
+  background: var(--glass-bg);
+  backdrop-filter: blur(0px);
+}
+
+/* Inner animation */
+.cursor.button-hover .cursor-inner {
+  transform: translate(-50%, -50%) scale(1.5);
+}
+
 .reveal {
   opacity: 0;
   transform: translateY(40px) scale(0.8);
@@ -32,16 +93,16 @@ body {
 
 .reveal-card {
   opacity: 0;
-  transform: translateY(60px) scale(0.8);
-  transition: all 1s ease ;
+  transform: translateY(60px) rotateX(45deg);
+  /* transition: all 1s ease; */
   filter: blur(2px);
 }
 .reveal-card.active {
   filter: blur(0px);
   opacity: 1;
-  transform: translateY(0) scale(1);
+  transform: translateY(0px) rotateX(0deg);
+  /* transform: translateY(0); */
 }
-
 
 .enter-reload {
   animation: entry 1s ease-in-out;
@@ -100,30 +161,6 @@ body {
   }
 }
 
-/* .reveal-one.active {
-  transition-delay: 0.1s;
-  
-}
-.reveal-two.active {
-  transition-delay: 0.2s;
-  
-}
-.reveal-three.active {
-  transition-delay: 0.5s;
-  
-}
-.reveal-four.active {
-  transition-delay: 0.7s;
-  
-}
-.reveal-five.active {
-  transition-delay: 1s;
-}
-.reveal-six.active {
-  transition-delay: 1.2s;
-  
-} */
-
 section {
   padding: 100px 10% !important;
   display: flex;
@@ -181,14 +218,16 @@ section {
   height: 100%;
   z-index: -1;
 }
-.animate-border:hover::before, .animate-border.active::before {
+.animate-border:hover::before,
+.animate-border.active::before {
   opacity: 1;
 }
 .animate-border::after {
   filter: blur(10px);
   z-index: -1;
 }
-.animate-border:hover::after, .animate-border.active::after {
+.animate-border:hover::after,
+.animate-border.active::after {
   opacity: 0.6;
 }
 
@@ -198,7 +237,7 @@ section {
   width: fit-content;
   padding: 5px 15px;
   border-radius: 40px;
-  border: 1px solid var(--border-hover);
+  border: 1px solid var(--border);
   margin-bottom: 2vw;
   color: var(--text-sec);
   box-shadow: 4px 4px 3px var(--shadow);
@@ -317,7 +356,9 @@ button:focus-visible {
   height: 300px;
   width: 300px;
   border-radius: 50%;
-  box-shadow: 10px 10px 10px var(--shadow), 2px 2px 5px var(--shadow);
+  box-shadow:
+    10px 10px 10px var(--shadow),
+    2px 2px 5px var(--shadow);
   background-color: var(--border);
   z-index: -1;
   animation: float 10s ease-in-out infinite alternate;
@@ -330,9 +371,11 @@ button:focus-visible {
   height: 400px;
   width: 400px;
   border-radius: 50%;
-  box-shadow: 10px 10px 10px var(--shadow), 2px 2px 5px var(--shadow);
+  box-shadow:
+    10px 10px 10px var(--shadow),
+    2px 2px 5px var(--shadow);
   /* background: var(--accent-bg-hover); */
-  border: 20px solid  var(--border);
+  border: 20px solid var(--border);
   z-index: -1;
   animation: float 3s linear infinite alternate;
 }
@@ -366,7 +409,6 @@ button:focus-visible {
     transform: rotate(-360deg);
   }
 }
-
 
 /* click effect of every button or links  */
 
@@ -426,7 +468,7 @@ button:focus-visible {
 /* == ENHANCEMENTS: Glow & 3D == */
 .glow-effect {
   position: fixed;
-  top: 50%;
+  top: 100%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
   width: 60vw;
@@ -439,20 +481,22 @@ button:focus-visible {
   pointer-events: none;
   z-index: -999;
   filter: blur(80px);
-  transition: transform 0.2s ease-out, opacity 0.2s ease-out;
+  transition:
+    transform 0.2s ease-out,
+    opacity 0.2s ease-out;
   mix-blend-mode: screen;
 }
 
-[data-theme="light"] .glow-effect, 
+[data-theme="light"] .glow-effect,
 :root:not([data-theme]) .glow-effect {
   mix-blend-mode: multiply;
-  opacity: 0.2; /* increased base opacity for light mode */
+  opacity: 0.2;
 }
 
 .magnetic-element {
   transition: transform 0.2s cubic-bezier(0.2, 0.8, 0.2, 1);
   will-change: transform;
-  display: inline-block; /* Ensure transforms work properly on links */
+  display: inline-block; 
 }
 
 /* Ensure smooth override if needed */
@@ -460,12 +504,7 @@ button:focus-visible {
   transition: transform 0.1s linear;
 }
 
-.tilt-element {
-  transform-style: preserve-3d;
-  perspective: 1000px;
-  transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
-  will-change: transform;
-}
+
 
 /* == ENHANCEMENTS: Active Theme Styling == */
 .show-color li.active-theme {
@@ -481,4 +520,3 @@ button:focus-visible {
     padding: 60px 4% !important;
   }
 }
-

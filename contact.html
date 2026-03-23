@@ -3,7 +3,48 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio</title>
+    <meta
+      name="description"
+      content="Get in touch with Moinam Ashim - Contact information, email, and social links to discuss your web development project."
+    />
+    <meta
+      name="keywords"
+      content="contact developer, web development inquiry, hire developer, get in touch, contact form, collaboration"
+    />
+    <meta name="author" content="Moinam Ashim" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://yourdomain.com/contact.html" />
+    <meta
+      property="og:title"
+      content="Contact Moinam Ashim - Frontend Developer"
+    />
+    <meta
+      property="og:description"
+      content="Get in touch with Moinam Ashim to discuss your web development project or collaborations."
+    />
+    <meta
+      property="og:image"
+      content="https://yourdomain.com/assest/og-image.png"
+    />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Contact Moinam Ashim - Frontend Developer"
+    />
+    <meta
+      name="twitter:description"
+      content="Get in touch for web development projects and collaborations."
+    />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://yourdomain.com/contact.html" />
+
+    <title>Contact Moinam Ashim - Frontend Developer | Get in Touch</title>
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/color.css" />
     <link rel="stylesheet" href="./css/header.css" />
@@ -38,10 +79,40 @@
       href="https://fonts.googleapis.com/css2?family=Asul:wght@400;700&family=Iceberg&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Italianno&family=Leckerli+One&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="./css/loader.css" />
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ContactPoint",
+        "contactType": "Customer Service",
+        "contactOption": "TollFree",
+        "email": "moinamashim123@gmail.com",
+        "areaServed": "Worldwide",
+        "availableLanguage": ["en"]
+      }
+    </script>
   </head>
   <body>
+    <!-- Content Loader -->
+    <div class="loader-container">
+      <div class="loader-content">
+        <div class="loader-title">Loading</div>
+        <div class="progress-bar-container">
+          <div class="progress-bar"></div>
+        </div>
+        <div class="progress-text">0%</div>
+      </div>
+    </div>
+    <!-- End Content Loader -->
+
+    <div class="cursor">
+      <div class="cursor-inner"></div>
+    </div>
+
     <header>
-      <div class="logo enter-left">M. ashim</div>
+      <div class="logo enter-left">M.A</div>
 
       <nav class="enter-top glass-icon">
         <a class="animate-border click-icon reveal-one" href="index.html"
@@ -219,7 +290,12 @@
           </div>
           <div class="sele">
             <div class="input-group">
-              <select name="from_service" id="service-type" class="reveal" required>
+              <select
+                name="from_service"
+                id="service-type"
+                class="reveal"
+                required
+              >
                 <option value="" disabled selected></option>
                 <option value="Portfolio">Portfolio</option>
                 <option value="Landing-page">Landing page</option>
@@ -295,6 +371,7 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="./js/loader.js"></script>
     <script src="./js/script.js"></script>
   </body>
 </html>

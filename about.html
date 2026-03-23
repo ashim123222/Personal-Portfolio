@@ -1,353 +1,441 @@
 <!doctype html>
 <html lang="en" data-theme="light">
-    <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Portfolio</title>
-      <link rel="stylesheet" href="./css/style.css" />
-      <link rel="stylesheet" href="./css/color.css" />
-      <link rel="stylesheet" href="./css/header.css" />
-      <link rel="stylesheet" href="./css/home.css" />
-      <link rel="stylesheet" href="./css/about.css" />
-      <link rel="stylesheet" href="./css/footer.css" />
-      <link rel="stylesheet" href="./css/float.css" />
-      <link rel="stylesheet" href="./css/screen.css" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="About Moinam Ashim - Frontend Developer with expertise in modern web development, responsive design, and MERN stack technologies."
+    />
+    <meta
+      name="keywords"
+      content="frontend developer, MERN stack, web developer, React developer, skills, experience, about me"
+    />
+    <meta name="author" content="Moinam Ashim" />
+    <meta name="robots" content="index, follow" />
 
-      <!-- font awesome cdn  -->
-      <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-        crossorigin="anonymous"
-        referrerpolicy="no-referrer"
-      />
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://yourdomain.com/about.html" />
+    <meta
+      property="og:title"
+      content="About Moinam Ashim - Frontend Developer"
+    />
+    <meta
+      property="og:description"
+      content="Discover my skills, experience, and approach to building modern web applications with focus on performance and user experience."
+    />
+    <meta
+      property="og:image"
+      content="https://yourdomain.com/assest/og-image.png"
+    />
 
-      <link
-        rel="stylesheet"
-        type="text/css"
-        href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
-      />
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="About Moinam Ashim - Frontend Developer"
+    />
+    <meta
+      name="twitter:description"
+      content="Discover my skills, experience, and approach to building modern web applications."
+    />
 
-      <!-- google font  -->
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-      <link
-        href="https://fonts.googleapis.com/css2?family=Asul:wght@400;700&family=Iceberg&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Italianno&family=Leckerli+One&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
-        rel="stylesheet"
-      />
-    </head>
-    <body>
-      <header>
-        <div class="logo enter-left">M. ashim</div>
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://yourdomain.com/about.html" />
 
-        <nav class="enter-top glass-icon">
-          <a class="animate-border click-icon reveal-one" href="index.html"
-            >Home</a
-          >
-          <a
-            class="active animate-border click-icon reveal-two"
-            href="about.html"
-            >About</a
-          >
-          <a class="animate-border click-icon reveal-three" href="project.html"
-            >Projects</a
-          >
-          <a class="animate-border click-icon reveal-four" href="service.html"
-            >Service</a
-          >
-          <a class="animate-border click-icon reveal-five" href="contact.html"
-            >Contact</a
-          >
-        </nav>
+    <title>
+      About Moinam Ashim - Frontend & MERN Stack Developer | Skills & Experience
+    </title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/color.css" />
+    <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/home.css" />
+    <link rel="stylesheet" href="./css/about.css" />
+    <link rel="stylesheet" href="./css/footer.css" />
+    <link rel="stylesheet" href="./css/float.css" />
+    <link rel="stylesheet" href="./css/screen.css" />
 
-        <div class="color">
-          <button class="mode click-icon glass-icon" id="theme-toggle">
-            <i class="fa-regular fa-sun"></i>
-          </button>
-          <button class="mode click-icon glass-icon" id="theme">
-            <i class="fa-solid fa-brush"></i>
-          </button>
+    <!-- font awesome cdn  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
-          <div class="show-color">
-            <ul>
-              <li id="blue" class="click-icon">Blue</li>
-              <li id="red" class="click-icon">Red</li>
-              <li id="green" class="click-icon">Green</li>
-            </ul>
-            <ul>
-              <li id="d-blue" class="click-icon">Dark-Blue</li>
-              <li id="d-red" class="click-icon">Dark-Red</li>
-              <li id="d-green" class="click-icon">Dark-green</li>
-            </ul>
-          </div>
-          <button
-            class="nav-toggle click-icon"
-            aria-label="Toggle navigation"
-            aria-expanded="false"
-          >
-            <span class="bar one"></span>
-            <span class="bar two"></span>
-            <span class="bar three"></span>
-          </button>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+    />
+
+    <!-- google font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Asul:wght@400;700&family=Iceberg&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Italianno&family=Leckerli+One&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/loader.css" />
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Moinam Ashim",
+        "url": "https://yourdomain.com/about.html",
+        "sameAs": [
+          "https://github.com/ashim123222",
+          "https://www.linkedin.com/in/moinam-ashim-786brr/",
+          "https://www.facebook.com/moimam.ashim"
+        ],
+        "jobTitle": "Frontend Developer & MERN Stack Developer",
+        "description": "Skilled frontend developer specializing in minimalist design, responsive interfaces, and high-performance web applications.",
+        "skills": [
+          "Frontend Development",
+          "React",
+          "JavaScript",
+          "CSS3",
+          "HTML5",
+          "Responsive Design",
+          "Web Performance",
+          "MERN Stack",
+          "Full Stack Development"
+        ],
+        "workLocation": {
+          "@type": "Place",
+          "address": {
+            "@type": "PostalAddress",
+            "addressCity": "Manipur",
+            "addressCountry": "IN"
+          }
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <!-- Content Loader -->
+    <div class="loader-container">
+      <div class="loader-content">
+        <div class="loader-title">Loading</div>
+        <div class="progress-bar-container">
+          <div class="progress-bar"></div>
         </div>
-      </header>
+        <div class="progress-text">0%</div>
+      </div>
+    </div>
+    <!-- End Content Loader -->
 
-      <p class="clock">00:00:00</p>
-      <section class="about sec-card">
-        <div class="before reveal"></div>
-        <p class="subtext reveal">About Me</p>
-        <h2 class="heading reveal">
-          The Human Behind <span class="heading outline">the Code</span>
-        </h2>
-        <p class="intro reveal">
-          Frontend specialist transitioning to Full Stack. I build polished,
-          high-performance interfaces while expanding my logic into robust
-          backend systems.
-        </p>
-        <h4 class="reveal">Focused on</h4>
-        <div class="cards">
-          <div class="card reveal-card reveal-one">
-            <div class="card-top">
-              <i class="fa-solid fa-feather"></i>
-              <h3>Minimalist Design</h3>
-              <p>
-                Focused on minimalist design, with eyecatchy Professional design
-              </p>
-            </div>
-          </div>
-          <div class="card reveal-card reveal-two">
-            <div class="card-top">
-              <i class="fa-solid fa-mobile"></i>
-              <h3>Highly Responsive</h3>
-              <p>
-                Highly responsive to all size of screen, using grid and flex
-                properties
-              </p>
-            </div>
-          </div>
-          <div class="card reveal-card reveal-three">
-            <div class="card-top">
-              <i class="fa-solid fa-bolt"></i>
-              <h3>Performance-first</h3>
-              <p>Work with performance first mindset,</p>
-            </div>
-          </div>
-          <div class="card reveal-card reveal-four">
-            <div class="card-top">
-              <i class="fa-solid fa-handshake"></i>
-              <h3>Collaborative</h3>
-              <p>
-                Happy in gathering, sharing the problems and making reliable
-                solution
-              </p>
-            </div>
-          </div>
+    <div class="cursor">
+      <div class="cursor-inner"></div>
+    </div>
+
+    <header>
+      <div class="logo enter-left">M.A</div>
+
+      <nav class="enter-top glass-icon">
+        <a class="animate-border click-icon reveal-one" href="index.html"
+          >Home</a
+        >
+        <a class="active animate-border click-icon reveal-two" href="about.html"
+          >About</a
+        >
+        <a class="animate-border click-icon reveal-three" href="project.html"
+          >Projects</a
+        >
+        <a class="animate-border click-icon reveal-four" href="service.html"
+          >Service</a
+        >
+        <a class="animate-border click-icon reveal-five" href="contact.html"
+          >Contact</a
+        >
+      </nav>
+
+      <div class="color">
+        <button class="mode click-icon glass-icon" id="theme-toggle">
+          <i class="fa-regular fa-sun"></i>
+        </button>
+        <button class="mode click-icon glass-icon" id="theme">
+          <i class="fa-solid fa-brush"></i>
+        </button>
+
+        <div class="show-color">
+          <ul>
+            <li id="blue" class="click-icon">Blue</li>
+            <li id="red" class="click-icon">Red</li>
+            <li id="green" class="click-icon">Green</li>
+          </ul>
+          <ul>
+            <li id="d-blue" class="click-icon">Dark-Blue</li>
+            <li id="d-red" class="click-icon">Dark-Red</li>
+            <li id="d-green" class="click-icon">Dark-green</li>
+          </ul>
         </div>
-      </section>
-      <div class="end reveal"></div>
+        <button
+          class="nav-toggle click-icon"
+          aria-label="Toggle navigation"
+          aria-expanded="false"
+        >
+          <span class="bar one"></span>
+          <span class="bar two"></span>
+          <span class="bar three"></span>
+        </button>
+      </div>
+    </header>
+    <!-- <div class="end"></div> -->
 
-      <section class="personal bg-tech sec-card reveal-card">
-        <div class="before reveal"></div>
-        <h2 class="name reveal">
-          Personal <span class="name outline">Information</span>
-        </h2>
-        <p class="intro reveal">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro
-          temporibus quod in natus. Fuga repellendus perferendis nesciunt minus,
-          soluta doloremque.
-        </p>
-        <div class="cards">
-          <div class="card reveal-card reveal-one">
-            <div class="card-top">
-              <h3><i class="fa-regular fa-user"></i> Full Name</h3>
-            </div>
+    <p class="clock">00:00:00</p>
+    <section class="about sec-card">
+      <div class="before reveal"></div>
+      <p class="subtext reveal">About Me</p>
+      <h2 class="heading reveal">
+        The Human Behind <span class="heading outline">the Code</span>
+      </h2>
+      <p class="intro reveal">
+        Frontend specialist transitioning to Full Stack. I build polished,
+        high-performance interfaces while expanding my logic into robust backend
+        systems.
+      </p>
+      <h4 class="reveal">Focused on</h4>
+      <div class="cards">
+        <div class="card reveal-card reveal-one">
+          <div class="card-top">
+            <i class="fa-solid fa-feather"></i>
+            <h3>Minimalist Design</h3>
             <p>
-              Moinam Ashim <br />
-              MERN Stack Developer
+              Focused on minimalist design, with eyecatchy Professional design
             </p>
           </div>
-          <div class="card reveal-card reveal-two">
-            <div class="card-top">
-              <h3><i class="fa-solid fa-location-dot"></i> Location</h3>
-            </div>
+        </div>
+        <div class="card reveal-card reveal-two">
+          <div class="card-top">
+            <i class="fa-solid fa-mobile"></i>
+            <h3>Highly Responsive</h3>
             <p>
-              Manipur, India <br />
-              (Open to Remote Opportunities)
-            </p>
-          </div>
-          <div class="card reveal-card reveal-three">
-            <div class="card-top">
-              <h3><i class="fa-regular fa-clipboard"></i> Experience</h3>
-            </div>
-            <p>
-              Fresher | Actively Building Projects <br />Offering mini services
-            </p>
-          </div>
-          <div class="card reveal-card reveal-four">
-            <div class="card-top">
-              <h3><i class="fa-solid fa-check"></i> Specialization</h3>
-            </div>
-            <p>Frontend Development <br />Pursuing MERN Stack</p>
-          </div>
-          <div class="card reveal-card reveal-five">
-            <div class="card-top">
-              <h3><i class="fa-solid fa-wifi"></i> Availability</h3>
-            </div>
-            <p>
-              Available for Internship & Freelance <br />
-              Portfolio, Landing-pages
+              Highly responsive to all size of screen, using grid and flex
+              properties
             </p>
           </div>
         </div>
-      </section>
-      <div class="end reveal"></div>
-
-      <section class="skill bg-tech sec-card">
-        <div class="before reveal"></div>
-        <h2 class="name reveal">
-          Technical <span class="name outline">Skills</span>
-        </h2>
-        <p class="intro reveal">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident
-          quaerat ratione autem quisquam hic nisi vel repellendus dolorum nulla.
-          Deserunt!
-        </p>
-        <div class="cards">
-          <div class="card reveal-card reveal-one">
-            <div class="card-top">
-              <h3><i class="fa-solid fa-laptop"></i> Frontend</h3>
-            </div>
-            <div class="card-bottom">
-              <span>HTML</span>
-              <span>CSS</span>
-              <span>JavaScript</span>
-              <span>React</span>
-            </div>
-          </div>
-          <div class="card reveal-card reveal-two">
-            <div class="card-top">
-              <h3><i class="fa-solid fa-hashtag"></i> Backend</h3>
-            </div>
-            <div class="card-bottom">
-              <span>node.js</span>
-              <span>Express.js</span>
-              <span>Resy APIs</span>
-            </div>
-          </div>
-          <div class="card reveal-card reveal-three">
-            <div class="card-top">
-              <h3><i class="fa-solid fa-database"></i> Database</h3>
-            </div>
-            <div class="card-bottom">
-              <span>MongoDB</span>
-              <span>MySQL</span>
-              <span>Firebase</span>
-            </div>
-          </div>
-          <div class="card reveal-card reveal-four">
-            <div class="card-top">
-              <h3><i class="fa-solid fa-screwdriver-wrench"></i> Tools</h3>
-            </div>
-            <div class="card-bottom">
-              <span>Git</span>
-              <span>VS Code</span>
-              <span>Hoppscotch</span>
-            </div>
-          </div>
-          <div class="card reveal-card reveal-five">
-            <div class="card-top">
-              <h3><i class="fa-brands fa-web-awesome"></i> Important</h3>
-            </div>
-            <div class="card-bottom">
-              <span>Animated design</span>
-              <span>Clean UI / UX</span>
-              <span>Responsive</span>
-            </div>
-          </div>
-          <div class="card reveal-card reveal-six">
-            <div class="card-top">
-              <h3><i class="fa-solid fa-globe"></i> Language</h3>
-            </div>
-            <div class="card-bottom">
-              <span>Manipuri</span>
-              <span>Hindi / Urdu</span>
-              <span>English</span>
-            </div>
+        <div class="card reveal-card reveal-three">
+          <div class="card-top">
+            <i class="fa-solid fa-bolt"></i>
+            <h3>Performance-first</h3>
+            <p>Work with performance first mindset,</p>
           </div>
         </div>
-      </section>
-      <div class="end reveal"></div>
+        <div class="card reveal-card reveal-four">
+          <div class="card-top">
+            <i class="fa-solid fa-handshake"></i>
+            <h3>Collaborative</h3>
+            <p>
+              Happy in gathering, sharing the problems and making reliable
+              solution
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="end reveal"></div>
 
-      <section class="imp">
-        <div class="common reveal">
-          <h2 class="name reveal">Let's Work Together</h2>
-          <p class="intro reveal">
-            I'm always open to discussing new opportunities and interesting
-            projects. Feel free to reach out if you'd like to collaborate.
+    <section class="personal bg-tech sec-card reveal-card">
+      <div class="before reveal"></div>
+      <h2 class="name reveal">
+        Personal <span class="name outline">Information</span>
+      </h2>
+      <p class="intro reveal">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro
+        temporibus quod in natus. Fuga repellendus perferendis nesciunt minus,
+        soluta doloremque.
+      </p>
+      <div class="cards">
+        <div class="card reveal-card reveal-one">
+          <div class="card-top">
+            <h3><i class="fa-regular fa-user"></i> Full Name</h3>
+          </div>
+          <p>
+            Moinam Ashim <br />
+            MERN Stack Developer
           </p>
-          <div class="go-to-links reveal">
-            <a
-              class="go-to go-to-t animate-border click-btn"
-              href="contact.html"
-            >
-              Let's Talk
-              <span
-                ><i class="one fa-solid fa-arrow-right"></i>
-                <i class="two fa-solid fa-arrow-right"></i
-              ></span>
-            </a>
-            <a
-              class="go-to go-to-d animate-border click-btn"
-              href="./assest/resume/Moinam-Ashim-Resume.pdf"
-            >
-              Download CV
-              <span>
-                <i class="one-d fa-solid fa-arrow-down"></i
-                ><i class="two-d fa-solid fa-arrow-down"></i>
-              </span>
-            </a>
-            <a class="go-to animate-border click-btn" href="project.html">
-              View Works
-              <span>
-                <i class="one fa-solid fa-arrow-right"></i>
-                <i class="two fa-solid fa-arrow-right"></i>
-              </span>
-            </a>
+        </div>
+        <div class="card reveal-card reveal-two">
+          <div class="card-top">
+            <h3><i class="fa-solid fa-location-dot"></i> Location</h3>
+          </div>
+          <p>
+            Manipur, India <br />
+            (Open to Remote Opportunities)
+          </p>
+        </div>
+        <div class="card reveal-card reveal-three">
+          <div class="card-top">
+            <h3><i class="fa-regular fa-clipboard"></i> Experience</h3>
+          </div>
+          <p>
+            Fresher | Actively Building Projects <br />Offering mini services
+          </p>
+        </div>
+        <div class="card reveal-card reveal-four">
+          <div class="card-top">
+            <h3><i class="fa-solid fa-check"></i> Specialization</h3>
+          </div>
+          <p>Frontend Development <br />Pursuing MERN Stack</p>
+        </div>
+        <div class="card reveal-card reveal-five">
+          <div class="card-top">
+            <h3><i class="fa-solid fa-wifi"></i> Availability</h3>
+          </div>
+          <p>
+            Available for Internship & Freelance <br />
+            Portfolio, Landing-pages
+          </p>
+        </div>
+      </div>
+    </section>
+    <div class="end reveal"></div>
+
+    <section class="skill bg-tech sec-card">
+      <div class="before reveal"></div>
+      <h2 class="name reveal">
+        Technical <span class="name outline">Skills</span>
+      </h2>
+      <p class="intro reveal">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident
+        quaerat ratione autem quisquam hic nisi vel repellendus dolorum nulla.
+        Deserunt!
+      </p>
+      <div class="cards">
+        <div class="card reveal-card reveal-one">
+          <div class="card-top">
+            <h3><i class="fa-solid fa-laptop"></i> Frontend</h3>
+          </div>
+          <div class="card-bottom">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+            <span>React</span>
           </div>
         </div>
-      </section>
-      <div class="end"></div>
+        <div class="card reveal-card reveal-two">
+          <div class="card-top">
+            <h3><i class="fa-solid fa-hashtag"></i> Backend</h3>
+          </div>
+          <div class="card-bottom">
+            <span>node.js</span>
+            <span>Express.js</span>
+            <span>Resy APIs</span>
+          </div>
+        </div>
+        <div class="card reveal-card reveal-three">
+          <div class="card-top">
+            <h3><i class="fa-solid fa-database"></i> Database</h3>
+          </div>
+          <div class="card-bottom">
+            <span>MongoDB</span>
+            <span>MySQL</span>
+            <span>Firebase</span>
+          </div>
+        </div>
+        <div class="card reveal-card reveal-four">
+          <div class="card-top">
+            <h3><i class="fa-solid fa-screwdriver-wrench"></i> Tools</h3>
+          </div>
+          <div class="card-bottom">
+            <span>Git</span>
+            <span>VS Code</span>
+            <span>Hoppscotch</span>
+          </div>
+        </div>
+        <div class="card reveal-card reveal-five">
+          <div class="card-top">
+            <h3><i class="fa-brands fa-web-awesome"></i> Important</h3>
+          </div>
+          <div class="card-bottom">
+            <span>Animated design</span>
+            <span>Clean UI / UX</span>
+            <span>Responsive</span>
+          </div>
+        </div>
+        <div class="card reveal-card reveal-six">
+          <div class="card-top">
+            <h3><i class="fa-solid fa-globe"></i> Language</h3>
+          </div>
+          <div class="card-bottom">
+            <span>Manipuri</span>
+            <span>Hindi / Urdu</span>
+            <span>English</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="end reveal"></div>
 
-      <footer>
-        <p class="reveal">
-          &copy; 2026: Made with &hearts; by <u>Moinam Ashim</u> <br />
-          From scratch with Chai
+    <section class="imp">
+      <div class="common reveal">
+        <h2 class="name reveal">Let's Work Together</h2>
+        <p class="intro reveal">
+          I'm always open to discussing new opportunities and interesting
+          projects. Feel free to reach out if you'd like to collaborate.
         </p>
-        <div class="social-links">
-          <a
-            class="icon reveal click-icon"
-            href="https://github.com/ashim123222"
-          >
-            <i class="click-icon fa-brands fa-github"></i>
+        <div class="go-to-links reveal">
+          <a class="go-to go-to-t animate-border click-btn" href="contact.html">
+            Let's Talk
+            <span
+              ><i class="one fa-solid fa-arrow-right"></i>
+              <i class="two fa-solid fa-arrow-right"></i
+            ></span>
           </a>
           <a
-            class="icon reveal click-icon"
-            href="https://www.linkedin.com/in/moinam-ashim-786brr/"
-            ><i class="click-icon fa-brands fa-linkedin-in"></i
-          ></a>
-          <a
-            class="icon reveal click-icon"
-            href="mailto:moinamashim123@gmail.com"
-            ><i class="click-icon fa-regular fa-envelope"></i
-          ></a>
-          <a
-            class="icon reveal click-icon"
-            href="https://www.facebook.com/moimam.ashim"
-            ><i class="click-icon fa-brands fa-facebook"></i
-          ></a>
+            class="go-to go-to-d animate-border click-btn"
+            href="./assest/resume/Moinam-Ashim-Resume.pdf"
+          >
+            Download CV
+            <span>
+              <i class="one-d fa-solid fa-arrow-down"></i
+              ><i class="two-d fa-solid fa-arrow-down"></i>
+            </span>
+          </a>
+          <a class="go-to animate-border click-btn" href="project.html">
+            View Works
+            <span>
+              <i class="one fa-solid fa-arrow-right"></i>
+              <i class="two fa-solid fa-arrow-right"></i>
+            </span>
+          </a>
         </div>
-      </footer>
+      </div>
+    </section>
+    <div class="end"></div>
 
-      <script src="./js/script.js"></script>
-    </body>
+    <footer>
+      <p class="reveal">
+        &copy; 2026: Made with &hearts; by <u>Moinam Ashim</u> <br />
+        From scratch with Chai
+      </p>
+      <div class="social-links">
+        <a class="icon reveal click-icon" href="https://github.com/ashim123222">
+          <i class="click-icon fa-brands fa-github"></i>
+        </a>
+        <a
+          class="icon reveal click-icon"
+          href="https://www.linkedin.com/in/moinam-ashim-786brr/"
+          ><i class="click-icon fa-brands fa-linkedin-in"></i
+        ></a>
+        <a class="icon reveal click-icon" href="mailto:moinamashim123@gmail.com"
+          ><i class="click-icon fa-regular fa-envelope"></i
+        ></a>
+        <a
+          class="icon reveal click-icon"
+          href="https://www.facebook.com/moimam.ashim"
+          ><i class="click-icon fa-brands fa-facebook"></i
+        ></a>
+      </div>
+    </footer>
+
+    <script src="./js/loader.js"></script>
+    <script src="./js/script.js"></script>
+  </body>
 </html>

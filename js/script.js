@@ -181,7 +181,7 @@ if (form && typeof emailjs !== "undefined") {
 // Selecting all clickable elements
 const magneticElements = Array.from(
   document.querySelectorAll(
-    ".social-links a, .color button, .card a, .go-to-t, form button",
+    ".social-links a, .card-bottom span, .color button, .card a, .go-to-t, form button",
   ),
 );
 
@@ -206,3 +206,31 @@ magneticElements.forEach((el) => {
   });
 });
 
+const cursor = document.querySelector(".cursor");
+
+document.addEventListener("mousemove", (e) => {
+  cursor.style.top = e.clientY + "px";
+  cursor.style.left = e.clientX + "px";
+});
+
+/* Detect interactive elements */
+const links = document.querySelectorAll("a");
+const buttons = document.querySelectorAll("button, .btn");
+
+links.forEach((link) => {
+  link.addEventListener("mouseenter", () => {
+    cursor.classList.add("link-hover");
+  });
+  link.addEventListener("mouseleave", () => {
+    cursor.classList.remove("link-hover");
+  });
+});
+
+buttons.forEach((btn) => {
+  btn.addEventListener("mouseenter", () => {
+    cursor.classList.add("button-hover");
+  });
+  btn.addEventListener("mouseleave", () => {
+    cursor.classList.remove("button-hover");
+  });
+});

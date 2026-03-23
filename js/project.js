@@ -4,7 +4,7 @@ const comBtn = document.getElementById("com-btn");
 const progBtn = document.getElementById("prog-btn");
 const miniBtn = document.getElementById("mini-btn");
 
-const buttons = document.querySelectorAll(".proj-btns button ");
+// const buttons = document.querySelectorAll(".proj-btns button ");
 
 // ====== cards selection ======
 const completeProjects = document.querySelectorAll(".com-proj");

@@ -1,307 +1,399 @@
 <!doctype html>
 <html lang="en" data-theme="light">
-    <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Portfolio</title>
-      <link rel="stylesheet" href="./css/style.css" />
-      <link rel="stylesheet" href="./css/color.css" />
-      <link rel="stylesheet" href="./css/header.css" />
-      <link rel="stylesheet" href="./css/home.css" />
-      <link rel="stylesheet" href="./css/footer.css" />
-      <link rel="stylesheet" href="./css/float.css" />
-      <link rel="stylesheet" href="./css/screen.css" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Moinam Ashim - Frontend Developer & MERN Stack Developer. Portfolio showcasing modern, responsive web development projects and services."
+    />
+    <meta
+      name="keywords"
+      content="frontend developer, MERN stack, web developer, responsive design, web development, portfolio"
+    />
+    <meta name="author" content="Moinam Ashim" />
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="English" />
 
-      <!-- font awesome cdn  -->
-      <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-        crossorigin="anonymous"
-        referrerpolicy="no-referrer"
-      />
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://yourdomain.com/" />
+    <meta
+      property="og:title"
+      content="Moinam Ashim - Frontend & MERN Stack Developer"
+    />
+    <meta
+      property="og:description"
+      content="Professional portfolio showcasing web development projects, skills in React, responsive design, and full-stack development services."
+    />
+    <meta
+      property="og:image"
+      content="https://yourdomain.com/assest/og-image.png"
+    />
 
-      <link
-        rel="stylesheet"
-        type="text/css"
-        href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
-      />
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://yourdomain.com/" />
+    <meta
+      name="twitter:title"
+      content="Moinam Ashim - Frontend & MERN Stack Developer"
+    />
+    <meta
+      name="twitter:description"
+      content="Professional portfolio showcasing web development projects, skills in React, responsive design, and full-stack development services."
+    />
 
-      <!-- google font  -->
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-      <link
-        href="https://fonts.googleapis.com/css2?family=Asul:wght@400;700&family=Iceberg&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Italianno&family=Leckerli+One&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
-        rel="stylesheet"
-      />
-    </head>
-    <body>
-      <header>
-        <div class="logo enter-left">M. ashim</div>
+    <!-- Canonical URL -->
+    <meta property="og:locale" content="en_US" />
+    <link rel="canonical" href="https://yourdomain.com/" />
 
-        <nav class="enter-top glass-icon">
-          <a
-            class="active animate-border click-icon reveal-one"
-            href="index.html"
-            >Home</a
-          >
-          <a class="animate-border click-icon reveal-two" href="about.html"
-            >About</a
-          >
-          <a class="animate-border click-icon reveal-three" href="project.html"
-            >Projects</a
-          >
-          <a class="animate-border click-icon reveal-four" href="service.html"
-            >Service</a
-          >
-          <a class="animate-border click-icon reveal-five" href="contact.html"
-            >Contact</a
-          >
-        </nav>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="./assest/favicon.png" />
+    <link rel="apple-touch-icon" href="./assest/apple-touch-icon.png" />
 
-        <div class="color">
-          <button class="mode click-icon glass-icon" id="theme-toggle">
-            <i class="fa-regular fa-sun"></i>
-          </button>
-          <button class="mode click-icon glass-icon" id="theme">
-            <i class="fa-solid fa-brush"></i>
-          </button>
+    <title>Moinam Ashim - Frontend & MERN Stack Developer | Portfolio</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/color.css" />
+    <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/home.css" />
+    <link rel="stylesheet" href="./css/footer.css" />
+    <link rel="stylesheet" href="./css/float.css" />
+    <link rel="stylesheet" href="./css/screen.css" />
 
-          <div class="show-color">
-            <ul>
-              <li id="blue" class="click-icon">Blue</li>
-              <li id="red" class="click-icon">Red</li>
-              <li id="green" class="click-icon">Green</li>
-            </ul>
-            <ul>
-              <li id="d-blue" class="click-icon">Dark-Blue</li>
-              <li id="d-red" class="click-icon">Dark-Red</li>
-              <li id="d-green" class="click-icon">Dark-green</li>
-            </ul>
-          </div>
-          <button
-            class="nav-toggle click-icon"
-            aria-label="Toggle navigation"
-            aria-expanded="false"
-          >
-            <span class="bar one"></span>
-            <span class="bar two"></span>
-            <span class="bar three"></span>
-          </button>
+    <!-- font awesome cdn  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+    />
+
+    <!-- google font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Asul:wght@400;700&family=Iceberg&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Italianno&family=Leckerli+One&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/loader.css" />
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Moinam Ashim",
+        "url": "https://yourdomain.com",
+        "sameAs": [
+          "https://github.com/ashim123222",
+          "https://www.linkedin.com/in/moinam-ashim-786brr/",
+          "https://www.facebook.com/moimam.ashim"
+        ],
+        "jobTitle": "Frontend Developer",
+        "description": "Frontend Developer & MERN Stack Developer focused on building modern, interactive, and user-centric web experiences.",
+        "email": "moinamashim123@gmail.com",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCity": "Manipur",
+          "addressCountry": "IN",
+          "addressRegion": "Manipur"
+        },
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Freelance"
+        },
+        "knowsAbout": [
+          "Frontend Development",
+          "React",
+          "JavaScript",
+          "HTML5",
+          "CSS3",
+          "Responsive Design",
+          "Web Performance",
+          "MERN Stack",
+          "Full Stack Development"
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <!-- Content Loader -->
+    <div class="loader-container">
+      <div class="loader-content">
+        <div class="loader-title">Loading</div>
+        <div class="progress-bar-container">
+          <div class="progress-bar"></div>
         </div>
-      </header>
+        <div class="progress-text">0%</div>
+      </div>
+    </div>
+    <!-- End Content Loader -->
 
-      <section id="home" class="home">
-        <div class="right enter-left">
-          <div class="img">
-            <img src="./assest/darker_version.png" alt="" />
-          </div>
-          <p class="clock">00:00:00</p>
+    <div class="cursor">
+      <div class="cursor-inner"></div>
+    </div>
+
+    <!-- <div class="glow-effect"></div> -->
+    <header>
+      <div class="logo enter-left">M.A</div>
+
+      <nav class="enter-top glass-icon">
+        <a class="active animate-border click-icon reveal-one" href="index.html"
+          >Home</a
+        >
+        <a class="animate-border click-icon reveal-two" href="about.html"
+          >About</a
+        >
+        <a class="animate-border click-icon reveal-three" href="project.html"
+          >Projects</a
+        >
+        <a class="animate-border click-icon reveal-four" href="service.html"
+          >Service</a
+        >
+        <a class="animate-border click-icon reveal-five" href="contact.html"
+          >Contact</a
+        >
+      </nav>
+
+      <div class="color">
+        <button class="mode click-icon glass-icon" id="theme-toggle">
+          <i class="fa-regular fa-sun"></i>
+        </button>
+        <button class="mode click-icon glass-icon" id="theme">
+          <i class="fa-solid fa-brush"></i>
+        </button>
+
+        <div class="show-color">
+          <ul>
+            <li id="blue" class="click-icon">Blue</li>
+            <li id="red" class="click-icon">Red</li>
+            <li id="green" class="click-icon">Green</li>
+          </ul>
+          <ul>
+            <li id="d-blue" class="click-icon">Dark-Blue</li>
+            <li id="d-red" class="click-icon">Dark-Red</li>
+            <li id="d-green" class="click-icon">Dark-green</li>
+          </ul>
         </div>
-        <div class="left">
-          <div class="top">
-            <p class="subtext reveal">Available for Work</p>
-            <h1 class="reveal">Moinam Ashim</h1>
-            <h4 class="reveal">
-              Frontend Developer |
-              <span class="enter-right">Pursuing MERN Stack</span>
-            </h4>
-          </div>
+        <button
+          class="nav-toggle click-icon"
+          aria-label="Toggle navigation"
+          aria-expanded="false"
+        >
+          <span class="bar one"></span>
+          <span class="bar two"></span>
+          <span class="bar three"></span>
+        </button>
+      </div>
+    </header>
+    <!-- <div class="end"></div> -->
 
-          <p class="intro reveal">
-            I am a passionate frontend web developer focused on building modern,
-            interactive, and user-centric web experiences. Currently Learning
-            backend to become a full stack developer.
-          </p>
-
-          <div class="go-to-links reveal">
-            <a
-              class="go-to go-to-t animate-border click-btn"
-              href="contact.html"
-            >
-              Let's Talk
-              <span
-                ><i class="one fa-solid fa-arrow-right"></i>
-                <i class="two fa-solid fa-arrow-right"></i
-              ></span>
-            </a>
-            <a class="go-to animate-border click-btn" href="project.html">
-              View Works
-              <span>
-                <i class="one fa-solid fa-arrow-right"></i>
-                <i class="two fa-solid fa-arrow-right"></i>
-              </span>
-            </a>
-            <a
-              class="go-to go-to-d animate-border click-btn"
-              target="_blank"
-              href="./assest/resume/Moinam-Ashim-Resume.pdf"
-            >
-              Download CV
-              <span>
-                <i class="one-d fa-solid fa-arrow-down"></i
-                ><i class="two-d fa-solid fa-arrow-down"></i>
-              </span>
-            </a>
-          </div>
-
-          <div class="social-links reveal">
-            <a class="icon click-icon" href="https://github.com/ashim123222">
-              <i class="fa-brands fa-github"></i>
-            </a>
-            <a
-              class="icon click-icon"
-              href="https://www.linkedin.com/in/moinam-ashim-786brr/"
-              ><i class="fa-brands fa-linkedin-in"></i
-            ></a>
-            <a class="icon click-icon" href="mailto:moinamashim123@gmail.com"
-              ><i class="fa-regular fa-envelope"></i
-            ></a>
-            <a
-              class="icon click-icon"
-              href="https://www.facebook.com/moimam.ashim"
-              ><i class="fa-brands fa-facebook"></i
-            ></a>
-          </div>
+    <p class="clock">00:00:00</p>
+    <section id="home" class="home">
+      <div class="right enter-left">
+        <div class="img">
+          <img src="./assest/darker_version.png" alt="" />
         </div>
-      </section>
-      <div class="end reveal"></div>
+      </div>
+      <div class="left">
+        <div class="top">
+          <p class="subtext reveal">Available for Work</p>
+          <h1 class="reveal">Moinam Ashim</h1>
+          <h4 class="reveal">
+            Frontend Developer |
+            <span class="enter-right">Pursuing MERN Stack</span>
+          </h4>
+        </div>
 
-      <section class="second bg-tech sec-card">
-        <div class="before animate-border"></div>
-        <h1 class="name reveal">
-          Explore <span class="name outline">More</span>
-        </h1>
         <p class="intro reveal">
-          Discover more about my experience, projects, and how I can help bring
-          your ideas to life
+          I am a passionate frontend web developer focused on building modern,
+          interactive, and user-centric web experiences. Currently Learning
+          backend to become a full stack developer.
         </p>
-        <div class="cards">
-          <div class="card reveal-card reveal-one">
-            <div class="card-top">
-              <i class="fa-regular fa-user"></i>
-              <h3>About Me</h3>
-              <p>
-                Learn more about my Skills, Experience and passion for
-                development
-              </p>
-            </div>
-            <a class="go-to click-icon" href="about.html">
-              Let's see
-              <span>
-                <i class="one fa-solid fa-arrow-right"></i>
-                <i class="two fa-solid fa-arrow-right"></i>
-              </span>
-            </a>
-          </div>
-          <div class="card reveal-card reveal-two">
-            <div class="card-top">
-              <i class="fa-solid fa-bolt"></i>
-              <h3>Projects</h3>
-              <p>Have a look on how I convert the idea to digital solution</p>
-            </div>
-            <a class="go-to click-icon" href="project.html">
-              Let's see
-              <span>
-                <i class="one fa-solid fa-arrow-right"></i>
-                <i class="two fa-solid fa-arrow-right"></i>
-              </span>
-            </a>
-          </div>
-          <div class="card reveal-card reveal-three">
-            <div class="card-top">
-              <i class="fa-solid fa-address-book"></i>
-              <h3>Get in Touch</h3>
-              <p>
-                Let's dicucss about your project and 'll help in your solution
-              </p>
-            </div>
-            <a class="go-to click-icon" href="contact.html">
-              Reached out
-              <span>
-                <i class="one fa-solid fa-arrow-right"></i>
-                <i class="two fa-solid fa-arrow-right"></i>
-              </span>
-            </a>
-          </div>
-          <div class="card reveal-card reveal-four">
-            <div class="card-top">
-              <i class="fa-solid fa-briefcase"></i>
-              <h3>Services</h3>
-              <p>Services that i offer for startup and businesses</p>
-            </div>
-            <a class="go-to click-icon" href="service.html">
-              Check
-              <span>
-                <i class="one fa-solid fa-arrow-right"></i>
-                <i class="two fa-solid fa-arrow-right"></i>
-              </span>
-            </a>
-          </div>
-        </div>
-      </section>
-      <div class="end reveal"></div>
 
-      <section class="imp reveal">
-        <div class="common reveal">
-          <h2 class="name reveal">
-            Ready to start a <span class="name outline">project</span>
-          </h2>
-          <p class="intro reveal">
-            I'm always excited to work on new challenges and help bring
-            innovative ideas to life. Let's discuss how we can work together.
-          </p>
-          <div class="go-to-links reveal">
-            <a
-              class="go-to go-to-t animate-border click-btn"
-              href="contact.html"
-            >
-              Let's Talk
-              <span
-                ><i class="one fa-solid fa-arrow-right"></i>
-                <i class="two fa-solid fa-arrow-right"></i
-              ></span>
-            </a>
-          </div>
-        </div>
-        <div class="imp-float f-one reveal"></div>
-        <div class="imp-float f-two reveal"></div>
-        <div class="imp-float f-three reveal"></div>
-      </section>
-
-      <div class="end reveal"></div>
-
-      <footer>
-        <p class="reveal">
-          &copy; 2026: Made with &hearts; by <u>Moinam Ashim</u> <br />
-          From scratch with Chai
-        </p>
-        <div class="social-links">
-          <a
-            class="icon reveal click-icon"
-            href="https://github.com/ashim123222"
-          >
-            <i class="click-icon fa-brands fa-github"></i>
+        <div class="go-to-links reveal">
+          <a class="go-to go-to-t animate-border click-btn" href="contact.html">
+            Let's Talk
+            <span
+              ><i class="one fa-solid fa-arrow-right"></i>
+              <i class="two fa-solid fa-arrow-right"></i
+            ></span>
+          </a>
+          <a class="go-to animate-border click-btn" href="project.html">
+            View Works
+            <span>
+              <i class="one fa-solid fa-arrow-right"></i>
+              <i class="two fa-solid fa-arrow-right"></i>
+            </span>
           </a>
           <a
-            class="icon reveal click-icon"
+            class="go-to go-to-d animate-border click-btn"
+            target="_blank"
+            href="./assest/resume/Moinam-Ashim-Resume.pdf"
+          >
+            Download CV
+            <span>
+              <i class="one-d fa-solid fa-arrow-down"></i
+              ><i class="two-d fa-solid fa-arrow-down"></i>
+            </span>
+          </a>
+        </div>
+
+        <div class="social-links reveal">
+          <a class="icon click-icon" href="https://github.com/ashim123222">
+            <i class="fa-brands fa-github"></i>
+          </a>
+          <a
+            class="icon click-icon"
             href="https://www.linkedin.com/in/moinam-ashim-786brr/"
-            ><i class="click-icon fa-brands fa-linkedin-in"></i
+            ><i class="fa-brands fa-linkedin-in"></i
+          ></a>
+          <a class="icon click-icon" href="mailto:moinamashim123@gmail.com"
+            ><i class="fa-regular fa-envelope"></i
           ></a>
           <a
-            class="icon reveal click-icon"
-            href="mailto:moinamashim123@gmail.com"
-            ><i class="click-icon fa-regular fa-envelope"></i
-          ></a>
-          <a
-            class="icon reveal click-icon"
+            class="icon click-icon"
             href="https://www.facebook.com/moimam.ashim"
-            ><i class="click-icon fa-brands fa-facebook"></i
+            ><i class="fa-brands fa-facebook"></i
           ></a>
         </div>
-      </footer>
+      </div>
+    </section>
+    <div class="end reveal"></div>
 
-      <script src="./js/script.js"></script>
-      <script src="./js/main.js"></script>
-    </body>
+    <section class="second bg-tech sec-card">
+      <div class="before animate-border"></div>
+      <h1 class="name reveal">
+        Explore <span class="name outline">More</span>
+      </h1>
+      <p class="intro reveal">
+        Discover more about my experience, projects, and how I can help bring
+        your ideas to life
+      </p>
+      <div class="cards">
+        <div class="card reveal-card reveal-one">
+          <div class="card-top">
+            <i class="fa-regular fa-user"></i>
+            <h3>About Me</h3>
+            <p>
+              Learn more about my Skills, Experience and passion for development
+            </p>
+          </div>
+          <a class="go-to click-icon" href="about.html">
+            Let's see
+            <span>
+              <i class="one fa-solid fa-arrow-right"></i>
+              <i class="two fa-solid fa-arrow-right"></i>
+            </span>
+          </a>
+        </div>
+        <div class="card reveal-card reveal-two">
+          <div class="card-top">
+            <i class="fa-solid fa-bolt"></i>
+            <h3>Projects</h3>
+            <p>Have a look on how I convert the idea to digital solution</p>
+          </div>
+          <a class="go-to click-icon" href="project.html">
+            Let's see
+            <span>
+              <i class="one fa-solid fa-arrow-right"></i>
+              <i class="two fa-solid fa-arrow-right"></i>
+            </span>
+          </a>
+        </div>
+        <div class="card reveal-card reveal-three">
+          <div class="card-top">
+            <i class="fa-solid fa-address-book"></i>
+            <h3>Get in Touch</h3>
+            <p>
+              Let's dicucss about your project and 'll help in your solution
+            </p>
+          </div>
+          <a class="go-to click-icon" href="contact.html">
+            Reached out
+            <span>
+              <i class="one fa-solid fa-arrow-right"></i>
+              <i class="two fa-solid fa-arrow-right"></i>
+            </span>
+          </a>
+        </div>
+        <div class="card reveal-card reveal-four">
+          <div class="card-top">
+            <i class="fa-solid fa-briefcase"></i>
+            <h3>Services</h3>
+            <p>Services that i offer for startup and businesses</p>
+          </div>
+          <a class="go-to click-icon" href="service.html">
+            Check
+            <span>
+              <i class="one fa-solid fa-arrow-right"></i>
+              <i class="two fa-solid fa-arrow-right"></i>
+            </span>
+          </a>
+        </div>
+      </div>
+    </section>
+    <div class="end reveal"></div>
+
+    <section class="imp reveal">
+      <div class="common reveal">
+        <h2 class="name reveal">
+          Ready to start a <span class="name outline">project</span>
+        </h2>
+        <p class="intro reveal">
+          I'm always excited to work on new challenges and help bring innovative
+          ideas to life. Let's discuss how we can work together.
+        </p>
+        <div class="go-to-links reveal">
+          <a class="go-to go-to-t animate-border click-btn" href="contact.html">
+            Let's Talk
+            <span
+              ><i class="one fa-solid fa-arrow-right"></i>
+              <i class="two fa-solid fa-arrow-right"></i
+            ></span>
+          </a>
+        </div>
+      </div>
+      <div class="imp-float f-one reveal"></div>
+      <div class="imp-float f-two reveal"></div>
+      <div class="imp-float f-three reveal"></div>
+    </section>
+    <div class="end reveal"></div>
+
+    <footer>
+      <p class="reveal">
+        &copy; 2026: Made with &hearts; by <u>Moinam Ashim</u> <br />
+        From scratch with Chai
+      </p>
+      <div class="social-links">
+        <a class="icon reveal click-icon" href="https://github.com/ashim123222">
+          <i class="click-icon fa-brands fa-github"></i>
+        </a>
+        <a
+          class="icon reveal click-icon"
+          href="https://www.linkedin.com/in/moinam-ashim-786brr/"
+          ><i class="click-icon fa-brands fa-linkedin-in"></i
+        ></a>
+        <a class="icon reveal click-icon" href="mailto:moinamashim123@gmail.com"
+          ><i class="click-icon fa-regular fa-envelope"></i
+        ></a>
+        <a
+          class="icon reveal click-icon"
+          href="https://www.facebook.com/moimam.ashim"
+          ><i class="click-icon fa-brands fa-facebook"></i
+        ></a>
+      </div>
+    </footer>
+
+    <script src="./js/loader.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
 </html>

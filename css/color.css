@@ -1,10 +1,10 @@
 :root {
-  --bg-color: rgb(1, 15, 11);
+  --bg-color: rgb(1, 15, 15);
 
   --text-pri: #cdfff7;
-  --text-sec: #3da999;
+  --text-sec: #4ad8c3;
 
-  --card-bg: rgba(12, 45, 38, 0.256);
+  --card-bg: rgba(12, 45, 38, 0.689);
   --card-bg-hover: rgba(15, 58, 47, 0.278);
 
   --border: rgba(101, 255, 193, 0.25);
@@ -16,10 +16,10 @@
 
   --accent-bg-hover: rgba(50, 170, 156, 0.216);
 
-  --glass-border: rgba(18, 59, 93, 0.301);
-  --glass-bg: rgba(9, 41, 31, 0.223);
+  --glass-border: rgba(10, 48, 44, 0.449);
+  --glass-bg: rgba(30, 31, 31, 0.059);
 
-  --shadow: rgb(0, 0, 0);
+  --shadow: rgba(0, 0, 0, 0.259);
 
   --service: rgba(16, 153, 142, 0.25);
 
@@ -29,25 +29,25 @@
 
 [data-theme="white"] {
   --bg-color: #f0f3f5;
-  --text-pri: #092f53;
+  --text-pri: #093021;
   --text-sec: #2c9180;
 
-  --card-bg: rgba(212, 230, 238, 0.167);
-  --card-bg-hover: rgba(255, 255, 255, 0.46);
+  --card-bg: rgba(168, 226, 208, 0.326);
+  --card-bg-hover: rgba(142, 206, 185, 0.326);
 
-  --border: rgba(0, 136, 204, 0.395);
-  --border-hover: rgba(136, 213, 252, 0.642);
+  --border: rgba(0, 204, 112, 0.395);
+  --border-hover: rgba(136, 252, 182, 0.642);
   --icon-border: rgba(11, 28, 45, 0.15);
 
   --live: #0aa60a;
   --live-bg: rgba(10, 166, 10, 0.08);
 
-  --accent-bg-hover: rgba(0, 119, 166, 0.08);
+  --accent-bg-hover: rgba(0, 166, 83, 0.252);
 
   --glass-border: rgba(255, 255, 255, 0.507);
-  --glass-bg: rgba(221, 251, 241, 0.318);
+  --glass-bg: rgba(255, 255, 255, 0.06);
 
-  --shadow: rgba(35, 71, 86, 0.138);
+  --shadow: rgba(124, 124, 124, 0.197);
 
   --service: #70d5e53c;
 

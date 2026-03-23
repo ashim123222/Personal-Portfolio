@@ -1,11 +1,13 @@
 header {
   height: 60px;
+  padding: 15px;
   padding: 0 5%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   z-index: 9999;
-  background: var(--card-bg);
+  border-bottom: 0.5px solid var(--border);
+  /* background: var(--card-bg); */
   position: relative;
   /* box-shadow: 1px 0 0.75px var(--text-pri); */
 }
@@ -34,28 +36,28 @@ header {
 }
 
 header.shrunk {
-  position: fixed;
+  position: sticky;
   top: -10px;
   right: 0px;
-  /* width: fit-content; */
   transform: translateY(20px);
   justify-content: flex-end;
   background-color: transparent;
   box-shadow: none;
   animation: move 0.5s linear;
   gap: 1vw;
+  border-bottom: none;
 }
 header.shrunk nav {
-  border-radius: 30px;
+  border-radius: 10px;
   padding: 5px;
   -webkit-backdrop-filter: blur(5px) saturate(10%);
   backdrop-filter: blur(10px);
-  background: var(--glass-bg);
+  background: linear-gradient(270deg, transparent, var(--glass-bg));
   border: 1px solid var(--glass-border);
   overflow: hidden;
   box-shadow:
-    inset 0 0 5px var(--glass-border),
-    0 5px 10px var(--shadow), 0 0 50px var(--shadow);
+    0 5px 10px var(--shadow),
+    0 0 50px var(--shadow);
   a {
     opacity: 1;
   }
@@ -66,18 +68,14 @@ header.shrunk .logo {
 }
 header.shrunk nav a {
   opacity: 1;
-  /* box-shadow: inset 3px 0 6px var(--border); */
   transition: 0.5s linear;
-  background: var(--glass-bg);
-  box-shadow: inset 0 0 5px var(--glass-border);
-  border: 1px solid var(--border);
+  background: var(--glass-border);
 }
 header.shrunk nav a:hover,
 header.shrunk nav a.active {
   background: var(--bg-color);
   opacity: 1;
   color: var(--text-sec);
-  /* box-shadow: inset 0 3px 6px var(--border-hover); */
 }
 header.shrunk .mode {
   -webkit-backdrop-filter: blur(10px) saturate(120%);
@@ -94,28 +92,32 @@ header.shrunk .mode {
 }
 
 .logo {
-  font-family: "Iceberg", sans-serif;
+  font-family: "Playfair Display";
+  -webkit-text-stroke: 1px var(--text-sec);
+  -webkit-text-fill-color: transparent;
   display: flex;
   align-items: center;
   height: 100%;
-  padding-top: 10px;
   font-size: 2rem;
   font-weight: 900;
-  /* text-shadow: 1px 1px 2px var(--text-sec); */
+  text-shadow:
+    0 0 2px var(--shadow),
+    0px 0px 3px var(--border-hover);
 }
 nav {
   display: flex;
-  gap: 1vw;
+  align-items: center;
+  gap: 10px;
   /* background: var(--glass-bg); */
 }
 nav a {
   padding: 9px 15px;
-  border-radius: 20px;
+  border-radius: 8px;
   color: var(--text-pri);
   font-weight: 550;
   position: relative;
   font-size: 0.9rem;
-  background: var(--card-bg-hover);
+  /* background: var(--card-bg-hover); */
   transition: 0.5s ease-in-out;
 }
 nav a:hover,
@@ -125,7 +127,8 @@ nav a.active {
 }
 nav a::before,
 nav a::after {
-  border-radius: 20px !important;
+  border-radius: 10px !important;
+  padding: 1px !important;
 }
 nav a.active::after,
 nav a.active::before {
@@ -135,6 +138,8 @@ nav a.active::before {
 }
 
 .mode {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
   box-shadow:
     4px 4px 5px var(--shadow),
     inset 3px 0 6px var(--glass-border);

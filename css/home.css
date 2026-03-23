@@ -80,7 +80,6 @@ section#home {
   line-height: 1.7;
   width: 600px;
   font-weight: 500;
-  opacity: 0.1;
   text-align: center;
   z-index: -1;
 }
@@ -105,10 +104,9 @@ a span i {
   justify-content: center;
   gap: 5px;
   font-weight: 500;
-  border-radius: 5px;
+  /* border-radius: 5px; */
   transition: 0.5s linear;
   box-shadow: 4px 4px 6px var(--shadow);
-  /* background: var(--glass-bg); */
 }
 .go-to-links .go-to:hover {
   background: var(--bg-color);
@@ -170,7 +168,7 @@ i.two-d {
 }
 .go-to-t {
   border-radius: 40px;
-  border: 1px solid var(--bg-color);
+  /* border: 1px solid var(--bg-color); */
   color: var(--bg-color);
   background: var(--text-sec);
 }
@@ -208,18 +206,16 @@ section.second {
   gap: 1rem;
   justify-content: space-between;
   padding: 1.5rem;
-  border-radius: 12px;
-  transition: all 1s cubic-bezier(0.68, -0.6, 0.32, 1.74);
+  /* border-radius: 12px; */
   box-shadow:
-    5px 5px 12px var(--shadow),
-    inset 3px 3px 5px var(--glass-border),
-    10px 10px 20px var(--shadow),
+    0px 0px 12px var(--shadow),
+    0px 0px 20px var(--shadow),
     0 0 40px var(--shadow);
-  background: linear-gradient(135deg, transparent, var(--card-bg));
-  border-left: 1px solid var(--border);
-  border-top: 1px solid var(--border);
+  background: linear-gradient(135deg, transparent, var(--card-bg), transparent);
+  border: 1px solid var(--border);
   backdrop-filter: blur(10px);
-  width: 280px;
+  width: 18vw !important;
+  transition: all 1s cubic-bezier(0.68, 0.6, 0.32, 1.74);
   /* corner-shape: scoop; */
 }
 .card .go-to {
@@ -272,12 +268,12 @@ section.second {
   transform: none;
 }
 .card:hover {
-  border-radius: 15px;
   box-shadow:
     5px 5px 12px var(--shadow),
-    inset 3px 3px 5px var(--accent-bg-hover),
     10px 10px 20px var(--shadow),
     0 0 40px var(--shadow);
+  border-radius: 7px;
+  transform: translateY(-7px) rotateX(-10deg);
 }
 .card:hover h3,
 .card a {

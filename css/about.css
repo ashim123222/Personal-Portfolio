@@ -89,15 +89,15 @@ section.skill .card {
     border-radius: 50%;
 }
 .card-bottom span {
-    text-align: left;
     font-size: 0.8rem;
+    text-align: left;
     padding: 4px 8px;
-    border: 1px solid var(--border);
     border-radius: 5px;
-    background: var(--card-bg);
-    opacity: 0.7;
     -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px);
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    opacity: 0.7;
     transition: 0.2s ease;
 }
 .card-bottom span:hover {

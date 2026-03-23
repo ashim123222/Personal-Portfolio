@@ -3,7 +3,7 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: var(--card-bg);
+  background: var(--glass-border);
 }
 footer p {
   font-size: 0.8rem;

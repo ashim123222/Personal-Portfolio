@@ -1,0 +1,51 @@
+{
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  "@id": "https://yourdomain.com/#homepage",
+  "datePublished": "2024-03-23T00:00:00+00:00",
+  "dateModified": "2024-03-23T00:00:00+00:00",
+  "mainEntity": {
+    "@type": "Person",
+    "@id": "https://yourdomain.com/#person",
+    "name": "Moinam Ashim",
+    "url": "https://yourdomain.com/",
+    "sameAs": [
+      "https://github.com/ashim123222",
+      "https://www.linkedin.com/in/moinam-ashim-786brr/",
+      "https://www.facebook.com/moimam.ashim"
+    ],
+    "jobTitle": "Frontend Developer",
+    "description": "Frontend Developer & MERN Stack Developer focused on building modern, interactive, and user-centric web experiences.",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://yourdomain.com/assest/profile-image.png"
+    },
+    "email": "moinamashim123@gmail.com",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Freelance"
+    },
+    "knowsAbout": [
+      "Frontend Development",
+      "React",
+      "JavaScript",
+      "HTML5",
+      "CSS3",
+      "Responsive Design",
+      "Web Performance",
+      "MERN Stack",
+      "Full Stack Development"
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "addressCity": "Manipur",
+      "addressCountry": "IN",
+      "addressRegion": "Manipur"
+    },
+    "skills": "Frontend Development, React, JavaScript, Web Design, Responsive Design, Performance Optimization"
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": "Moinam Ashim"
+  }
+}

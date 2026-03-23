@@ -1,0 +1,121 @@
+/* Content Loader CSS */
+
+.loader-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, var(--bg-color) 0%, var(--bg-color) 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999999999;
+  opacity: 1;
+  transition: opacity 0.5s ease-out;
+}
+
+.loader-container.hidden {
+  pointer-events: none;
+  opacity: 0;
+}
+
+.loader-content {
+  text-align: center;
+}
+
+.loader-title {
+  color: var(--text-sec);
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 30px;
+  letter-spacing: 2px;
+  opacity: 0.9;
+}
+
+.progress-bar-container {
+  width: 300px;
+  height: 6px;
+  background: var(--glass-bg);
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  box-shadow: 0 0 20px var(--text-sec);
+}
+
+.progress-bar {
+  height: 100%;
+  background: linear-gradient(
+    45deg,
+    var(--text-sec),
+    transparent,
+    var(--border-hover)
+  );
+  width: 0%;
+  border-radius: 10px;
+  box-shadow: 0 0 10px var(--text-pri);
+  animation: none;
+}
+
+.progress-bar.animating {
+  animation: fillProgress 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+@keyframes fillProgress {
+  0% {
+    width: 0%;
+  }
+  50% {
+    width: 60%;
+  }
+  85% {
+    width: 85%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.progress-text {
+  color: var(--text-pri);
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-top: 15px;
+}
+
+/* Content fade in animation */
+body.loading {
+  overflow: hidden;
+}
+
+body.loaded {
+  overflow: auto;
+}
+
+main,
+.main-content,
+body
+  > *:not(.loader-container):not(.cursor):not(script):not(header):not(footer) {
+  animation: fadeInFromCenter 0.8s ease-out forwards;
+  animation-delay: 1.5s;
+  opacity: 0;
+}
+
+@keyframes fadeInFromCenter {
+  from {
+    opacity: 0;
+    transform: scale(0.95) translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* Ensure smooth transition */
+.loader-container,
+.progress-bar-container,
+.progress-bar {
+  will-change: opacity, width;
+}
