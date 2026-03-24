@@ -28,7 +28,7 @@
   min-width: 380px;
 }
 
-.ser-card h1 {
+.ser-card h2 {
   font-size: 1.2rem;
   text-align: center;
   color: var(--text-sec);
@@ -200,10 +200,11 @@ section.perser {
   z-index: -1;
 }
 
-.pro-cards .card h1 {
+.pro-cards .card b {
   font-size: 5rem;
   opacity: 0.5;
   font-family: "Iceberg", sans-serif;
+  color: var(--text-sec);
 }
 
 .pro-cards .card p {

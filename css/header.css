@@ -44,7 +44,7 @@ header.shrunk {
   background-color: transparent;
   box-shadow: none;
   animation: move 0.5s linear;
-  gap: 1vw;
+  gap: 20px;
   border-bottom: none;
 }
 header.shrunk nav {
@@ -184,7 +184,7 @@ nav a.active::before {
 
 .color {
   display: flex;
-  gap: 1vw;
+  gap: 20px;
   position: relative;
 }
 .show-color {

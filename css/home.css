@@ -218,7 +218,7 @@ section.second {
   backdrop-filter: blur(10px);
   width: 18vw !important;
   min-width: 250px;
-  transition: all 1s cubic-bezier(0.68, 0.6, 0.32, 1.74);
+  transition: all 0.75s cubic-bezier(0.68, 0.6, 0.32, 1.74);
   /* corner-shape: scoop; */
 }
 .card .go-to {
@@ -275,7 +275,7 @@ section.second {
     5px 5px 12px var(--shadow),
     10px 10px 20px var(--shadow),
     0 0 40px var(--shadow);
-  border-radius: 7px;
+  border-radius: 12px;
   transform: translateY(-7px) rotateX(-10deg);
 }
 .card:hover h3,

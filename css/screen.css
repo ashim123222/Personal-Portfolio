@@ -93,31 +93,46 @@
 }
 
 @media (max-width: 680px) {
-  nav,  header.shrunk nav {
+  .color {
+    gap: 10px;
+  }
+  nav {
+    display: flex;
     flex-direction: column;
     position: fixed;
-    top: 70px;
-    right: -100vw;
-    height: fit-content;
-    width: 100%;
-    height: 100vh;
-    padding: 50px;
+    top: 30px;
+    right: 50px;
+    height: 0px;
+    width: 0px;
+    opacity: 0;
     background: var(--glass-border);
-    -webkit-backdrop-filter: blur(30px) saturate(100%);
-    backdrop-filter: blur(30px);
-    transition: all 0.5s ease;
-    /* border-radius: 50px; */
-    /* transform: rotateX(45deg); */
+    pointer-events: none;
+    transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    padding: 50px;
   }
-  nav.active, header.shrunk nav.active {
-    height: 100vh;
-    right: 0vh;
+  nav.active {
+    height: 100%;
+    width: 100%;
+    top: 80px;
+    right: 0px;
+    opacity: 1;
+    pointer-events: all;
+    backdrop-filter: blur(30px);
+    gap: 20px;
+  }
+  header.shrunk nav.active {
+    height: fit-content;
+    padding: 100px 50px;
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    border-top: 1px solid var(--border-hover);
+    border-bottom: 1px solid var(--border-hover);
+    background: var(--glass-border);
   }
   nav a {
+    border: 1px solid var(--border);
     width: 90%;
     text-align: center;
-    border: 1px solid var(--border);
-    gap: 15px;
   }
 
   .nav-toggle {
@@ -146,6 +161,9 @@
 
   .mode:hover i {
     color: var(--text-pri);
+  }
+  .go-to-links {
+    flex-direction: row-reverse;
   }
 
   section {
@@ -183,10 +201,12 @@
     text-align: center;
   }
 
-  .left h4,
-  .left h4 span {
+  .left h2,
+  .left h2 span {
     text-align: center;
-    font-size: 5vw;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 30px;
   }
 
   .left h1 {
@@ -203,9 +223,9 @@
     text-align: center;
   }
 
-  .go-to {
+  /* .go-to {
     padding: 3px 7px;
-  }
+  } */
 
   .go-to-t {
     box-shadow: none;
@@ -257,6 +277,17 @@
   section#home {
     gap: 30px;
   }
+  .left .top h2 {
+    font-size: 25px;
+    width: 80vw;
+    margin-top: 25px;
+  }
+  .left .top h2 span {
+    font-size: 20px;
+  }
+  /* .go-to-links {
+    width: 70%;
+  } */
 
   .heading {
     font-size: 1.5rem;
@@ -305,7 +336,6 @@
     font-size: 18px;
     text-align: center;
   }
-
 
   .pro-cards::before {
     display: none;
