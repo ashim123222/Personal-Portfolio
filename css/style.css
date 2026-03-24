@@ -1,6 +1,6 @@
 body {
   background-color: var(--bg-color);
-  overflow-x: hidden;
+  overflow-x: hidden !important;
   align-items: center;
   scroll-behavior: smooth;
 }
@@ -347,6 +347,9 @@ button:focus-visible {
 .imp {
   overflow: hidden;
   position: relative;
+}
+.imp .go-to {
+  margin-top: 5vh;
 }
 .f-one {
   position: absolute;
