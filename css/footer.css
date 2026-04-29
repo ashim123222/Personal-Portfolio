@@ -1,9 +1,10 @@
 footer {
   padding: 5% 2%;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: var(--glass-border);
+  background: var(--glass-bg);
 }
 footer p {
   font-size: 0.8rem;

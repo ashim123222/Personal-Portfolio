@@ -1,15 +1,26 @@
 header {
-  height: 60px;
   padding: 15px;
-  padding: 0 5%;
+  padding: 10px 5%;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   z-index: 9999;
-  border-bottom: 0.5px solid var(--border);
-  /* background: var(--card-bg); */
-  position: relative;
-  /* box-shadow: 1px 0 0.75px var(--text-pri); */
+  border: 1px solid transparent;
+  border-bottom: 0.5px solid var(--glass-border);
+  position: sticky;
+  top: 0px;
+}
+header.shrunk {
+  top: 10px;
+  border: 2px solid var(--glass-border);
+  box-shadow: inset 0 0 3px var(--border-hover), 0 0 20px var(--shadow);
+  width: 1000px;
+  margin: auto;
+  border-radius: 40px;
+  padding: 5px 20px;
+  -webkit-backdrop-filter: blur(5px) saturate(10%);
+  backdrop-filter: blur(10px);
 }
 
 .nav-toggle {
@@ -35,41 +46,20 @@ header {
   transition: 0.3s ease;
 }
 
-header.shrunk {
-  position: sticky;
-  top: -10px;
-  right: 0px;
-  transform: translateY(20px);
-  justify-content: flex-end;
-  background-color: transparent;
-  box-shadow: none;
-  animation: move 0.5s linear;
-  gap: 20px;
-  border-bottom: none;
-}
 header.shrunk nav {
-  border-radius: 10px;
+  border-radius: 30px;
   padding: 5px;
-  -webkit-backdrop-filter: blur(5px) saturate(10%);
-  backdrop-filter: blur(10px);
-  background: linear-gradient(270deg, transparent, var(--glass-bg));
   border: 1px solid var(--glass-border);
-  overflow: hidden;
-  box-shadow:
-    0 5px 10px var(--shadow),
-    0 0 50px var(--shadow);
   a {
     opacity: 1;
   }
 }
 
-header.shrunk .logo {
-  display: none;
-}
 header.shrunk nav a {
   opacity: 1;
   transition: 0.5s linear;
   background: var(--glass-border);
+  border-radius: 30px;
 }
 header.shrunk nav a:hover,
 header.shrunk nav a.active {
@@ -92,32 +82,23 @@ header.shrunk .mode {
 }
 
 .logo {
-  font-family: "Playfair Display";
-  -webkit-text-stroke: 1px var(--text-sec);
-  -webkit-text-fill-color: transparent;
-  display: flex;
-  align-items: center;
+  font-family: head;
   height: 100%;
   font-size: 2rem;
-  font-weight: 900;
-  text-shadow:
-    0 0 2px var(--shadow),
-    0px 0px 3px var(--border-hover);
 }
 nav {
   display: flex;
   align-items: center;
   gap: 10px;
-  /* background: var(--glass-bg); */
+  border: 1px solid transparent;
 }
 nav a {
-  padding: 9px 15px;
-  border-radius: 8px;
+  padding: 12px 20px;
+  border-radius: 30px;
   color: var(--text-pri);
   font-weight: 550;
   position: relative;
   font-size: 0.9rem;
-  /* background: var(--card-bg-hover); */
   transition: 0.5s ease-in-out;
 }
 nav a:hover,
@@ -129,15 +110,16 @@ nav a::before,
 nav a::after {
   border-radius: 10px !important;
   padding: 1px !important;
+  border-radius: 30px !important;
 }
 nav a.active::after,
 nav a.active::before {
   height: 100%;
   width: 100%;
-  /* opacity: 1; */
+  border-radius: 30px !important;
 }
 
-.mode {
+.icon {
   background: var(--glass-bg);
   border: 1px solid var(--glass-border);
   box-shadow:
@@ -153,32 +135,24 @@ nav a.active::before {
   cursor: pointer;
   transition: 0.5s linear;
 }
-#theme.active {
-  box-shadow:
-    0 5px 10px var(--shadow),
-    inset 0 3px 6px var(--border-hover);
-  opacity: 1;
-}
-#theme.active i {
-  color: var(--text-sec);
-  transform: rotate(-45deg);
-}
-.mode i {
+
+.icon i {
   font-size: 0.9rem;
   transition: 0.5s linear;
 }
-.mode:hover {
+.icon:hover {
   box-shadow:
-    0 5px 10px var(--shadow),
-    inset 0 3px 6px var(--border-hover);
+    0 0px 30px var(--border),
+    inset 0 3px 6px var(--border);
   opacity: 1;
+  border: 1px solid var(--border);
   transform: scale(1.05);
   i {
     color: var(--text-sec);
     transform: rotate(-45deg);
   }
 }
-.mode:active i {
+.icon:active i {
   rotate: 90deg;
 }
 

@@ -1,17 +1,7 @@
 section.contact {
-  /* padding: 5% 20%; */
   text-align: center;
 }
-section.contact .cards {
-  display: flex;
-  flex-wrap: wrap;
-}
-section.contact .cards .card {
-  gap: 3px;
-}
-section.con-sec .cards {
-  margin-top: 10px;
-}
+
 
 .card .link {
   font-size: 1rem;

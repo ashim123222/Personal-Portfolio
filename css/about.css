@@ -1,106 +1,150 @@
 section.about {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
-.heading {
-    font-size: 3rem;
-    font-family: "Playfair Display", serif;
-    z-index: -1;
+h1 {
+  height: 90vh;
+  width: 100%;
+  font-size: 3vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: cz;
+  position: relative;
+  overflow: hidden;
+  text-shadow: 0 0 50px var(--border-hover);
+  color: var(--text-pri);
+}
+h1 span {
+  font-size: 15vw;
+  margin-bottom: 5vh;
+  text-transform: capitalize;
+  font-family: styl !important;
+  line-height: 1;
+  text-shadow:  0 0 30px var(--border-hover);
+  color: var(--text-sec);
+}
+
+h1::before,
+h1::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  width: 100%;
+  height: 100%;
+  background: var(--accent-bg-hover);
+  border: 2px dashed var(--border);
+  transition: 5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  z-index: -1;
+}
+h1::before {
+  transform: rotate(45deg);
+}
+h1::after {
+  transform: rotate(45deg);
+}
+h1.reveal.active::before {
+  transform: rotate(135deg) translateY(-50vw);
+}
+h1.reveal.active::after {
+  transform: rotate(135deg) translateY(50vw);
+}
+
+.heading.reveal {
+  transform: translateY(400px);
+  opacity: 0;
+  transition: 5s ease;
+}
+.heading.reveal.active {
+  transform: translateY(0px);
+  opacity: 1;
 }
 section.about p {
-    opacity: 0.8;
-    font-family: "Montserrat", sans-serif;
+  opacity: 0.8;
+  font-family: "Montserrat", sans-serif;
 }
 section.about h2 {
-    text-transform: uppercase;
-    margin-top: 4rem;
-    font-size: 2rem;
-    color: var(--text-sec);
+  text-transform: uppercase;
+  margin-top: 4rem;
+  font-size: 2rem;
+  color: var(--text-sec);
 }
-section.about .cards  {
-    margin-top: 3rem;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+section.about .cards {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 section.about .card {
-    width: 280px;
-    flex-grow: 1;
+  width: 280px;
+  flex-grow: 1;
 }
 
 section.personal {
-    /* padding: 5% 10%; */
-    text-align: center;
+  text-align: center;
 }
 section.personal .cards {
-    padding: 0% 10%;
-    display: flex;
-    flex-wrap: wrap;
-} 
+  display: flex;
+  flex-wrap: wrap;
+}
 section.personal .card {
-    align-items: stretch;
-    flex-grow: 1;
-    width: 280px;
+  align-items: stretch;
+  flex-grow: 1;
+  min-width: 300px;
 }
 section.personal .card .card-top {
-    align-items: start;
+  align-items: start;
 }
 section.personal .card p {
-    margin-top: 0px;
-    text-align: left;
-    font-family: "Montserrat", sans-serif;
+  margin-top: 0px;
+  text-align: left;
 }
 
 section.skill {
-    padding: 5% 10%;
-    text-align: center;
+  text-align: center;
 }
 section.skill .cards {
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
 section.skill .card {
-    width: 280px;
-    align-items: start;
-    flex-grow: 1;
+  min-width: 300px;
+  align-items: start;
+  flex-grow: 1;
 }
 
-.cards .card .card-bottom{
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    width: 100%;
+.cards .card .card-bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 100%;
 }
 .cards .card h3 {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-weight: 550;
-    text-transform: capitalize;
-}
-.cards .card .card-top h3 i {
-    font-size: 1rem;
-    height: 40px;
-    width: 40px;
-    margin-bottom: 0px;
-    border-radius: 50%;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-weight: 550;
+  text-transform: capitalize;
 }
 .card-bottom span {
-    font-size: 0.8rem;
-    text-align: left;
-    padding: 4px 8px;
-    border-radius: 5px;
-    -webkit-backdrop-filter: blur(5px);
-    backdrop-filter: blur(5px);
-    background: var(--card-bg);
-    border: 1px solid var(--border);
-    opacity: 0.7;
-    transition: 0.2s ease;
+  font-size: 0.8rem;
+  text-align: left;
+  padding: 4px 8px;
+  border-radius: 5px;
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  opacity: 0.7;
+  transition: 0.2s ease;
 }
 .card-bottom span:hover {
-    color: var(--text-sec);
-    opacity: 1;
-    border: 1px solid var(--border-hover);
+  color: var(--text-sec);
+  opacity: 1;
+  border: 1px solid var(--border-hover);
 }

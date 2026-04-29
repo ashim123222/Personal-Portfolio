@@ -1,8 +1,10 @@
 :root {
   --bg-color: rgb(1, 15, 15);
+  --bg-sec: rgba(0, 0, 0, 0.903);
 
   --text-pri: #cdfff7;
   --text-sec: #4ad8c3;
+  --text-muted: #86afa9;
 
   --card-bg: rgba(12, 45, 38, 0.689);
   --card-bg-hover: rgba(15, 58, 47, 0.278);
@@ -16,8 +18,8 @@
 
   --accent-bg-hover: rgba(50, 170, 156, 0.216);
 
-  --glass-border: rgba(10, 48, 44, 0.449);
-  --glass-bg: rgba(30, 31, 31, 0.059);
+  --glass-border: rgba(15, 72, 66, 0.449);
+  --glass-bg: rgba(43, 58, 58, 0.223);
 
   --shadow: rgba(0, 0, 0, 0.259);
 

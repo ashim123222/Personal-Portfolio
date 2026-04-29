@@ -1,8 +1,33 @@
+@font-face {
+  font-family: pri;
+  src: url(../fonts/Inter/Inter-VariableFont_opsz\,wght.ttf);
+}
+@font-face {
+  font-family: head;
+  src: url(../fonts/Lato/Lato-Regular.ttf);
+}
+@font-face {
+  font-family: "styl";
+  src: url(../fonts/Lavishly_Yours/LavishlyYours-Regular.ttf);
+}
+@font-face {
+  font-family: "cz";
+  src: url(../fonts/Cinzel_Decorative/CinzelDecorative-Regular.ttf);
+}
+
 body {
   background-color: var(--bg-color);
   overflow-x: hidden !important;
   align-items: center;
   scroll-behavior: smooth;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 * {
@@ -13,75 +38,38 @@ body {
   color: var(--text-pri);
   background: transparent;
   border: none;
-  font-family: "Montserrat", sans-serif;
+  font-family: pri;
   font-size: 1rem;
   box-sizing: border-box;
+  transition: 0.3s ease;
 }
-
-/* Hide default cursor */
-body,
-a,
-button {
-  cursor: none;
+.td-o {
+  transition-delay: 0.5s !important;
 }
-
-/* Main cursor */
-.cursor {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 40px;
-  height: 40px;
-  border: 1px solid var(--text-pri);
-  border-radius: 50%;
-  pointer-events: none;
-  transform: translate(-50%, -50%);
-  transition:
-    width 0.3s ease,
-    height 0.3s ease,
-    background 0.3s ease,
-    transform 0.15s ease;
-  z-index: 99999999;
-  backdrop-filter: blur(4px);
+.td-tw {
+  transition-delay: 1s !important;
 }
-
-/* Inner indicator */
-.cursor-inner {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 7px;
-  height: 7px;
-  background: var(--text-sec);
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-  transition: transform 0.2s ease;
+.td-th {
+  transition-delay: 1.5s !important;
 }
-
-/* 🔥 Link hover state */
-.cursor.link-hover {
-  width: 70px;
-  height: 70px;
-  background: var(--glass-bg);
-  backdrop-filter: blur(0px);
+.td-fo {
+  transition-delay: 2s !important;
 }
-
-/* 🔥 Button hover state */
-.cursor.button-hover {
-  width: 55px;
-  height: 55px;
-  background: var(--glass-bg);
-  backdrop-filter: blur(0px);
+.td-fi {
+  transition-delay: 2.5s !important;
 }
-
-/* Inner animation */
-.cursor.button-hover .cursor-inner {
-  transform: translate(-50%, -50%) scale(1.5);
+.td-si {
+  transition-delay: 3s !important;
 }
-
+.td-se {
+  transition-delay: 3.5s !important;
+}
+.td-e {
+  transition-delay: 4s !important;
+}
 .reveal {
   opacity: 0;
-  transform: translateY(40px) scale(0.8);
+  transform: translateY(40px);
   transition: all 1s ease;
 }
 
@@ -92,15 +80,12 @@ button {
 
 .reveal-card {
   opacity: 0;
-  transform: translateY(60px) rotateX(45deg);
-  /* transition: all 1s ease; */
-  filter: blur(2px);
+  transform: translateY(60px);
+  transition: all 1s linear;
 }
 .reveal-card.active {
-  filter: blur(0px);
   opacity: 1;
-  transform: translateY(0px) rotateX(0deg);
-  /* transform: translateY(0); */
+  transform: translateY(0px);
 }
 
 .enter-reload {
@@ -161,7 +146,8 @@ button {
 }
 
 section {
-  padding: 100px 10% !important;
+  width: 1200px;
+  padding: 10% 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -199,7 +185,7 @@ section {
   border-radius: 10px;
   transition: 0.4s ease-in-out;
   z-index: -1;
-  animation: spin 3s linear infinite;
+  animation: spin 5s linear infinite;
 }
 
 @keyframes spin {
@@ -231,23 +217,48 @@ section {
 }
 
 .subtext {
-  font-size: 0.8rem;
-  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: 1px;
+  font-weight: 300;
+  text-transform: uppercase;
   width: fit-content;
-  padding: 5px 15px;
+  padding: 10px 15px;
   border-radius: 40px;
-  border: 1px solid var(--border);
   margin-bottom: 2vw;
   color: var(--text-sec);
-  box-shadow: 4px 4px 3px var(--shadow);
+  box-shadow:
+    4px 4px 3px var(--shadow),
+    inset 0 0 3px var(--border);
+  position: relative;
 }
-.outline {
-  font-family: "Playfair Display", serif;
-  letter-spacing: 1px;
-  -webkit-text-stroke: 1px var(--text-sec);
-  -webkit-text-fill-color: transparent;
-  text-shadow: 2px 2px 2px var(--accent-bg-hover);
+.subtext::before {
+  content: "";
+  position: absolute;
+  top: -25%;
+  left: 0%;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background: var(--text-sec);
+  animation: pulse 3s ease infinite;
 }
+@keyframes pulse {
+  0% {
+    transform: scale(0.9);
+    box-shadow: 0 0 0 0 var(--text-sec);
+  }
+
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 30px rgba(52, 152, 219, 0);
+  }
+
+  100% {
+    transform: scale(0.9);
+    box-shadow: 0 0 0 0 rgba(52, 152, 219, 0);
+  }
+}
+
 
 .end {
   height: 1px;
@@ -267,33 +278,9 @@ section {
   display: flex;
   gap: 1vw;
 }
-.social-links a i {
-  box-shadow:
-    4px 4px 5px var(--shadow),
-    inset 3px 0 6px var(--border);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 45px;
-  width: 45px;
-  font-size: 1.2rem;
-  backdrop-filter: blur(5px);
-  transition: 0.5s linear;
-}
-.social-links a i:hover {
-  background: var(--card-bg);
-  color: var(--text-sec);
-  opacity: 1;
-  box-shadow:
-    5px 5px 3px var(--shadow),
-    inset 0 3px 6px var(--border);
-  scale: 1.1;
-  transform: rotateX(10deg) rotateY(10deg) translateZ(10px);
-}
 
 .common {
-  padding: 5% 10%;
+  width: 100vw;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -467,46 +454,16 @@ button:focus-visible {
   }
 }
 
-/* == ENHANCEMENTS: Glow & 3D == */
-.glow-effect {
-  position: fixed;
-  top: 100%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(1);
-  width: 60vw;
-  height: 60vw;
-  max-width: 800px;
-  max-height: 800px;
-  border-radius: 50%;
-  background: radial-gradient(circle, var(--text-sec) 0%, transparent 80%);
-  opacity: 0.2; /* increased base opacity */
-  pointer-events: none;
-  z-index: -999;
-  filter: blur(80px);
-  transition:
-    transform 0.2s ease-out,
-    opacity 0.2s ease-out;
-  mix-blend-mode: screen;
-}
-
-[data-theme="light"] .glow-effect,
-:root:not([data-theme]) .glow-effect {
-  mix-blend-mode: multiply;
-  opacity: 0.2;
-}
-
 .magnetic-element {
   transition: transform 0.2s cubic-bezier(0.2, 0.8, 0.2, 1);
   will-change: transform;
-  display: inline-block; 
+  display: inline-block;
 }
 
 /* Ensure smooth override if needed */
 .magnetic-element:hover {
   transition: transform 0.1s linear;
 }
-
-
 
 /* == ENHANCEMENTS: Active Theme Styling == */
 .show-color li.active-theme {

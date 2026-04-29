@@ -1,9 +1,3 @@
-section#home {
-  /* padding: 5% 10%; */
-  display: grid;
-  grid-template-columns: 0.5fr 2fr;
-  gap: 2vw;
-}
 .clock {
   font-family: "Iceberg", sans-serif;
   text-align: center;
@@ -17,6 +11,11 @@ section#home {
   z-index: 9999;
   backdrop-filter: blur(10px);
   font-size: 0.8rem;
+}
+section#home {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-top: -70px;
 }
 
 .right .img {
@@ -42,10 +41,6 @@ section#home {
   object-fit: cover;
   filter: drop-shadow(0 0 10px var(--border));
 }
-.right .img:hover {
-  box-shadow: -10px 10px 20px var(--shadow);
-  transform: translateY(-4px);
-}
 
 .left {
   display: flex;
@@ -54,36 +49,34 @@ section#home {
   justify-content: center;
   gap: 20px;
 }
-.left h1 {
-  font-size: 3.5rem;
-  font-weight: 900;
-  letter-spacing: 2px;
+h1 {
+  font-size: 70px;
+  font-weight: 500;
+  text-transform: uppercase;
   width: fit-content;
   background: linear-gradient(45deg, var(--text-sec), var(--text-pri));
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-family: "Playfair Display", serif;
+  /* font-family: 2; */
 }
-.left h2 {
+.left strong {
   text-align: left;
   opacity: 0.7;
   font-size: 2rem;
-  font-weight: 700;
+  font-weight: 400;
   color: var(--text-sec);
-}
-.left h2 span {
-  font-size: 1.5rem;
-  font-weight: 700;
+  /* font-family: styl; */
 }
 .intro {
   margin-top: 1rem;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
   line-height: 1.7;
   width: 600px;
-  font-weight: 500;
-  text-align: center;
+  font-weight: 300;
+  color: var(--text-muted);
   z-index: -1;
+  font-size: 18px;
 }
 a span i {
   font-size: 0.9rem;
@@ -93,7 +86,7 @@ a span i {
 .go-to-links {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 15px;
   margin-top: 20px;
 }
 .go-to {
@@ -106,15 +99,11 @@ a span i {
   justify-content: center;
   gap: 5px;
   font-weight: 500;
-  /* border-radius: 5px; */
   transition: 0.5s linear;
   box-shadow: 4px 4px 6px var(--shadow);
-}
-.go-to-links .go-to:hover {
-  background: var(--bg-color);
-  box-shadow: none;
   border-radius: 10px;
 }
+
 .go-to-links .go-to::before,
 .go-to-links .go-to::after {
   background-image: conic-gradient(
@@ -142,16 +131,6 @@ i.one {
 i.two {
   transform: translateX(-8px);
 }
-.go-to:hover i.one {
-  transform: translateX(8px);
-  display: flex;
-  border-left: 2px solid var(--text-sec);
-  border-radius: 4px;
-  padding: 0 4px;
-}
-.go-to:hover i.two {
-  transform: translateX(100px);
-}
 
 i.one-d {
   transform: translateY(-100px);
@@ -159,73 +138,61 @@ i.one-d {
 i.two-d {
   transform: translateX(-8px);
 }
-.go-to-d:hover i.two-d {
-  transform: translateY(100px);
+
+.go-to-td {
+  background: var(--bg-color);
+  border: 1px wavy     red;
 }
-.go-to-d:hover i.one-d {
-  transform: translateY(0px) translateX(7px);
-  border-bottom: 2px solid var(--text-sec);
-  border-radius: 4px;
-  padding: 4px 0;
+.go-to-td::before, .go-to-td::after {
+  height: 100%;
+  width: 100%;
+  padding: 2px;
+  opacity: 1;
 }
-.go-to-t {
-  border-radius: 40px;
-  /* border: 1px solid var(--bg-color); */
-  color: var(--bg-color);
-  background: var(--text-sec);
-}
-.go-to-t:hover {
-  background: var(--text-sec) !important;
-}
-.go-to-t i {
-  color: var(--bg-color);
+.go-to-td::after {
+  opacity: 0.5;
 }
 
 /* home second  */
 
 section.second {
-  /* padding: 5% 10%; */
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
 }
 .name {
-  font-size: 2.5rem;
-  font-family: "Playfair Display", serif;
+  font-size: 3rem;
   letter-spacing: 1px;
+  font-weight: 600;
 }
 .cards {
   display: flex;
   flex-wrap: wrap;
-  gap: 1.5rem;
+  width: 100%;
+  gap: 20px;
   margin-top: 4vw;
 }
 .card {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 15px;
   justify-content: space-between;
   padding: 1.5rem;
-  /* border-radius: 12px; */
+  border-radius: 30px;
   box-shadow:
     0px 0px 12px var(--shadow),
     0px 0px 20px var(--shadow),
     0 0 40px var(--shadow);
-  background: linear-gradient(135deg, transparent, var(--card-bg), transparent);
-  border: 1px solid var(--border);
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
   backdrop-filter: blur(10px);
   width: 18vw !important;
-  min-width: 250px;
-  transition: all 0.75s cubic-bezier(0.68, 0.6, 0.32, 1.74);
-  /* corner-shape: scoop; */
+  min-width: 280px;
+  overflow: hidden;
 }
-.card .go-to {
-  opacity: 0;
-  border: none;
-  box-shadow: none;
-}
+
 .card-top {
   display: flex;
   flex-direction: column;
@@ -233,62 +200,114 @@ section.second {
 }
 .card .card-top i,
 .card-contact i {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   box-shadow:
     4px 4px 5px var(--shadow),
     inset 3px 0 6px var(--border);
-  border-radius: 12px;
+  border-radius: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
   height: 50px;
   width: 50px;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   opacity: 0.8;
   -webkit-backdrop-filter: blur(5px) saturate(120%);
   backdrop-filter: blur(5px);
   transition: 0.5s linear;
 }
 .card h3 {
-  font-size: 20px;
+  font-size: 22px;
   letter-spacing: 1px;
   transition: 0.5s linear;
+  font-weight: 500;
 }
 .card p {
-  opacity: 0.8;
+  color: var(--text-muted);
   margin-top: 10px;
-  font-size: 0.9rem;
+  font-size: 16px;
+  letter-spacing: 0.5px;
   line-height: 1.5;
-  font-weight: 500;
+  font-weight: 300;
   transition: 0.5s linear;
 }
 .card .go-to {
   margin: auto;
-  padding: 1px;
+  border: 1px solid var(--border);
+  border-radius: 30px;
+  padding: 8px 15px;
   transition: 0.5s linear;
-}
-.card .go-to:hover {
-  transform: none;
-}
-.card:hover {
+  background: var(--glass-bg);
+  opacity: 1;
+  width: 100%;
   box-shadow:
-    5px 5px 12px var(--shadow),
-    10px 10px 20px var(--shadow),
-    0 0 40px var(--shadow);
-  border-radius: 12px;
-  transform: translateY(-7px) rotateX(-10deg);
+    0px 0px 10px var(--shadow),
+    0 0 30px var(--accent-bg-hover);
 }
-.card:hover h3,
 .card a {
   color: var(--text-sec);
 }
-.card:hover .card-top i {
-  color: var(--text-sec);
-  box-shadow:
-    4px 4px 5px var(--shadow),
-    inset 0 3px 6px var(--border-hover);
+
+@media (hover: hover) {
+  .go-to-links .go-to:hover {
+    background: var(--bg-color);
+    box-shadow: none;
+    border-radius: 10px;
+  }
+  .go-to:hover i.one {
+    transform: translateX(8px);
+    display: flex;
+    border-left: 2px solid var(--text-sec);
+    border-radius: 4px;
+    padding: 0 4px;
+  }
+  .go-to:hover i.two {
+    transform: translateX(100px);
+  }
+  .go-to-d:hover i.two-d {
+    transform: translateY(100px);
+  }
+  .go-to-d:hover i.one-d {
+    transform: translateY(0px) translateX(7px);
+    border-bottom: 2px solid var(--text-sec);
+    border-radius: 4px;
+    padding: 4px 0;
+  }
+  
+  .card .go-to:hover {
+    transform: none;
+  }
+  .card:hover {
+    box-shadow:
+      5px 5px 12px var(--shadow),
+      10px 10px 20px var(--shadow),
+      0 0 40px var(--shadow);
+    border-radius: 12px;
+    transform: translateY(-7px) rotateX(-10deg);
+  }
+  .card:hover h3 {
+    color: var(--text-sec);
+  }
+  .card:hover .card-top i {
+    color: var(--text-sec);
+    transform: scale(1.1) rotate(20deg);
+    box-shadow: 0 0 30px var(--border);
+    box-shadow:
+      4px 4px 5px var(--shadow),
+      inset 0 3px 6px var(--border-hover),
+      0 0 30px var(--border), 0 0 100px var(--border);
+  }
+  .card .go-to {
+    opacity: 0;
+    border: none;
+    background: transparent;
+    box-shadow: none;
+  }
+  .card:hover .go-to {
+    opacity: 1;
+  }
 }
 
-.card:hover .go-to {
-  opacity: 1;
+section.imp {
+  width: 100%;
 }
