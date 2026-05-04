@@ -14,6 +14,23 @@
   font-family: "cz";
   src: url(../fonts/Cinzel_Decorative/CinzelDecorative-Regular.ttf);
 }
+:root {
+  --shadow-main: 0 0 20px var(--shadow);
+
+  --icon-width: 45px;
+  --icon-width-card: 50px;
+  --icon-padding: 8px;
+  --icon-shadow: 4px 4px 5px var(--shadow), inset 3px 0 6px var(--glass-border);
+
+  --gap-sm: 10px;
+  --gap-lg: 20px;
+
+  --padding-nav: 5px 10px;
+  --padding-nav-a: 12px 20px;
+
+  --border-radius-large: 30px;
+  --border-radius-sm: 10px;
+}
 
 body {
   background-color: var(--bg-color);
@@ -43,6 +60,21 @@ main {
   box-sizing: border-box;
   transition: 0.3s ease;
 }
+.d-f {
+  display: flex;
+}
+.ai-c {
+  align-items: center;
+}
+.jc-sb {
+  justify-content: space-between;
+}
+.fd-c {
+  flex-direction: column;
+}
+.ta-c {
+  text-align: center;
+}
 .td-o {
   transition-delay: 0.5s !important;
 }
@@ -69,7 +101,7 @@ main {
 }
 .reveal {
   opacity: 0;
-  transform: translateY(40px);
+  transform: translateY(80px);
   transition: all 1s ease;
 }
 
@@ -80,8 +112,8 @@ main {
 
 .reveal-card {
   opacity: 0;
-  transform: translateY(60px);
-  transition: all 1s linear;
+  transform: translateY(80px);
+  transition: all 1s ease;
 }
 .reveal-card.active {
   opacity: 1;
@@ -219,15 +251,17 @@ section {
 .subtext {
   font-size: 12px;
   letter-spacing: 1px;
-  font-weight: 300;
+  font-weight: 500;
   text-transform: uppercase;
   width: fit-content;
   padding: 10px 15px;
   border-radius: 40px;
   margin-bottom: 2vw;
   color: var(--text-sec);
+  background: var(--accent-bg-hover);
+  border: 1px solid var(--glass-border);
   box-shadow:
-    4px 4px 3px var(--shadow),
+    0px 0px 30px var(--accent-bg-hover),
     inset 0 0 3px var(--border);
   position: relative;
 }
@@ -259,7 +293,6 @@ section {
   }
 }
 
-
 .end {
   height: 1px;
   width: 100%;
@@ -276,7 +309,7 @@ section {
 .social-links {
   margin-top: 1rem;
   display: flex;
-  gap: 1vw;
+  gap: 15px;
 }
 
 .common {
@@ -433,49 +466,45 @@ button:focus-visible {
 /* == SCREEN SIZE LESS THAN 1280PX == */
 /* =====  SCREEN SIZE LESS THAN 600PX ACTIVE OR CLICK STYLE ===== */
 
-@media (max-width: 600px) {
-  .social-links a i {
-    font-size: 1rem;
-    height: 35px;
-    width: 35px;
+@media (hover: hover) {
+  .magnetic-element {
+    transition: transform 0.2s cubic-bezier(0.2, 0.8, 0.2, 1);
+    will-change: transform;
+    display: inline-block;
   }
-  .social-links a i:hover {
-    background: transparent;
-    color: var(--text-pri);
-    box-shadow: none;
-    box-shadow: inset 3px 0 6px var(--border);
-    scale: 1;
+  .magnetic-element:hover {
+    transition: transform 0.1s linear;
   }
-}
-
-@media (max-width: 460px) {
-  .social-links {
-    gap: 20px;
-  }
-}
-
-.magnetic-element {
-  transition: transform 0.2s cubic-bezier(0.2, 0.8, 0.2, 1);
-  will-change: transform;
-  display: inline-block;
-}
-
-/* Ensure smooth override if needed */
-.magnetic-element:hover {
-  transition: transform 0.1s linear;
 }
 
 /* == ENHANCEMENTS: Active Theme Styling == */
 .show-color li.active-theme {
-  outline: 2px solid var(--text-sec);
-  outline-offset: 4px;
+  outline: 1px solid var(--text-sec);
+  outline-offset: 2px;
   background: var(--card-bg-hover);
-  border-radius: 4px;
+  border-radius: 20px;
 }
 
-/* == ENHANCEMENTS: High-End Mobile Adjustments == */
-@media (max-width: 768px) {
-  section {
-    padding: 60px 4% !important;
+.fix {
+  position: fixed;
+  top: 105vh;
+  left: 50%;
+  translate: -50% -50%;
+  height: 30vh;
+  width: 120%;
+  border-radius: 50%;
+  z-index: -88;
+  transition: 5s linear;
+  background: radial-gradient(var(--text-sec), transparent, transparent);
+  filter: blur(50px);
+  animation: updown 3s ease-in-out infinite alternate;
+}
+
+@keyframes updown {
+  from {
+    transform: translateY(30px);
+  }
+  to {
+    transform: translateY(-10px);
   }
 }

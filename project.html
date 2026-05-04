@@ -99,7 +99,7 @@
     </script>
   </head>
   <body>
-    <header>
+    <header class="d-f ai-c jc-sb">
       <div class="logo enter-left">M.A</div>
 
       <nav class="enter-top glass-icon">
@@ -110,7 +110,7 @@
           >About</a
         >
         <a
-          class="active animate-border click-icon reveal-three"
+          class="animate-border click-icon reveal-three active"
           href="project.html"
           >Projects</a
         >
@@ -123,11 +123,155 @@
       </nav>
 
       <div class="color">
-        <button class="mode click-icon glass-icon" id="theme-toggle">
-          <i class="fa-regular fa-sun"></i>
+        <button
+          class="grid-btn icon click-icon glass-icon"
+          onclick="window.location.href = 'grid.html'"
+        >
+          <svg
+            viewBox="-1.6 -1.6 19.20 19.20"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            transform="rotate(0)matrix(1, 0, 0, 1, 0, 0)"
+          >
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g
+              id="SVGRepo_tracerCarrier"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke="#CCCCCC"
+              stroke-width="0.032"
+            ></g>
+            <g id="SVGRepo_iconCarrier">
+              <path d="M7 1H1V5H7V1Z" fill="var(--text-pri)"></path>
+              <path d="M7 7H1V15H7V7Z" fill="var(--accent-bg-hover)"></path>
+              <path d="M9 1H15V9H9V1Z" fill="var(--accent-bg-hover)"></path>
+              <path d="M15 11H9V15H15V11Z" fill="var(--text-pri)"></path>
+            </g>
+          </svg>
         </button>
-        <button class="mode click-icon glass-icon" id="theme">
-          <i class="fa-solid fa-brush"></i>
+
+        <button class="mode icon click-icon glass-icon" id="theme-toggle">
+          <svg
+            class="sun-icon"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g
+              id="SVGRepo_tracerCarrier"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></g>
+            <g id="SVGRepo_iconCarrier">
+              <path
+                d="M7.28451 10.3333C7.10026 10.8546 7 11.4156 7 12C7 14.7614 9.23858 17 12 17C14.7614 17 17 14.7614 17 12C17 9.23858 14.7614 7 12 7C11.4156 7 10.8546 7.10026 10.3333 7.28451"
+                stroke="var(--text-pri)"
+                stroke-width="1.5"
+                stroke-linecap="round"
+              ></path>
+              <path
+                d="M12 2V4"
+                stroke="var(--text-pri)"
+                stroke-width="1.5"
+                stroke-linecap="round"
+              ></path>
+              <path
+                d="M12 20V22"
+                stroke="var(--text-pri)"
+                stroke-width="1.5"
+                stroke-linecap="round"
+              ></path>
+              <path
+                d="M4 12L2 12"
+                stroke="var(--text-pri)"
+                stroke-width="1.5"
+                stroke-linecap="round"
+              ></path>
+              <path
+                d="M22 12L20 12"
+                stroke="var(--text-pri)"
+                stroke-width="1.5"
+                stroke-linecap="round"
+              ></path>
+              <path
+                d="M19.7778 4.22266L17.5558 6.25424"
+                stroke="var(--text-pri)"
+                stroke-width="1.5"
+                stroke-linecap="round"
+              ></path>
+              <path
+                d="M4.22217 4.22266L6.44418 6.25424"
+                stroke="var(--text-pri)"
+                stroke-width="1.5"
+                stroke-linecap="round"
+              ></path>
+              <path
+                d="M6.44434 17.5557L4.22211 19.7779"
+                stroke="var(--text-pri)"
+                stroke-width="1.5"
+                stroke-linecap="round"
+              ></path>
+              <path
+                d="M19.7778 19.7773L17.5558 17.5551"
+                stroke="var(--text-pri)"
+                stroke-width="1.5"
+                stroke-linecap="round"
+              ></path>
+            </g>
+          </svg>
+          <svg
+            class="moon-icon hidden"
+            viewBox="-4.08 -4.08 32.16 32.16"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            stroke="var(--text-pri)"
+            stroke-width="0.00024000000000000003"
+          >
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g
+              id="SVGRepo_tracerCarrier"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></g>
+            <g id="SVGRepo_iconCarrier">
+              <path
+                d="M21.0672 11.8568L20.4253 11.469L21.0672 11.8568ZM12.1432 2.93276L11.7553 2.29085V2.29085L12.1432 2.93276ZM7.37554 20.013C7.017 19.8056 6.5582 19.9281 6.3508 20.2866C6.14339 20.6452 6.26591 21.104 6.62446 21.3114L7.37554 20.013ZM2.68862 17.3755C2.89602 17.7341 3.35482 17.8566 3.71337 17.6492C4.07191 17.4418 4.19443 16.983 3.98703 16.6245L2.68862 17.3755ZM21.25 12C21.25 17.1086 17.1086 21.25 12 21.25V22.75C17.9371 22.75 22.75 17.9371 22.75 12H21.25ZM2.75 12C2.75 6.89137 6.89137 2.75 12 2.75V1.25C6.06294 1.25 1.25 6.06294 1.25 12H2.75ZM15.5 14.25C12.3244 14.25 9.75 11.6756 9.75 8.5H8.25C8.25 12.5041 11.4959 15.75 15.5 15.75V14.25ZM20.4253 11.469C19.4172 13.1373 17.5882 14.25 15.5 14.25V15.75C18.1349 15.75 20.4407 14.3439 21.7092 12.2447L20.4253 11.469ZM9.75 8.5C9.75 6.41182 10.8627 4.5828 12.531 3.57467L11.7553 2.29085C9.65609 3.5593 8.25 5.86509 8.25 8.5H9.75ZM12 2.75C11.9115 2.75 11.8077 2.71008 11.7324 2.63168C11.6686 2.56527 11.6538 2.50244 11.6503 2.47703C11.6461 2.44587 11.6482 2.35557 11.7553 2.29085L12.531 3.57467C13.0342 3.27065 13.196 2.71398 13.1368 2.27627C13.0754 1.82126 12.7166 1.25 12 1.25V2.75ZM21.7092 12.2447C21.6444 12.3518 21.5541 12.3539 21.523 12.3497C21.4976 12.3462 21.4347 12.3314 21.3683 12.2676C21.2899 12.1923 21.25 12.0885 21.25 12H22.75C22.75 11.2834 22.1787 10.9246 21.7237 10.8632C21.286 10.804 20.7293 10.9658 20.4253 11.469L21.7092 12.2447ZM12 21.25C10.3139 21.25 8.73533 20.7996 7.37554 20.013L6.62446 21.3114C8.2064 22.2265 10.0432 22.75 12 22.75V21.25ZM3.98703 16.6245C3.20043 15.2647 2.75 13.6861 2.75 12H1.25C1.25 13.9568 1.77351 15.7936 2.68862 17.3755L3.98703 16.6245Z"
+                fill="var(--text-pri)"
+              ></path>
+            </g>
+          </svg>
+        </button>
+
+        <button class="icon click-icon glass-icon" id="theme">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g
+              id="SVGRepo_tracerCarrier"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></g>
+            <g id="SVGRepo_iconCarrier">
+              <path
+                opacity="0.4"
+                d="M22 16.5V19.5C22 21 21 22 19.5 22H6C6.41 22 6.83 21.94 7.22 21.81C7.33 21.77 7.43999 21.73 7.54999 21.68C7.89999 21.54 8.24001 21.34 8.54001 21.08C8.63001 21.01 8.73001 20.92 8.82001 20.83L8.85999 20.79L15.66 14H19.5C21 14 22 15 22 16.5Z"
+                fill="var(--text-pri)"
+              ></path>
+              <path
+                opacity="0.6"
+                d="M18.3694 11.29L15.6594 14L8.85938 20.79C9.55937 20.07 9.99939 19.08 9.99939 18V8.33996L12.7094 5.62996C13.7694 4.56996 15.1894 4.56996 16.2494 5.62996L18.3694 7.74996C19.4294 8.80996 19.4294 10.23 18.3694 11.29Z"
+                fill="var(--text-pri)"
+              ></path>
+              <path
+                d="M7.5 2H4.5C3 2 2 3 2 4.5V18C2 18.27 2.02999 18.54 2.07999 18.8C2.10999 18.93 2.13999 19.06 2.17999 19.19C2.22999 19.34 2.28 19.49 2.34 19.63C2.35 19.64 2.35001 19.65 2.35001 19.65C2.36001 19.65 2.36001 19.65 2.35001 19.66C2.49001 19.94 2.65 20.21 2.84 20.46C2.95 20.59 3.06001 20.71 3.17001 20.83C3.28001 20.95 3.4 21.05 3.53 21.15L3.54001 21.16C3.79001 21.35 4.06 21.51 4.34 21.65C4.35 21.64 4.35001 21.64 4.35001 21.65C4.50001 21.72 4.65 21.77 4.81 21.82C4.94 21.86 5.07001 21.89 5.20001 21.92C5.46001 21.97 5.73 22 6 22C6.41 22 6.83 21.94 7.22 21.81C7.33 21.77 7.43999 21.73 7.54999 21.68C7.89999 21.54 8.24001 21.34 8.54001 21.08C8.63001 21.01 8.73001 20.92 8.82001 20.83L8.85999 20.79C9.55999 20.07 10 19.08 10 18V4.5C10 3 9 2 7.5 2ZM6 19.5C5.17 19.5 4.5 18.83 4.5 18C4.5 17.17 5.17 16.5 6 16.5C6.83 16.5 7.5 17.17 7.5 18C7.5 18.83 6.83 19.5 6 19.5Z"
+                fill="var(--text-pri)"
+              ></path>
+            </g>
+          </svg>
         </button>
 
         <div class="show-color">
@@ -142,6 +286,7 @@
             <li id="d-green" class="click-icon">Dark-green</li>
           </ul>
         </div>
+
         <button
           class="nav-toggle click-icon"
           aria-label="Toggle navigation"
@@ -153,10 +298,14 @@
         </button>
       </div>
     </header>
+
+    <div class="fix reveal"></div>
+
     <p class="clock">00:00:00</p>
     <h1 class="heading reveal">
       My <span class="heading outline">Projects</span>
     </h1>
+    <div class="end reveal"></div>
     <section class="about">
       <p class="subtext reveal">My Projects</p>
       <p class="intro reveal">
@@ -168,6 +317,7 @@
     <div class="end"></div>
 
     <section class="project">
+      <h2 class="name">Have a look on my projects</h2>
       <div class="proj-btns">
         <button id="all-btn" class="active click-btn">All Projects</button>
         <button id="com-btn" class="click-btn">Completed</button>
@@ -177,7 +327,50 @@
       <div class="proj-container">
         <div class="proj-card com-proj reveal">
           <div class="top">
-            <div class="proj-logo">logo</div>
+            <div class="proj-logo">
+              <svg
+                viewBox="-0.5 0 25 25"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g
+                  id="SVGRepo_tracerCarrier"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></g>
+                <g id="SVGRepo_iconCarrier">
+                  <path
+                    d="M22 10.32C22 9.25914 21.5786 8.24172 20.8284 7.49158C20.0783 6.74143 19.0609 6.32001 18 6.32001H6C4.93913 6.32001 3.92178 6.74143 3.17163 7.49158C2.42149 8.24172 2 9.25914 2 10.32"
+                    stroke="var(--text-sec)"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                  <path
+                    d="M22 10.32C15.91 16.32 8.09 16.32 2 10.32"
+                    stroke="var(--text-sec)"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                  <path
+                    d="M21.9999 10.32L20.9999 18.32C20.8507 19.4088 20.3192 20.4089 19.5002 21.1417C18.6813 21.8745 17.6285 22.2922 16.5299 22.32H7.38989C6.29132 22.2922 5.23847 21.8745 4.41956 21.1417C3.60064 20.4089 3.0691 19.4088 2.91992 18.32L1.91992 10.32"
+                    stroke="var(--text-sec)"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                  <path
+                    d="M8.00977 6.03998C8.00977 4.97911 8.43119 3.96169 9.18134 3.21155C9.93148 2.4614 10.9489 2.03998 12.0098 2.03998C13.0706 2.03998 14.0881 2.4614 14.8382 3.21155C15.5883 3.96169 16.0098 4.97911 16.0098 6.03998"
+                    stroke="var(--text-sec)"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                </g>
+              </svg>
+            </div>
 
             <div>
               <h3 class="title">Personal Portfolio</h3>
@@ -194,24 +387,29 @@
               <img src="./assest/proj-thumb/portfolio.png" alt="img" />
             </div>
             <div>
-              <p class="proj-intro">
-                I am versatile developer bridging web expertise with software
-                engineering principles. I build scalable, high-performance,
-                systems, by distilling complex requirements into elegant code
-                and stratetic, full-stack solutions.
-              </p>
-              <div class="key-features">
-                <h4>Key Features</h4>
-                <li>Showcase best works</li>
-                <li>Demonstrate Growth and evolution</li>
-                <li>Provides context and rationale</li>
-              </div>
-              <div class="tech">
-                <h4>Technologies Used</h4>
-                <span>HTML5</span>
-                <span>CSS3</span>
-                <span>JavaScript</span>
-                <span>EmailJs</span>
+              <div>
+                <div>
+                  <h4>Description</h4>
+                  <p class="proj-intro">
+                    I am versatile developer bridging web expertise with
+                    software engineering principles. I build scalable,
+                    high-performance, systems, by distilling complex
+                    requirements into elegant code and stratetic, full-stack
+                    solutions.
+                  </p>
+                </div>
+                <div class="key-features">
+                  <h4>Key Features</h4>
+                  <li>Showcase best works</li>
+                  <li>Demonstrate Growth and evolution</li>
+                  <li>Provides context and rationale</li>
+                </div>
+                <div class="tech">
+                  <span>HTML5</span>
+                  <span>CSS3</span>
+                  <span>JavaScript</span>
+                  <span>EmailJs</span>
+                </div>
               </div>
               <div class="link-btns">
                 <a
@@ -233,7 +431,49 @@
 
         <div class="proj-card prog-proj reveal">
           <div class="top">
-            <div class="proj-logo">logo</div>
+            <div class="proj-logo">
+              <svg
+                viewBox="0 0 24 24"
+                id="Layer_1"
+                data-name="Layer 1"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="var(--text-sec)"
+              >
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g
+                  id="SVGRepo_tracerCarrier"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></g>
+                <g id="SVGRepo_iconCarrier">
+                  <defs>
+                    <style>
+                      .cls-1 {
+                        fill: none;
+                        stroke: var(--text-sec);
+                        stroke-miterlimit: 10;
+                        stroke-width: 1.92px;
+                      }
+                    </style>
+                  </defs>
+                  <path
+                    class="cls-1"
+                    d="M11,.5V6.76a3.81,3.81,0,0,1-2.12,3.42h0a3.83,3.83,0,0,1-3.43,0h0A3.83,3.83,0,0,1,3.37,6.76V.5"
+                  ></path>
+                  <line
+                    class="cls-1"
+                    x1="7.21"
+                    y1="0.5"
+                    x2="7.21"
+                    y2="23.5"
+                  ></line>
+                  <path
+                    class="cls-1"
+                    d="M14.87,23.5v-22h0a5.74,5.74,0,0,1,5.74,5.75V13l-5.75,2.87"
+                  ></path>
+                </g>
+              </svg>
+            </div>
 
             <div>
               <h3 class="title">Flow Bite Restaurant</h3>
@@ -251,33 +491,38 @@
             </div>
 
             <div>
-              <p class="proj-intro">
-                A Restaurant Management System that streamlines orders,
-                reservations and inventory through an intuitive dashboard.
-                Designed for efficiency and seamless user experience, it
-                simplifies operations while enhancing customer satisfaction and
-                business performance.
-              </p>
-              <div class="key-features">
-                <h4>Key Features</h4>
-                <li>Scan QR code and show menu.</li>
-                <li>Can order, can manage orders.</li>
-                <li>Admin dashboard.</li>
-              </div>
-              <div class="tech">
-                <span>HTML</span>
-                <span>CSS</span>
-                <span>JavaScript</span>
-                <span>MongoDb</span>
-                <span>React.js</span>
-                <span>Express.js</span>
-                <span>Node.js</span>
+              <div>
+                <div>
+                  <h4>Description</h4>
+                  <p class="proj-intro">
+                    A Restaurant Management System that streamlines orders,
+                    reservations and inventory through an intuitive dashboard.
+                    Designed for efficiency and seamless user experience, it
+                    simplifies operations while enhancing customer satisfaction
+                    and business performance.
+                  </p>
+                </div>
+                <div class="key-features">
+                  <h4>Key Features</h4>
+                  <li>Scan QR code and show menu.</li>
+                  <li>Can order, can manage orders.</li>
+                  <li>Admin dashboard.</li>
+                </div>
+                <div class="tech">
+                  <span>HTML</span>
+                  <span>CSS</span>
+                  <span>JavaScript</span>
+                  <span>MongoDb</span>
+                  <span>React.js</span>
+                  <span>Express.js</span>
+                  <span>Node.js</span>
+                </div>
               </div>
               <div class="link-btns">
                 <a
                   target="_blank"
                   class="click-btn"
-                  href="https://ashim123222.github.io/Flow-Bite-restaurant/"
+                  href="https://ashim123222.github.io/Restaurant-site/"
                   >Live Preview <i class="fa-regular fa-eye"></i
                 ></a>
                 <a
@@ -293,7 +538,53 @@
 
         <div class="proj-card prog-proj reveal">
           <div class="top">
-            <div class="proj-logo">logo</div>
+            <div class="proj-logo">
+              <svg
+                version="1.0"
+                id="Layer_1"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 0 64 64"
+                enable-background="new 0 0 64 64"
+                xml:space="preserve"
+                fill="#000000"
+              >
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g
+                  id="SVGRepo_tracerCarrier"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></g>
+                <g id="SVGRepo_iconCarrier">
+                  <g>
+                    <path
+                      fill="var(--text-sec)"
+                      d="M32,3.457C25.496,9.84,21.152,18.418,20.203,28h23.594C42.848,18.418,38.504,9.84,32,3.457z"
+                    ></path>
+                    <path
+                      fill="var(--text-sec)"
+                      d="M38.812,0c6.148,7.367,12.148,17.871,12.984,28H64C62.398,15.195,51.812,3.875,38.812,0z"
+                    ></path>
+                    <path
+                      fill="var(--text-sec)"
+                      d="M20.203,36C21.152,45.582,25.496,54.16,32,60.543C38.504,54.16,42.848,45.582,43.797,36H20.203z"
+                    ></path>
+                    <path
+                      fill="var(--text-sec)"
+                      d="M0,28h12.203c0.836-10.129,6.836-20.633,12.984-28C12.062,4.062,1.602,15.195,0,28z"
+                    ></path>
+                    <path
+                      fill="var(--text-sec)"
+                      d="M25.125,64c-6.148-7.367-12.086-17.871-12.922-28H0C1.602,48.805,12.062,60.125,25.125,64z"
+                    ></path>
+                    <path
+                      fill="var(--text-sec)"
+                      d="M64,36H51.797c-0.836,10.129-6.836,20.633-12.984,28C52,60.125,62.398,48.805,64,36z"
+                    ></path>
+                  </g>
+                </g>
+              </svg>
+            </div>
 
             <div>
               <h3 class="title">Wonderlust</h3>
@@ -311,27 +602,33 @@
             </div>
 
             <div>
-              <p class="proj-intro">
-                A full-stack Airbnb-inspired platform enabling users to browse
-                listings, view property details, authenticate securely, and
-                manage bookings through an intuitive interface with dynamic
-                filtering, responsive design, and scalable backend architecture.
-              </p>
-              <div class="key-features">
-                <h4>Key Features</h4>
-                <li>Can Upload Your Properties</li>
-                <li>Can Edit or Delete Your Uploads</li>
-                <li>Can Search and Book Favourite Place</li>
-                <li>Can Share Your Experience to The World</li>
-              </div>
-              <div class="tech">
-                <span>HTML</span>
-                <span>CSS</span>
-                <span>JavaScript</span>
-                <span>MongoDb</span>
-                <span>React.js</span>
-                <span>Express.js</span>
-                <span>Node.js</span>
+              <div>
+                <div>
+                  <h4>Description</h4>
+                  <p class="proj-intro">
+                    A full-stack Airbnb-inspired platform enabling users to
+                    browse listings, view property details, authenticate
+                    securely, and manage bookings through an intuitive interface
+                    with dynamic filtering, responsive design, and scalable
+                    backend architecture.
+                  </p>
+                </div>
+                <div class="key-features">
+                  <h4>Key Features</h4>
+                  <li>Can Upload Your Properties</li>
+                  <li>Can Edit or Delete Your Uploads</li>
+                  <li>Can Search and Book Favourite Place</li>
+                  <li>Can Share Your Experience to The World</li>
+                </div>
+                <div class="tech">
+                  <span>HTML</span>
+                  <span>CSS</span>
+                  <span>JavaScript</span>
+                  <span>MongoDb</span>
+                  <span>React.js</span>
+                  <span>Express.js</span>
+                  <span>Node.js</span>
+                </div>
               </div>
               <div class="link-btns">
                 <a target="_blank" class="not-now click-btn" href=""
@@ -359,7 +656,10 @@
           projects. Feel free to reach out if you'd like to collaborate.
         </p>
         <div class="go-to-links reveal">
-          <a class="go-to go-to-t animate-border click-btn" href="contact.html">
+          <a
+            class="go-to go-to-td animate-border click-btn"
+            href="contact.html"
+          >
             Let's Talk
             <span
               ><i class="one fa-solid fa-arrow-right"></i>

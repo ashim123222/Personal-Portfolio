@@ -4,7 +4,6 @@ section.project {
   align-items: center;
   gap: 3rem;
   transition: 0.5s linear;
-  padding: 100px 5% !important;
 }
 
 .proj-btns {
@@ -18,7 +17,7 @@ section.project {
   font-weight: 550;
   position: relative;
   cursor: pointer;
-  border: 0.5px solid var(--text-pri);
+  background: var(--accent-bg-hover);
 }
 .proj-btns button::before,
 .proj-btns button::after {
@@ -45,7 +44,7 @@ section.project {
 }
 .proj-btns button:hover::before,
 .proj-btns button.active::before {
-  background: var(--border-hover);
+  background: var(--glass-border);
   z-index: -1;
   height: 100%;
   width: 100%;
@@ -60,28 +59,55 @@ section.project {
   flex-wrap: wrap;
   gap: 16px;
   justify-content: center;
-}
-img {
-  height: 200px;
+  /* width: 80vw; */
 }
 .proj-card {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  border: 1px solid var(--border);
+  border: 2px solid var(--glass-border);
+  background: var(--glass-bg);
+  box-shadow: 0 0 20px var(--shadow);
   border-radius: 30px;
   padding: 20px;
+  backdrop-filter: blur(20px);
 }
 .proj-card .top {
   display: flex;
+  align-items: center;
   flex-grow: 1;
   gap: 15px;
-  
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 15px;
+}
+.proj-card .proj-logo {
+  background: var(--bg-glass);
+  box-shadow:
+    0px 0px 20px var(--shadow),
+    inset 0 0 10px var(--accent-bg-hover);
+  border: 1px solid var(--border);
+  padding: 10px;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+}
+.proj-card .proj-logo svg {
+  height: 100%;
+  width: 100%;
+}
+h3.title {
+  font-size: 25px;
+  letter-spacing: 1px;
+  font-weight: 500;
 }
 .proj-card .top > div:last-child {
   display: flex;
   flex-direction: column;
+  gap: 10px;
   flex-grow: 1;
+  border-left: 1px solid var(--border);
+  padding-left: 15px;
+  height: 100%;
 }
 .proj-card .top > div:last-child div {
   display: flex;
@@ -91,59 +117,158 @@ img {
 .proj-card .top > div:last-child div p {
   font-size: 12px;
   font-family: monospace;
+  color: var(--text-sec);
 }
 
 .card-det {
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* flex-direction: row; */
   gap: 20px;
 }
-
+.card-det > * {
+  flex: 1;
+}
+.card-det .img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--border-radius-large);
+  height: 100%;
+  overflow: hidden;
+  border: 2px solid var(--glass-bg);
+  box-shadow:
+    0 0 2px var(--accent-bg-hover),
+    inset 0 0 2px var(--shadow);
+  padding: 10px;
+}
+.card-det .img img {
+  outline: 1px solid transparent;
+  margin: auto;
+  filter: drop-shadow(0 0 20px var(--accent-bg-hover));
+  width: 100%;
+  border-radius: var(--border-radius-large);
+  border: 1px solid var(--glass-border);
+}
+.card-det > div:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: space-between;
+}
+.card-det > div:nth-child(2) > div:first-child {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.card-det p {
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.8;
+  color: var(--text-muted);
+}
+h4 {
+  font-size: 20px;
+  letter-spacing: 1px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.card-det li {
+  font-size: 15px;
+  line-height: 1.7;
+  font-weight: 300;
+  list-style-type: "» ";
+  list-style-position: inside;
+  color: var(--text-muted);
+}
+.card-det .tech {
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+.card-det span {
+  font-size: 14px;
+  font-weight: 300;
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  padding: 5px 10px;
+  border-radius: 20px;
+}
 
 .link-btns {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
 }
 
 .link-btns a:nth-child(1) {
-    padding: 5px 7px;
-    border: 1px solid var(--text-sec);
-    color: var(--text-sec);
-    border-radius: 7px;
-    font-weight: 550;
+  padding: 10px 15px;
+  border: 1px solid var(--border);
+  border-radius: 30px;
+  font-weight: 550;
+  color: var(--bg-color);
+  background: var(--text-sec);
 }
-.link-btns a:nth-child(1):hover {
-    border: 1px solid var(--text-pri);
-    color: var(--bg-color);
-    background: var(--text-sec);
-    box-shadow: 0 0 20px var(--border);
-}
-.link-btns a:nth-child(1):hover i {
-    color: var(--bg-color);
-}
-.link-btns a:nth-child(1) i {
-    font-size: 0.8rem;
-    color: var(--text-sec);
-}
-.link-btns a:nth-child(2) i {
-    font-size: 1.2rem;
-}
-.link-btns a:nth-child(2):hover i {
+@media (hover: hover) {
+  .proj-card:hover {
+    transform: translateY(-5px);
+    box-shadow:
+      0 0 20px var(--shadow),
+      0px 10px 20px var(--shadow);
+      outline: 1px solid var(--border-hover         );
+      outline-offset: 3px;
+  }
+  .proj-card:hover .proj-logo {
+    transform: rotate(20deg) scale(1.1);
+    box-shadow:
+      0px 0px 20px var(--shadow),
+      0 0 30px var(--accent-bg-hover),
+      inset 0 0 10px var(--accent-bg-hover);
+  }
+  .proj-card:hover .img {
+    border: 2px solid var(--glass-border);
+    box-shadow:
+      inset 0 0 2px solid var(--border-hover),
+      0 0 20px var(--shadow);
+  }
+  .proj-card:hover img {
+    filter: drop-shadow(0 0 100px var(--accent-bg-hover));
+    outline: 1px solid var(--border);
+    outline-offset: 3px;
+  }
+  .link-btns a:nth-child(1):hover {
+    border: 1px solid var(--border-hover);
+    box-shadow:
+      0 0 20px var(--border),
+      inset 0 0 3px var(--border-hover);
+  }
+  .link-btns a:nth-child(1) i {
+    color: var(--bg-color) !important;
+  }
+  .link-btns a:nth-child(2):hover i {
     color: var(--text-sec);
     transform: scale(1.2);
+  }
+}
+
+.link-btns a:nth-child(1) i {
+  font-size: 0.8rem;
+  color: var(--text-sec);
+}
+.link-btns a:nth-child(2) i {
+  font-size: 1.2rem;
 }
 .hide {
   display: none !important;
 }
 .show {
-    display: flex !important;
+  display: flex !important;
 }
 
 .not-now {
-    opacity: 0.5;
-    pointer-events: none;
+  opacity: 0.5;
+  pointer-events: none;
 }
 
 @media (max-width: 600px) {
@@ -171,5 +296,5 @@ img {
   }
   .tech span {
     font-size: 0.8rem;
-}
+  }
 }

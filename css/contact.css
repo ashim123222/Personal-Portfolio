@@ -1,49 +1,99 @@
-section.contact {
+section.contact p.intro,
+section.con-sec p.intro {
   text-align: center;
 }
 
-
-.card .link {
-  font-size: 1rem;
+.con-card {
+  padding: 1.5rem;
+  border-radius: 30px;
+  box-shadow:
+    0px 0px 12px var(--shadow),
+    0px 0px 20px var(--shadow),
+    0 0 40px var(--shadow);
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  display: flex;
+  flex-direction: column;
+}
+.con-card p {
+  text-align: center;
+}
+p.note {
+  font-size: 12px;
   font-weight: 600;
-  color: var(--text-sec);
 }
-.card .note {
-  font-weight: 500;
-  opacity: 0.7;
-  font-size: 0.8rem;
+.card a {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--text-sec);
+  border: 1px solid var(--border);
+  background: var(--accent-bg-hover);
+  padding: 10px;
+  text-align: center;
+  border-radius: 30px;
+  box-shadow: 0 0 20px var(--accent-bg-hover);
 }
 
+@media (hover: hover) {
+  .card a {
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--text-sec);
+    border: 1px solid transparent;
+    background: transparent;
+    padding: 10px;
+    border-radius: 30px;
+    box-shadow: none;
+  }
+}
 section.con-sec {
   display: flex;
-  flex-direction: row-reverse;
-  flex-wrap: wrap;
-  align-items: start;
-  gap: 3rem;
+  flex-direction: column;
+  gap: 40px;
 }
-section.con-sec > * {
+section.con-sec > div {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: start;
+  gap: 40px;
+}
+section.con-sec > div > * {
+  flex-grow: 1;
   flex: 1;
 }
-section.con-sec .intro {
-  text-align: left;
+.card p,
+.card li {
+  color: var(--text-muted);
+  line-height: 1.8;
+  font-weight: 300;
+  list-style-type: "» ";
+  list-style-position: inside;
 }
-
+.card b {
+  color: var(--text-sec);
+}
+.card .subtext {
+  margin-bottom: 10px;
+}
 .left {
-  flex-grow: 1;
-  width: 100%;
+  border: 2px solid var(--glass-border);
+  box-shadow: 0 0 20px var(--shadow);
+  background: var(--glass-bg);
+  padding: 40px;
+  border-radius: 30px;
 }
-
 .left,
 form {
   display: flex;
   flex-direction: column;
   gap: 35px;
+  text-align: center;
 }
 .left h2,
 .right h2 {
   font-size: 2rem;
   margin-bottom: 1vw;
-  font-family: "Playfair Display", serif;
+  font-family: head;
   letter-spacing: 1px;
   text-transform: capitalize;
 }
@@ -58,10 +108,12 @@ textarea,
 select {
   background: var(--card-bg);
   padding: 15px;
+  border-radius: 8px;
   border-bottom: 1px solid var(--border);
 }
 input:focus,
-textarea:focus, select:focus {
+textarea:focus,
+select:focus {
   outline: none;
   border-bottom: 1px solid var(--text-sec);
   box-shadow: 0 2px 5px var(--border);
@@ -80,7 +132,8 @@ input:focus ~ label,
 textarea:focus ~ label,
 select:focus ~ label,
 input:not(:placeholder-shown) ~ label,
-textarea:not(:placeholder-shown) ~ label, .lab {
+textarea:not(:placeholder-shown) ~ label,
+.lab {
   top: -10px;
   left: 0;
   text-transform: uppercase;
@@ -106,81 +159,20 @@ textarea {
   min-height: 150px;
 }
 .left button {
-  background: var(--border-hover);
+  background: var(--text-pri);
   border: none;
   padding: 10px;
   cursor: pointer;
   font-weight: 500;
   letter-spacing: 0.5px;
+  color: var(--bg-color);
   border: 1px solid var(--border);
+  border-radius: 30px;
 }
 .left button:hover {
   color: var(--text-pri);
   background: var(--card-bg-hover);
-  /* border: 1px solid var(--border-hover); */
   z-index: 1;
-}
-
-.right {
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  width: 100%;
-  /* max-width: 400px; */
-}
-.right .intro {
-  width: 100%;
-  /* font-size: 14px; */
-  letter-spacing: 0.5px;
-}
-
-.right .cards .card {
-  min-width: 300px;
-}
-
-.right h4 {
-  font-size: 1.5rem;
-}
-.right li {
-  position: relative;
-  font-size: 16px;
-  letter-spacing: 0.5px;
-  padding-left: 35px;
-  font-weight: 400 !important;
-}
-
-.right li::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  width: 22px;
-  height: 22px;
-  /* Direct SVG for the "double-circle" checkmark look */
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='2' stroke='%234ade80'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z' /%3E%3C/svg%3E");
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-
-.card h5.subtext {
-  margin: 0px;
-  color: var(--live);
-  border: 1px solid var(--live);
-  background: var(--live-bg);
-}
-.bold {
-  letter-spacing: 1px;
-}
-.card b {
-  color: var(--text-sec);
-}
-.card li {
-  font-weight: 550;
-  line-height: 1.1;
-}
-.quick {
-  background: linear-gradient(235deg, var(--border), var(--card-bg));
-}
-.quick:hover {
-  background: linear-gradient(255deg, var(--border), var(--card-bg));
+  outline-offset: 2px;
+  outline: 1px solid var(--border-hover);
 }

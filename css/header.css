@@ -1,26 +1,22 @@
 header {
-  padding: 15px;
   padding: 10px 5%;
   width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   z-index: 9999;
   border: 1px solid transparent;
   border-bottom: 0.5px solid var(--glass-border);
   position: sticky;
   top: 0px;
+  -webkit-backdrop-filter: blur(50px) saturate(100%);
+  backdrop-filter: blur(50px);
 }
 header.shrunk {
   top: 10px;
   border: 2px solid var(--glass-border);
-  box-shadow: inset 0 0 3px var(--border-hover), 0 0 20px var(--shadow);
+  box-shadow: var(--shadow-main);
   width: 1000px;
   margin: auto;
   border-radius: 40px;
-  padding: 5px 20px;
-  -webkit-backdrop-filter: blur(5px) saturate(10%);
-  backdrop-filter: blur(10px);
+  padding: var(--padding-nav);
 }
 
 .nav-toggle {
@@ -47,9 +43,8 @@ header.shrunk {
 }
 
 header.shrunk nav {
-  border-radius: 30px;
-  padding: 5px;
-  border: 1px solid var(--glass-border);
+  border-radius: var(--border-radius-large);
+  padding: var(--padding-nav);
   a {
     opacity: 1;
   }
@@ -59,7 +54,9 @@ header.shrunk nav a {
   opacity: 1;
   transition: 0.5s linear;
   background: var(--glass-border);
-  border-radius: 30px;
+  border-radius: var(--border-radius-large);
+  outline-offset: 2px;
+  outline: 1px solid var(--glass-border);
 }
 header.shrunk nav a:hover,
 header.shrunk nav a.active {
@@ -72,34 +69,28 @@ header.shrunk .mode {
   backdrop-filter: blur(5px);
 }
 
-@keyframes move {
-  from {
-    gap: 20vw;
-  }
-  to {
-    gap: 3vw;
-  }
-}
-
 .logo {
   font-family: head;
   height: 100%;
-  font-size: 2rem;
+  font-size: 2vw;
+  font-weight: 900;
 }
 nav {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: var(--gap-sm);
   border: 1px solid transparent;
 }
 nav a {
-  padding: 12px 20px;
-  border-radius: 30px;
+  padding: var(--padding-nav-a);
+  border-radius: var(--border-radius-large);
   color: var(--text-pri);
   font-weight: 550;
   position: relative;
-  font-size: 0.9rem;
+  font-size: max(14px, 1vw);
   transition: 0.5s ease-in-out;
+  outline-offset: 2px;
+  outline: 1px solid transparent;
 }
 nav a:hover,
 nav a.active {
@@ -108,26 +99,23 @@ nav a.active {
 }
 nav a::before,
 nav a::after {
-  border-radius: 10px !important;
   padding: 1px !important;
-  border-radius: 30px !important;
+  border-radius: var(--border-radius-large) !important;
 }
 nav a.active::after,
 nav a.active::before {
   height: 100%;
   width: 100%;
-  border-radius: 30px !important;
+  border-radius: var(--border-radius-large) !important;
 }
 
 .icon {
   background: var(--glass-bg);
   border: 1px solid var(--glass-border);
-  box-shadow:
-    4px 4px 5px var(--shadow),
-    inset 3px 0 6px var(--glass-border);
-  padding: 7px;
-  height: 40px;
-  width: 40px;
+  box-shadow: var(--icon-shadow);
+  padding: var(--icon-padding);
+  height: var(--icon-width);
+  width: var(--icon-width);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -137,16 +125,13 @@ nav a.active::before {
 }
 
 .icon i {
-  font-size: 0.9rem;
+  font-size: max(14px, 1vw);
   transition: 0.5s linear;
 }
 .icon:hover {
-  box-shadow:
-    0 0px 30px var(--border),
-    inset 0 3px 6px var(--border);
   opacity: 1;
   border: 1px solid var(--border);
-  transform: scale(1.05);
+  transform: scale(1.2) !important;
   i {
     color: var(--text-sec);
     transform: rotate(-45deg);
@@ -155,10 +140,20 @@ nav a.active::before {
 .icon:active i {
   rotate: 90deg;
 }
+#theme.active {
+  box-shadow: var(--icon-shadow);
+  opacity: 1;
+  border: 1px solid var(--border);
+  transform: scale(1.2) !important;
+  i {
+    color: var(--text-sec);
+    transform: rotate(-45deg);
+  }
+}
 
 .color {
   display: flex;
-  gap: 20px;
+  gap: var(--gap-sm);
   position: relative;
 }
 .show-color {
@@ -166,46 +161,105 @@ nav a.active::before {
   top: 50%;
   left: 50%;
   translate: -50% -50%;
-  border: 1px solid var(--glass-border);
-  border-radius: 10px;
+  border: 2px solid var(--glass-border);
+  border-radius: 30px;
   height: fit-content;
-  width: 200px;
+  width: 400px;
   padding: 4rem 2rem;
   opacity: 0;
   transform: scale(0);
-  transition: 1s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+  z-index: 99999;
 }
 .show-color {
   display: flex;
-  flex-direction: column;
-  gap: 15px;
-  background-color: var(--glass-bg);
-  box-shadow: 0 8px 20px var(--shadow);
-  backdrop-filter: blur(10px);
+  gap: var(--gap-sm);
+  background-color: var(--bg-color);
+  box-shadow:var(--shadow-main);
+  backdrop-filter: blur(10px) !important;
   z-index: 9999;
 }
 .show-color ul {
+  flex-grow: 1;
+  flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: var(--gap-sm);
 }
 .show-color li {
-  padding: 5px 7px;
-  font-size: 0.8rem;
+  padding: var(--padding-nav-a);
+  font-size: max(14px, 1vw);
   text-align: center;
-  border: 1px solid var(--border);
-  border-radius: 20px;
+  border: 2px solid var(--glass-border);
+  background: transparent;
+  box-shadow: 0 0 10px var(--shadow);
+  border-radius: var(--border-radius-large);
   cursor: pointer;
-  opacity: 0.9;
+  opacity: 0.7;
 }
 .show-color li:hover {
   opacity: 1;
-  border: 1px solid var(--border-hover);
+  border: 2px solid var(--border-hover);
 }
 .show-color.active {
   top: 100%;
-  left: 20%;
-  translate: -50% 10%;
+  left: 50%;
+  translate: -82% 10%;
   transform: scale(1);
   opacity: 1;
+}
+
+/* SVG Icon Styling */
+button svg {
+  width: 100%;
+  height: 100%;
+  stroke: currentColor;
+  filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.1));
+}
+
+button svg.hidden {
+  opacity: 0;
+  transform: scale(0) rotate(-180deg);
+  position: absolute;
+}
+
+button svg:not(.hidden) {
+  opacity: 1;
+  transform: scale(1) rotate(0deg);
+}
+
+/* Overlay Effect */
+.theme-overlay {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 80px;
+  height: 80px;
+  pointer-events: none;
+  animation: overlayPulse 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+  z-index: 10000;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    var(--overlay-color, var(--bg-color)) 0%,
+    transparent 70%
+  );
+  box-shadow: 0 0 40px var(--overlay-color, var(--border));
+  transform-origin: center;
+}
+
+@keyframes overlayPulse {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(0.5);
+    box-shadow: 0 0 40px var(--overlay-color, var(--bg-color));
+  }
+  50% {
+    opacity: 1;
+    box-shadow: 0 0 60px var(--overlay-color, var(--border));
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(3.5);
+    box-shadow: 0 0 20px var(--overlay-color, rgba(255, 255, 255, 0));
+  }
 }

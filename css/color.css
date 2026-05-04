@@ -18,7 +18,7 @@
 
   --accent-bg-hover: rgba(50, 170, 156, 0.216);
 
-  --glass-border: rgba(15, 72, 66, 0.449);
+  --glass-border: rgba(15, 72, 66, 0.574);
   --glass-bg: rgba(43, 58, 58, 0.223);
 
   --shadow: rgba(0, 0, 0, 0.259);
@@ -30,24 +30,25 @@
 }
 
 [data-theme="white"] {
-  --bg-color: #f0f3f5;
-  --text-pri: #093021;
+  --bg-color: #ebf1f5;
+  --text-pri: #0d5a3c;
   --text-sec: #2c9180;
+  --text-muted: #455552;
 
   --card-bg: rgba(168, 226, 208, 0.326);
   --card-bg-hover: rgba(142, 206, 185, 0.326);
 
-  --border: rgba(0, 204, 112, 0.395);
+  --border: rgba(136, 214, 180, 0.662);
   --border-hover: rgba(136, 252, 182, 0.642);
   --icon-border: rgba(11, 28, 45, 0.15);
 
   --live: #0aa60a;
   --live-bg: rgba(10, 166, 10, 0.08);
 
-  --accent-bg-hover: rgba(0, 166, 83, 0.252);
+  --accent-bg-hover: rgba(189, 248, 222, 0.477);
 
-  --glass-border: rgba(255, 255, 255, 0.507);
-  --glass-bg: rgba(255, 255, 255, 0.06);
+  --glass-border: rgba(255, 255, 255, 0.671);
+  --glass-bg: rgba(255, 255, 255, 0.082);
 
   --shadow: rgba(124, 124, 124, 0.197);
 
@@ -58,10 +59,11 @@
 }
 
 [data-theme="blue"] {
-  --bg-color: #eef5fb;
+  --bg-color: #e3e9ed;
 
   --text-pri: #0b2e4f;
   --text-sec: #1e8fd1;
+  --text-muted: #667c89;
 
   --card-bg: rgba(170, 210, 247, 0.222);
   --card-bg-hover: rgba(255, 255, 255, 0.55);
@@ -76,7 +78,7 @@
   --accent-bg-hover: rgba(0, 135, 210, 0.08);
 
   --glass-border: rgba(255, 255, 255, 0.55);
-  --glass-bg: rgba(220, 240, 255, 0.35);
+  --glass-bg: rgba(255, 255, 255, 0.35);
 
   --shadow: rgba(20, 60, 90, 0.12);
   
@@ -86,10 +88,11 @@
   --bg: url(../assest/bg-card-white.png);
 }
 [data-theme="red"] {
-  --bg-color: #ffffff;
+  --bg-color: #f8f5f4;
 
   --text-pri: #4a1f24;
   --text-sec: #d94a5a;
+  --text-muted: #795a5e;
 
   --card-bg: rgba(246, 180, 185, 0.296);
   --card-bg-hover: rgba(255, 255, 255, 0.585);
@@ -103,8 +106,8 @@
 
   --accent-bg-hover: rgba(210, 80, 90, 0.08);
 
-  --glass-border: rgba(255, 255, 255, 0.55);
-  --glass-bg: rgba(255, 230, 232, 0.35);
+  --glass-border: rgba(255, 255, 255, 0.933);
+  --glass-bg: rgba(255, 255, 255, 0.219);
 
   --shadow: rgba(90, 30, 35, 0.12);
 
@@ -114,10 +117,11 @@
   --bg: url(../assest/bg-card-white.png);
 }
 [data-theme="green"] {
-  --bg-color: #ffffff;
+  --bg-color: #f0f6f1;
 
-  --text-pri: #0f3a2d;
+  --text-pri: #155c46;
   --text-sec: #2fa87a;
+  --text-muted: #5d7e72;
 
   --card-bg: rgba(192, 247, 223, 0.321);
   --card-bg-hover: rgba(255, 255, 255, 0.55);
@@ -131,8 +135,8 @@
 
   --accent-bg-hover: rgba(50, 170, 120, 0.08);
 
-  --glass-border: rgba(255, 255, 255, 0.55);
-  --glass-bg: rgba(225, 250, 240, 0.35);
+  --glass-border: rgba(255, 255, 255, 0.867);
+  --glass-bg: rgba(255, 255, 255, 0.35);
 
   --shadow: rgba(25, 80, 60, 0.12);
 
@@ -142,10 +146,10 @@
   --bg: url(../assest/bg-card-white.png);
 }
 [data-theme="d-blue"] {
-  --bg-color: rgb(6, 10, 18);
+  --bg-color: rgb(3, 5, 9);
 
   --text-pri: #b5dcfb;
-  --text-sec: #2bbcff;
+  --text-sec: #1285ff;
 
   --card-bg: rgba(12, 28, 45, 0.35);
   --card-bg-hover: rgba(18, 40, 65, 0.45);
@@ -159,8 +163,8 @@
 
   --accent-bg-hover: rgba(50, 120, 170, 0.25);
 
-  --glass-border: rgba(14, 59, 97, 0.247);
-  --glass-bg: rgba(13, 36, 54, 0.223);
+  --glass-border: rgba(31, 63, 248, 0.148);
+  --glass-bg: rgba(13, 36, 54, 0.179);
 
   --shadow: rgb(0, 0, 0);
 
@@ -174,6 +178,7 @@
 
   --text-pri: #ffdcdc;
   --text-sec: #ff4a4a;
+  --text-muted: #fac0c0;
 
   --card-bg: rgba(69, 19, 19, 0.35);
   --card-bg-hover: rgba(60, 18, 18, 0.45);
@@ -187,8 +192,8 @@
 
   --accent-bg-hover: rgba(170, 40, 40, 0.25);
 
-  --glass-border: rgba(71, 15, 15, 0.315);
-  --glass-bg: rgba(71, 19, 19, 0.226);
+  --glass-border: rgba(71, 15, 15, 0.644);
+  --glass-bg: rgba(71, 19, 19, 0.166);
 
   --shadow: rgb(0, 0, 0);
 
@@ -203,7 +208,7 @@
   --text-pri: #cbfdde;
   --text-sec: #00e676;
 
-  --card-bg: rgba(12, 32, 20, 0.35);
+  --card-bg: rgba(19, 54, 33, 0.282);
   --card-bg-hover: rgba(18, 50, 30, 0.45);
 
   --border: rgba(0, 255, 150, 0.25);
@@ -215,7 +220,7 @@
 
   --accent-bg-hover: rgba(30, 120, 70, 0.25);
 
-  --glass-border: rgba(14, 69, 39, 0.296);
+  --glass-border: rgba(14, 69, 39, 0.634);
   --glass-bg: rgba(20, 60, 35, 0.174);
 
   --shadow: rgb(0, 0, 0);

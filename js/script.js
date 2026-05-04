@@ -66,12 +66,40 @@ const dBlue = document.getElementById("d-blue");
 const dRed = document.getElementById("d-red");
 const dGreen = document.getElementById("d-green");
 
-function updateThemeIcon() {
-  const icon = toggleBtn.querySelector("i");
+function createOverlay(event) {
+  const rect = toggleBtn.getBoundingClientRect();
+  const x = rect.left + rect.width / 2;
+  const y = rect.top + rect.height / 2;
+
+  const overlay = document.createElement("div");
+  overlay.classList.add("theme-overlay");
+  overlay.style.setProperty("--overlay-x", "50%");
+  overlay.style.setProperty("--overlay-y", "50%");
+
+  // Determine color based on current theme
   if (root.hasAttribute("data-theme")) {
-    icon.className = "fa-regular fa-moon";
+    overlay.style.setProperty("--overlay-color", "rgba(30, 30, 30, 0.4)");
   } else {
-    icon.className = "fa-regular fa-sun";
+    overlay.style.setProperty("--overlay-color", "rgba(255, 255, 255, 0.3)");
+  }
+
+  document.body.appendChild(overlay);
+
+  setTimeout(() => {
+    overlay.remove();
+  }, 600);
+}
+
+function updateThemeIcon() {
+  const sunIcon = toggleBtn.querySelector(".sun-icon");
+  const moonIcon = toggleBtn.querySelector(".moon-icon");
+
+  if (root.hasAttribute("data-theme")) {
+    sunIcon.classList.add("hidden");
+    moonIcon.classList.remove("hidden");
+  } else {
+    sunIcon.classList.remove("hidden");
+    moonIcon.classList.add("hidden");
   }
 }
 
@@ -85,7 +113,8 @@ function updateActiveThemeBtn(themeName) {
   }
 }
 
-toggleBtn.addEventListener("click", () => {
+toggleBtn.addEventListener("click", (event) => {
+  createOverlay(event);
   if (root.hasAttribute("data-theme")) {
     root.removeAttribute("data-theme");
     localStorage.setItem("theme", "");
@@ -181,56 +210,30 @@ if (form && typeof emailjs !== "undefined") {
 // Selecting all clickable elements
 const magneticElements = Array.from(
   document.querySelectorAll(
-    ".social-links a, .card-bottom span, .color button, .card a, .go-to-t, form button",
+    ".social-links a, .color button, .card a, .go-to-t",
   ),
 );
+const isDesktop = window.matchMedia(
+  "(hover: hover) and (pointer: fine)",
+).matches;
 
-magneticElements.forEach((el) => {
-  el.classList.add("magnetic-element");
+if (isDesktop) {
+  magneticElements.forEach((el) => {
+    el.classList.add("magnetic-element");
 
-  el.addEventListener("mousemove", (e) => {
-    const rect = el.getBoundingClientRect();
-    const x = e.clientX - rect.left - rect.width / 2;
-    const y = e.clientY - rect.top - rect.height / 2;
+    el.addEventListener("mousemove", (e) => {
+      const rect = el.getBoundingClientRect();
+      const x = e.clientX - rect.left - rect.width / 2;
+      const y = e.clientY - rect.top - rect.height / 2;
 
-    // Smooth magnetic pull
-    const pullX = x * 0.5;
-    const pullY = y * 0.5;
+      const pullX = x * 0.5;
+      const pullY = y * 0.5;
 
-    el.style.transform = `translate(${pullX}px, ${pullY}px) scale(1.05)`;
+      el.style.transform = `translate(${pullX}px, ${pullY}px) scale(1.05)`;
+    });
+
+    el.addEventListener("mouseleave", () => {
+      el.style.transform = "translate(0px, 0px) scale(1)";
+    });
   });
-
-  el.addEventListener("mouseleave", () => {
-    // Smooth reset
-    el.style.transform = "translate(0px, 0px) scale(1)";
-  });
-});
-
-const cursor = document.querySelector(".cursor");
-
-document.addEventListener("mousemove", (e) => {
-  cursor.style.top = e.clientY + "px";
-  cursor.style.left = e.clientX + "px";
-});
-
-/* Detect interactive elements */
-const links = document.querySelectorAll("a");
-const buttons = document.querySelectorAll("button, .btn");
-
-links.forEach((link) => {
-  link.addEventListener("mouseenter", () => {
-    cursor.classList.add("link-hover");
-  });
-  link.addEventListener("mouseleave", () => {
-    cursor.classList.remove("link-hover");
-  });
-});
-
-buttons.forEach((btn) => {
-  btn.addEventListener("mouseenter", () => {
-    cursor.classList.add("button-hover");
-  });
-  btn.addEventListener("mouseleave", () => {
-    cursor.classList.remove("button-hover");
-  });
-});
+}

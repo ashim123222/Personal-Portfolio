@@ -15,7 +15,8 @@ h1 {
   font-family: cz;
   position: relative;
   overflow: hidden;
-  text-shadow: 0 0 50px var(--border-hover);
+  /* text-shadow: 0 0 50px var(--border-hover); */
+  text-shadow: 5px -5px 5px var(--border);
   color: var(--text-pri);
 }
 h1 span {
@@ -24,7 +25,8 @@ h1 span {
   text-transform: capitalize;
   font-family: styl !important;
   line-height: 1;
-  text-shadow:  0 0 30px var(--border-hover);
+  /* text-shadow: 0 0 30px var(--border-hover); */
+  text-shadow: 5px -5px 5px var(--border);
   color: var(--text-sec);
 }
 
@@ -40,23 +42,26 @@ h1::after {
   background: var(--accent-bg-hover);
   border: 2px dashed var(--border);
   transition: 5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  z-index: -1;
+  filter: blur(500px);
+  z-index: 9;
 }
 h1::before {
-  transform: rotate(45deg);
+  transform: rotate(-45deg);
 }
 h1::after {
-  transform: rotate(45deg);
+  transform: rotate(-45deg);
 }
 h1.reveal.active::before {
   transform: rotate(135deg) translateY(-50vw);
+  filter: blur(0px);
 }
 h1.reveal.active::after {
   transform: rotate(135deg) translateY(50vw);
+  filter: blur(0px);
 }
 
 .heading.reveal {
-  transform: translateY(400px);
+  transform: translateY(70vh);
   opacity: 0;
   transition: 5s ease;
 }
@@ -118,7 +123,7 @@ section.skill .card {
   flex-grow: 1;
 }
 
-.cards .card .card-bottom {
+.card-bottom {
   display: flex;
   flex-direction: column;
   gap: 4px;
@@ -138,13 +143,16 @@ section.skill .card {
   border-radius: 5px;
   -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px);
-  background: var(--card-bg);
   border: 1px solid var(--border);
   opacity: 0.7;
   transition: 0.2s ease;
 }
-.card-bottom span:hover {
-  color: var(--text-sec);
-  opacity: 1;
-  border: 1px solid var(--border-hover);
+
+@media (hover: hover) {
+  .card-bottom span:hover {
+    color: var(--text-sec);
+    background: var(--card-bg);
+    opacity: 1;
+    border: 1px solid var(--border-hover);
+  }
 }

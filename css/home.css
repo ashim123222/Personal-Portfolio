@@ -1,5 +1,5 @@
 .clock {
-  font-family: "Iceberg", sans-serif;
+  font-family: monospace;
   text-align: center;
   padding: 5px 2vw;
   background: linear-gradient(270deg, transparent, var(--glass-bg));
@@ -10,12 +10,12 @@
   right: 0;
   z-index: 9999;
   backdrop-filter: blur(10px);
-  font-size: 0.8rem;
+  font-size: 0.9rem;
 }
-section#home {
-  display: flex;
+section.home {
   flex-direction: row-reverse;
-  margin-top: -70px;
+  margin-top: -5vw;
+  min-height: 100vh;
 }
 
 .right .img {
@@ -23,13 +23,11 @@ section#home {
   width: 200px;
   border-radius: 10%;
   corner-end-end-shape: bevel;
-  /* corner-left-shape: scoop; */
+  corner-left-shape: scoop;
   overflow: hidden;
   border-right: 5px solid var(--accent-bg-hover);
   border-bottom: 5px solid var(--accent-bg-hover);
-  padding: 10px;
-  box-shadow: 0px 0px 20px var(--shadow);
-  backdrop-filter: blur(10px);
+  box-shadow: var(--shadow-main);
   z-index: -1;
   position: relative;
 }
@@ -39,7 +37,7 @@ section#home {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: drop-shadow(0 0 10px var(--border));
+  filter: drop-shadow(0 0 1vw var(--border));
 }
 
 .left {
@@ -47,10 +45,10 @@ section#home {
   flex-grow: 1;
   flex-direction: column;
   justify-content: center;
-  gap: 20px;
+  gap: var(--gap-lg);
 }
 h1 {
-  font-size: 70px;
+  font-size: 5vw;
   font-weight: 500;
   text-transform: uppercase;
   width: fit-content;
@@ -58,39 +56,36 @@ h1 {
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  /* font-family: 2; */
 }
 .left strong {
   text-align: left;
-  opacity: 0.7;
-  font-size: 2rem;
+  font-size: max(1.5rem, 2vw);
   font-weight: 400;
   color: var(--text-sec);
-  /* font-family: styl; */
 }
 .intro {
-  margin-top: 1rem;
+  margin-top: max(15px, 1.5vw);
   letter-spacing: 0.5px;
   line-height: 1.7;
   width: 600px;
-  font-weight: 300;
+  font-weight: 400;
   color: var(--text-muted);
   z-index: -1;
-  font-size: 18px;
+  font-size: max(16px, 1.2vw);
 }
 a span i {
-  font-size: 0.9rem;
+  font-size: max(14px, 1vw);
   color: var(--text-sec);
   transition: 0.5s linear;
 }
 .go-to-links {
   display: flex;
   flex-wrap: wrap;
-  gap: 15px;
+  gap: var(--gap-lg);
   margin-top: 20px;
 }
 .go-to {
-  padding: 6px 15px;
+  padding: var(--padding-nav-a);
   font-size: 1rem;
   border: 1px solid var(--border);
   color: var(--text-sec);
@@ -100,8 +95,8 @@ a span i {
   gap: 5px;
   font-weight: 500;
   transition: 0.5s linear;
-  box-shadow: 4px 4px 6px var(--shadow);
-  border-radius: 10px;
+  box-shadow: 0px 0px 6px var(--accent-bg-hover);
+  border-radius: var(--border-radius-sm);
 }
 
 .go-to-links .go-to::before,
@@ -118,8 +113,8 @@ a span i {
 
 .go-to span {
   border-radius: 50%;
-  height: 30px;
-  width: 30px;
+  height: 25px;
+  width: 25px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -141,9 +136,9 @@ i.two-d {
 
 .go-to-td {
   background: var(--bg-color);
-  border: 1px wavy     red;
 }
-.go-to-td::before, .go-to-td::after {
+.go-to-td::before,
+.go-to-td::after {
   height: 100%;
   width: 100%;
   padding: 2px;
@@ -153,16 +148,8 @@ i.two-d {
   opacity: 0.5;
 }
 
-/* home second  */
-
-section.second {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
 .name {
-  font-size: 3rem;
+  font-size: max(2rem, 3vw);
   letter-spacing: 1px;
   font-weight: 600;
 }
@@ -170,27 +157,25 @@ section.second {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  gap: 20px;
+  gap: var(--gap-lg);
   margin-top: 4vw;
 }
 .card {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: var(--gap-sm);
   justify-content: space-between;
-  padding: 1.5rem;
+  padding: var(--gap-lg);
   border-radius: 30px;
-  box-shadow:
-    0px 0px 12px var(--shadow),
-    0px 0px 20px var(--shadow),
-    0 0 40px var(--shadow);
+  box-shadow: var(--shadow-main);
   background: var(--glass-bg);
-  border: 1px solid var(--glass-border);
-  backdrop-filter: blur(10px);
+  border: 2px solid var(--glass-border);
+  backdrop-filter: blur(50px);
   width: 18vw !important;
   min-width: 280px;
   overflow: hidden;
+  outline: 1px solid transparent;
 }
 
 .card-top {
@@ -202,22 +187,24 @@ section.second {
 .card-contact i {
   margin-bottom: 10px;
   box-shadow:
-    4px 4px 5px var(--shadow),
-    inset 3px 0 6px var(--border);
-  border-radius: 30px;
+    0px 0px 20px var(--shadow),
+    inset 0 0 10px var(--accent-bg-hover);
+  border: 1px solid var(--glass-border);
+  background: var(--glass-bg);
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 50px;
-  width: 50px;
-  font-size: 1.3rem;
+  height: var(--icon-width-card);
+  width: var(--icon-width-card);
+  font-size: max(16px, 1.2vw);
   opacity: 0.8;
   -webkit-backdrop-filter: blur(5px) saturate(120%);
   backdrop-filter: blur(5px);
   transition: 0.5s linear;
 }
 .card h3 {
-  font-size: 22px;
+  font-size: max(1.2rem, 1.5vw);
   letter-spacing: 1px;
   transition: 0.5s linear;
   font-weight: 500;
@@ -225,7 +212,7 @@ section.second {
 .card p {
   color: var(--text-muted);
   margin-top: 10px;
-  font-size: 16px;
+  font-size: max(14px, 1vw);
   letter-spacing: 0.5px;
   line-height: 1.5;
   font-weight: 300;
@@ -234,8 +221,8 @@ section.second {
 .card .go-to {
   margin: auto;
   border: 1px solid var(--border);
-  border-radius: 30px;
-  padding: 8px 15px;
+  border-radius: var(--border-radius-lg);
+  padding:var(--padding-nav-a   );
   transition: 0.5s linear;
   background: var(--glass-bg);
   opacity: 1;
@@ -273,17 +260,17 @@ section.second {
     border-radius: 4px;
     padding: 4px 0;
   }
-  
+
   .card .go-to:hover {
     transform: none;
   }
   .card:hover {
     box-shadow:
       5px 5px 12px var(--shadow),
-      10px 10px 20px var(--shadow),
       0 0 40px var(--shadow);
-    border-radius: 12px;
-    transform: translateY(-7px) rotateX(-10deg);
+    transform: translateY(-7px) scaleY(1.05);
+    outline-offset: 3px;
+    outline: 1px solid var(--border-hover);
   }
   .card:hover h3 {
     color: var(--text-sec);
@@ -291,11 +278,12 @@ section.second {
   .card:hover .card-top i {
     color: var(--text-sec);
     transform: scale(1.1) rotate(20deg);
-    box-shadow: 0 0 30px var(--border);
     box-shadow:
-      4px 4px 5px var(--shadow),
-      inset 0 3px 6px var(--border-hover),
-      0 0 30px var(--border), 0 0 100px var(--border);
+      0px 0px 20px var(--shadow),
+      inset 0 0 10px var(--accent-bg-hover),
+      0 0 100px var(--border),
+      0 0 30px var(--border);
+    background: var(--glass-bg);
   }
   .card .go-to {
     opacity: 0;
