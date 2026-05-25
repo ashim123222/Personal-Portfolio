@@ -4,7 +4,8 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: var(--glass-bg);
+  background: var(--bg-color);
+  z-index: 9999;
 }
 footer p {
   font-size: 0.8rem;

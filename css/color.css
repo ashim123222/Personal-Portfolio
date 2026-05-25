@@ -1,15 +1,16 @@
 :root {
   --bg-color: rgb(1, 15, 15);
-  --bg-sec: rgba(0, 0, 0, 0.903);
+  --bg-sec: rgba(43, 58, 58, 0.245);
+  --bg-hover: rgba(195, 195, 195, 0.123);
+  --card-bg: rgba(2, 31, 31, 0.585);
 
   --text-pri: #cdfff7;
   --text-sec: #4ad8c3;
   --text-muted: #86afa9;
 
-  --card-bg: rgba(12, 45, 38, 0.689);
   --card-bg-hover: rgba(15, 58, 47, 0.278);
 
-  --border: rgba(101, 255, 193, 0.25);
+  --border: rgba(76, 251, 181, 0.684);
   --border-hover: rgba(60, 255, 203, 0.65);
   --icon-border: rgba(210, 240, 255, 0.2);
 
@@ -19,7 +20,7 @@
   --accent-bg-hover: rgba(50, 170, 156, 0.216);
 
   --glass-border: rgba(15, 72, 66, 0.574);
-  --glass-bg: rgba(43, 58, 58, 0.223);
+  --glass-bg: rgba(24, 40, 40, 0.093);
 
   --shadow: rgba(0, 0, 0, 0.259);
 
@@ -30,15 +31,18 @@
 }
 
 [data-theme="white"] {
-  --bg-color: #ebf1f5;
+  --bg-color: rgb(255, 255, 255);
+  --bg-sec: #ebf1f555;
+  --bg-hover: rgba(195, 195, 195, 0.179);
+  --card-bg: rgba(223, 230, 228, 0.222);
+
   --text-pri: #0d5a3c;
   --text-sec: #2c9180;
   --text-muted: #455552;
 
-  --card-bg: rgba(168, 226, 208, 0.326);
   --card-bg-hover: rgba(142, 206, 185, 0.326);
 
-  --border: rgba(136, 214, 180, 0.662);
+  --border: #38e3c7;
   --border-hover: rgba(136, 252, 182, 0.642);
   --icon-border: rgba(11, 28, 45, 0.15);
 
@@ -47,10 +51,10 @@
 
   --accent-bg-hover: rgba(189, 248, 222, 0.477);
 
-  --glass-border: rgba(255, 255, 255, 0.671);
-  --glass-bg: rgba(255, 255, 255, 0.082);
+  --glass-border: rgba(214, 219, 217, 0.773);
+  --glass-bg: rgba(228, 244, 242, 0.481);
 
-  --shadow: rgba(124, 124, 124, 0.197);
+  --shadow: rgba(0, 0, 0, 0.079);
 
   --service: #70d5e53c;
 
@@ -59,173 +63,232 @@
 }
 
 [data-theme="blue"] {
-  --bg-color: #e3e9ed;
-
-  --text-pri: #0b2e4f;
-  --text-sec: #1e8fd1;
-  --text-muted: #667c89;
-
-  --card-bg: rgba(170, 210, 247, 0.222);
-  --card-bg-hover: rgba(255, 255, 255, 0.55);
-
-  --border: rgba(0, 140, 210, 0.32);
-  --border-hover: rgba(120, 200, 255, 0.55);
-  --icon-border: rgba(20, 45, 70, 0.15);
-
-  --live: #0aa60a;
-  --live-bg: rgba(10, 166, 10, 0.08);
-
-  --accent-bg-hover: rgba(0, 135, 210, 0.08);
-
-  --glass-border: rgba(255, 255, 255, 0.55);
-  --glass-bg: rgba(255, 255, 255, 0.35);
-
-  --shadow: rgba(20, 60, 90, 0.12);
+  --bg-color: rgb(255, 255, 255);
+  --bg-sec: rgba(231, 236, 241, 0.485);
+  --bg-hover: rgba(226, 234, 240, 0.445);
+  --card-bg: rgba(223, 230, 228, 0.222);
   
-  --service: #006eff20;
-
+  /* Deep Oceanic Text */
+  --text-pri: #1a3a5a; /* Deep navy for sharp contrast */
+  --text-sec: #3e75b9; /* Soft denim blue */
+  --text-muted: #4f565d; /* Soft denim blue */
+  
+  /* Surface colors - "Frozen" White/Blue */
+  --card-bg: rgba(255, 255, 255, 0.7);
+  --card-bg-hover: rgba(210, 230, 250, 0.5);
+  
+  /* Borders - Sky & Steel */
+  --border: rgba(9, 118, 227, 0.922);
+  --border-hover: rgba(50, 130, 200, 0.8);
+  --icon-border: rgba(0, 100, 200, 0.1);
+  
+  /* Status and Highlights - "Clear Sky" */
+  --live: rgb(0, 120, 215);
+  --live-bg: rgba(200, 230, 255, 0.9);
+  
+  /* Hover States - Soft Ripple */
+  --accent-bg-hover: rgba(0, 100, 255, 0.06);
+  
+  /* Glass Effects - Frosted Blue Glass */
+  --glass-border: rgba(154, 178, 204, 0.314);
+  --glass-bg: rgba(229, 240, 245, 0.4);
+  
+  /* Shadows - Soft Blue Tint */
+  --shadow: rgba(0, 0, 0, 0.079);
+  
+  /* Service Highlight - Water Tint */
+  --service: rgba(0, 150, 255, 0.12);
+  
   --bg-home: url(../assest/image-white.png);
   --bg: url(../assest/bg-card-white.png);
 }
 [data-theme="red"] {
-  --bg-color: #f8f5f4;
-
-  --text-pri: #4a1f24;
-  --text-sec: #d94a5a;
-  --text-muted: #795a5e;
-
-  --card-bg: rgba(246, 180, 185, 0.296);
-  --card-bg-hover: rgba(255, 255, 255, 0.585);
-
-  --border: rgba(210, 80, 90, 0.32);
-  --border-hover: rgba(255, 150, 160, 0.55);
-  --icon-border: rgba(70, 20, 25, 0.15);
-
-  --live: #0aa60a;
-  --live-bg: rgba(10, 166, 10, 0.08);
-
-  --accent-bg-hover: rgba(210, 80, 90, 0.08);
-
-  --glass-border: rgba(255, 255, 255, 0.933);
-  --glass-bg: rgba(255, 255, 255, 0.219);
-
-  --shadow: rgba(90, 30, 35, 0.12);
-
-  --service: #f4958c3c;
-
+  --bg-color: rgb(255, 255, 255);
+  --bg-sec: rgba(245, 247, 250, 0.8);
+  --bg-hover: rgba(229, 229, 229, 0.445);
+  --card-bg: rgba(223, 230, 228, 0.222);
+  
+  /* Deep Contrast Text */
+  --text-pri: #1a1a1a; /* Near black for readability */
+  --text-sec: #5f6368; /* Medium grey for descriptions */
+  --text-muted: #5f6368; /* Medium grey for descriptions */
+  
+  /* Surface colors - "Paper" elevation */
+  --card-bg: rgba(255, 255, 255, 0.9);
+  --card-bg-hover: rgba(240, 242, 245, 0.7);
+  
+  /* Borders - Soft Silver & Platinum */
+  --border: rgba(0, 0, 0, 0.67);
+  --border-hover: rgba(0, 0, 0, 0.25);
+  --icon-border: rgba(0, 0, 0, 0.05);
+  
+  /* Status and Highlights - Electric Blue (Classic Professional) */
+  --live: rgb(26, 115, 232);
+  --live-bg: rgba(232, 240, 254, 1);
+  
+  /* Hover States - Subtle Mist */
+  --accent-bg-hover: rgba(0, 0, 0, 0.03);
+  
+  /* Glass Effects - Frosted Ice */
+  --glass-border: rgb(230, 230, 230);
+  --glass-bg: rgba(255, 255, 255, 0.5);
+  
+  /* Shadow - Soft Depth (Crucial for White Themes) */
+  --shadow: rgba(0, 0, 0, 0.04);
+  
+  /* Service Highlight - Soft Cloud */
+  --service: rgba(0, 0, 0, 0.04);
   --bg-home: url(../assest/image-white.png);
   --bg: url(../assest/bg-card-white.png);
 }
 [data-theme="green"] {
-  --bg-color: #f0f6f1;
+  --bg-color: rgb(255, 255, 255);
+  --bg-sec: rgba(225, 240, 230, 0.548);
+  --bg-hover: rgba(203, 224, 210, 0.548);
+  --card-bg: rgba(223, 230, 228, 0.222);
 
-  --text-pri: #155c46;
-  --text-sec: #2fa87a;
-  --text-muted: #5d7e72;
+  /* Deep Forest Text */
+  --text-pri: #1b3d2f; /* Dark evergreen for contrast */
+  --text-sec: #13a94f; /* Sage green for secondary info */
+  --text-muted: #6e8279; /* Sage green for secondary info */
 
-  --card-bg: rgba(192, 247, 223, 0.321);
-  --card-bg-hover: rgba(255, 255, 255, 0.55);
+  /* Surface colors - "Lilypad" White */
+  --card-bg: rgba(255, 255, 255, 0.75);
+  --card-bg-hover: rgba(215, 235, 220, 0.6);
 
-  --border: rgba(50, 170, 120, 0.32);
-  --border-hover: rgba(140, 230, 190, 0.55);
-  --icon-border: rgba(20, 60, 45, 0.15);
+  /* Borders - Soft Clover & Moss */
+  --border: rgba(54, 179, 116, 0.792);
+  --border-hover: rgba(45, 160, 100, 0.7);
+  --icon-border: rgba(0, 120, 80, 0.1);
 
-  --live: #0aa60a;
-  --live-bg: rgba(10, 166, 10, 0.08);
+  /* Status and Highlights - "Vibrant Leaf" */
+  --live: rgb(20, 165, 90);
+  --live-bg: rgba(210, 245, 225, 0.9);
 
-  --accent-bg-hover: rgba(50, 170, 120, 0.08);
+  /* Hover States - Morning Dew */
+  --accent-bg-hover: rgba(0, 200, 100, 0.05);
 
-  --glass-border: rgba(255, 255, 255, 0.867);
-  --glass-bg: rgba(255, 255, 255, 0.35);
+  /* Glass Effects - Frosted Aloe */
+  --glass-border: rgba(167, 172, 169, 0.249);
+  --glass-bg: rgba(216, 240, 222, 0.4);
 
-  --shadow: rgba(25, 80, 60, 0.12);
+  /* Shadows - Earthy Tint */
+  --shadow: rgba(30, 60, 45, 0.08);
 
-  --service: rgba(0, 150, 20, 0.101);
+  /* Service Highlight - Pale Lime */
+  --service: rgba(100, 220, 150, 0.15);
 
   --bg-home: url(../assest/image-white.png);
   --bg: url(../assest/bg-card-white.png);
 }
 [data-theme="d-blue"] {
-  --bg-color: rgb(3, 5, 9);
+  --bg-color: rgb(2, 9, 15);
+  --bg-sec: rgba(0, 35, 51, 0.37);
+  --bg-hover: rgba(0, 35, 51, 0.7);
 
-  --text-pri: #b5dcfb;
-  --text-sec: #1285ff;
+  /* Feathery Teals and Cyans */
+  --text-pri: #a3e9f0; /* Soft pale teal */
+  --text-sec: #00d4ff; /* Kingfisher bright blue */
 
-  --card-bg: rgba(12, 28, 45, 0.35);
-  --card-bg-hover: rgba(18, 40, 65, 0.45);
+  /* Surface colors - "Wet Wing" aesthetic */
+  --card-bg: rgba(4, 21, 32, 0.744);
+  --card-bg-hover: rgba(0, 59, 87, 0.5);
 
-  --border: rgba(60, 180, 255, 0.25);
-  --border-hover: rgba(60, 180, 255, 0.65);
-  --icon-border: rgba(210, 240, 255, 0.2);
+  /* The Beak & Feet - Vivid Orange Accents */
+  --border: rgba(0, 221, 255, 0.8);
+  --border-hover: rgba(64, 210, 255, 0.9);
+  --icon-border: rgba(0, 212, 255, 0.3);
 
-  --live: rgb(0, 210, 255);
-  --live-bg: rgba(10, 40, 60, 0.8);
+  /* Status and Highlights */
+  --live: rgb(0, 255, 221);
+  --live-bg: rgba(0, 60, 70, 0.8);
 
-  --accent-bg-hover: rgba(50, 120, 170, 0.25);
+  /* Hover States */
+  --accent-bg-hover: rgba(0, 184, 212, 0.2);
 
-  --glass-border: rgba(31, 63, 248, 0.148);
-  --glass-bg: rgba(13, 36, 54, 0.179);
+  /* Glass Effects */
+  --glass-border: rgb(1, 37, 49);
+  --glass-bg: rgba(3, 18, 28, 0.3);
 
-  --shadow: rgb(0, 0, 0);
+  --shadow: rgba(1, 8, 12, 0.647);
 
-  --service: rgba(2, 13, 104, 0.244);
+  /* The "Kingfisher Blue" you requested */
+  --service: rgba(0, 145, 170, 0.3);
 
   --bg-home: url(../assest/image.png);
   --bg: url(../assest/bg-card.png);
 }
 [data-theme="d-red"] {
-  --bg-color: rgb(13, 4, 4);
+  --bg-color: rgb(0, 0, 0);
+  --bg-sec: rgba(18, 18, 18, 0.582);
+  --bg-hover: rgba(35, 35, 35, 0.597);
 
-  --text-pri: #ffdcdc;
-  --text-sec: #ff4a4a;
-  --text-muted: #fac0c0;
+  /* Monochrome High Contrast */
+  --text-pri: #ffffff; /* Pure white */
+  --text-sec: #b0b0b0; /* Medium gray for secondary info */
+  --text-muted: #b0b0b0bc; /* Medium gray for secondary info */
 
-  --card-bg: rgba(69, 19, 19, 0.35);
-  --card-bg-hover: rgba(60, 18, 18, 0.45);
+  /* Surface colors - Subtle "Lifted" Black */
+  --card-bg: rgba(15, 15, 15, 0.9);
+  --card-bg-hover: rgba(30, 30, 30, 0.6);
 
-  --border: rgba(255, 80, 80, 0.25);
-  --border-hover: rgba(255, 80, 80, 0.65);
-  --icon-border: rgba(255, 200, 200, 0.2);
+  /* Borders - Dark Slate & Silver */
+  --border: rgba(255, 255, 255, 0.448);
+  --border-hover: rgba(255, 255, 255, 0.4);
+  --icon-border: rgba(255, 255, 255, 0.1);
 
-  --live: rgb(255, 70, 70);
-  --live-bg: rgba(55, 15, 15, 0.8);
+  /* Status and Highlights - Crystal White */
+  --live: rgb(255, 255, 255);
+  --live-bg: rgba(40, 40, 40, 0.9);
 
-  --accent-bg-hover: rgba(170, 40, 40, 0.25);
+  /* Hover States - Ghostly White */
+  --accent-bg-hover: rgba(255, 255, 255, 0.05);
 
-  --glass-border: rgba(71, 15, 15, 0.644);
-  --glass-bg: rgba(71, 19, 19, 0.166);
+  /* Glass Effects - Etched Obsidian */
+  --glass-border: rgb(35, 35, 35);
+  --glass-bg: rgba(20, 20, 20, 0.4);
 
   --shadow: rgb(0, 0, 0);
 
-  --service: rgba(112, 3, 3, 0.25);
+  /* Service Highlight - Deep Graphite */
+  --service: rgba(255, 255, 255, 0.08);
 
   --bg-home: url(../assest/image.png);
   --bg: url(../assest/bg-card.png);
 }
 [data-theme="d-green"] {
-  --bg-color: rgb(7, 14, 9);
+  --bg-color: rgb(2, 8, 4);
+  --bg-sec: rgba(7, 24, 15, 0.49);
+  --bg-hover: rgba(13, 44, 27, 0.456);
 
-  --text-pri: #cbfdde;
-  --text-sec: #00e676;
+  /* Moss and Neon Text */
+  --text-pri: #c2e0c8; /* Pale sage green */
+  --text-sec: #00ff88; /* Vibrant spring green */
 
-  --card-bg: rgba(19, 54, 33, 0.282);
-  --card-bg-hover: rgba(18, 50, 30, 0.45);
+  /* Surface colors - "Overgrown" Dark Tones */
+  --card-bg: rgba(6, 18, 12, 0.8);
+  --card-bg-hover: rgba(12, 45, 28, 0.5);
 
-  --border: rgba(0, 255, 150, 0.25);
-  --border-hover: rgba(0, 255, 150, 0.65);
-  --icon-border: rgba(200, 255, 230, 0.2);
+  /* Borders - Emerald & Malachite */
+  --border: rgba(20, 180, 90, 0.8);
+  --border-hover: rgba(60, 255, 150, 0.7);
+  --icon-border: rgba(100, 255, 180, 0.2);
 
-  --live: rgb(0, 255, 120);
-  --live-bg: rgba(15, 50, 25, 0.8);
+  /* Status and Highlights - "Bioluminescence" */
+  --live: rgb(0, 255, 136);
+  --live-bg: rgba(10, 60, 35, 0.8);
 
-  --accent-bg-hover: rgba(30, 120, 70, 0.25);
+  /* Hover States */
+  --accent-bg-hover: rgba(30, 150, 80, 0.2);
 
-  --glass-border: rgba(14, 69, 39, 0.634);
-  --glass-bg: rgba(20, 60, 35, 0.174);
+  /* Glass Effects - Smoked Jade */
+  --glass-border: rgb(7, 44, 24);
+  --glass-bg: rgba(10, 45, 25, 0.25);
 
-  --shadow: rgb(0, 0, 0);
+  --shadow: rgb(0, 5, 2);
 
-  --service: rgba(1, 89, 10, 0.25);
+  /* Service Highlight */
+  --service: rgba(0, 139, 69, 0.3);
 
   --bg-home: url(../assest/image.png);
   --bg: url(../assest/bg-card.png);

@@ -13,10 +13,10 @@ section .intro {
 
 .ser-card,
 .ser-card .top {
-  padding: 15px;
+  padding: 25px 15px;
   flex: 1;
-  background: var(--glass-bg);
-  border: 2px solid var(--glass-border);
+  background: var(--card-bg);
+  border: 1px solid var(--glass-border);
   border-radius: 10px 10px 32px 32px;
   display: flex;
   flex-direction: column;
@@ -30,11 +30,11 @@ section .intro {
 .pro-cards .card {
   width: 380px;
   min-width: 380px;
-  outline: 1px solid transparent;
+  padding: 1vw;
 }
 
 .ser-card h2 {
-  font-size: 20px;
+  font-size: 25px;
   text-align: center;
   color: var(--text-sec);
   font-weight: 550;
@@ -85,7 +85,7 @@ section .intro {
 .ser-card a {
   padding: 10px 9px;
   margin-top: 5px;
-  border: 1px solid var(--border);
+  /* border: 1px solid var(--border); */
   border-radius: 30px;
   display: flex;
   gap: 15px;
@@ -101,7 +101,7 @@ section .intro {
 .ser-card a::after {
   height: 100%;
   width: 100%;
-  padding: 2px;
+  padding: 1px;
   opacity: 1;
   border-radius: 30px;
 }
@@ -120,12 +120,9 @@ section .intro {
 }
 
 .ser-card:hover {
-  transform: translateY(-6px);
   box-shadow:
     0 10px 10px var(--shadow),
     0 0 3px var(--shadow);
-    outline: 1px solid var(--border-hover);
-    outline-offset: 3px;
 }
 .pro-cards {
   margin-top: 4vw;
@@ -133,33 +130,56 @@ section .intro {
   gap: 15px;
   flex-wrap: wrap;
 }
-.pro-cards .card {
+.pro-cards > * {
   position: relative;
   width: 400px;
   min-width: 400px;
+  padding: 1rem;
+  flex-grow: 1;
+  border-top: 1px solid var(--glass-border);
+  border-right: 1px solid var(--glass-border);
+  border-radius: 20px;
+  background: radial-gradient(circle at 80%, var(--bg-hover), var(--glass-bg));
+  z-index: 1;
+  overflow: hidden;
 }
-.pro-cards .card b {
+.pro-cards > * h3 {
+  font-size: 1.4rem;
+  font-family: head;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+@media (hover: hover) {
+  .pro-cards > *:hover h3 {
+    color: var(--text-sec);
+  }
+}
+.pro-cards > * p {
+  font-size: 15px;
+  letter-spacing: 0.5px;
+  font-weight: 200;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+.pro-cards > * b {
   position: absolute;
   top: 0%;
   right: 0%;
   padding-right: 15px;
   height: 100%;
-  font-size: 6vw;
+  font-size: 6rem;
   z-index: -99;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--text-sec);
-}
-.pro-cards .card::before {
-  content: "";
-  position: absolute;
-  top: 0%;
-  right: 0%;
-  width: 100%;
-  height: 100%;
-  background: radial-gradient(circle at 120%,  var(--glass-bg), var(--bg-color), var(--bg-color));
-  z-index: -1;
+  background: radial-gradient(
+    circle at 80% 10%,
+    var(--text-sec),
+    var(--accent-bg-hover)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .how-det {
   width: 70%;

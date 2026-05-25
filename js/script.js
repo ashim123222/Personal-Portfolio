@@ -209,9 +209,7 @@ if (form && typeof emailjs !== "undefined") {
 // Magnetic Buttons
 // Selecting all clickable elements
 const magneticElements = Array.from(
-  document.querySelectorAll(
-    ".social-links a, .color button, .card a, .go-to-t",
-  ),
+  document.querySelectorAll(" .card a, .go-to-t"),
 );
 const isDesktop = window.matchMedia(
   "(hover: hover) and (pointer: fine)",
@@ -237,3 +235,12 @@ if (isDesktop) {
     });
   });
 }
+
+
+
+
+const bgSec = document.querySelectorAll(".social-links a, nav a, button")
+
+bgSec.forEach((bgsec) => {
+  bgsec.classList.add("bg-sec")
+})

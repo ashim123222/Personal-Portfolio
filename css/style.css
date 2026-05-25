@@ -14,6 +14,11 @@
   font-family: "cz";
   src: url(../fonts/Cinzel_Decorative/CinzelDecorative-Regular.ttf);
 }
+@font-face {
+  font-family: name;
+  src: url(../fonts/Diplomata/Diplomata-Regular.ttf);
+}
+
 :root {
   --shadow-main: 0 0 20px var(--shadow);
 
@@ -59,6 +64,8 @@ main {
   font-size: 1rem;
   box-sizing: border-box;
   transition: 0.3s ease;
+  letter-spacing: 0.5px;
+  /* transition: 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important; */
 }
 .d-f {
   display: flex;
@@ -76,33 +83,35 @@ main {
   text-align: center;
 }
 .td-o {
-  transition-delay: 0.5s !important;
+  transition-delay: 0.25s !important;
 }
 .td-tw {
-  transition-delay: 1s !important;
+  transition-delay: 0.5s !important;
 }
 .td-th {
-  transition-delay: 1.5s !important;
+  transition-delay: 0.75s !important;
 }
 .td-fo {
-  transition-delay: 2s !important;
+  transition-delay: 1s !important;
 }
 .td-fi {
-  transition-delay: 2.5s !important;
+  transition-delay: 1.25s !important;
 }
 .td-si {
-  transition-delay: 3s !important;
+  transition-delay: 1.5s !important;
 }
 .td-se {
-  transition-delay: 3.5s !important;
+  transition-delay: 1.75s !important;
 }
 .td-e {
-  transition-delay: 4s !important;
+  transition-delay: 2s !important;
 }
 .reveal {
   opacity: 0;
-  transform: translateY(80px);
-  transition: all 1s ease;
+  transform: translateY(100px);
+  transition:
+    transform 1s ease,
+    opacity 1s ease;
 }
 
 .reveal.active {
@@ -113,7 +122,9 @@ main {
 .reveal-card {
   opacity: 0;
   transform: translateY(80px);
-  transition: all 1s ease;
+  transition:
+    transform 1s ease,
+    opacity 1s ease;
 }
 .reveal-card.active {
   opacity: 1;
@@ -178,11 +189,12 @@ main {
 }
 
 section {
-  width: 1200px;
-  padding: 10% 0;
+  width: 100vw;
+  padding: 10%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  
 }
 
 .animate-border {
@@ -202,7 +214,7 @@ section {
   translate: -50% -50%;
   width: 0%;
   height: 0%;
-  padding: 2px;
+  padding: 1px;
   background-image: conic-gradient(
     from var(--angle),
     transparent,
@@ -240,17 +252,17 @@ section {
   opacity: 1;
 }
 .animate-border::after {
-  filter: blur(10px);
+  filter: blur(20px);
   z-index: -1;
 }
 .animate-border:hover::after,
 .animate-border.active::after {
-  opacity: 0.6;
+  opacity: 0.4;
 }
 
 .subtext {
   font-size: 12px;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
   font-weight: 500;
   text-transform: uppercase;
   width: fit-content;
@@ -258,11 +270,9 @@ section {
   border-radius: 40px;
   margin-bottom: 2vw;
   color: var(--text-sec);
-  background: var(--accent-bg-hover);
+  background: var(--bg-sec);
   border: 1px solid var(--glass-border);
-  box-shadow:
-    0px 0px 30px var(--accent-bg-hover),
-    inset 0 0 3px var(--border);
+  box-shadow: 0 10px 20px var(--shadow);
   position: relative;
 }
 .subtext::before {
@@ -293,24 +303,11 @@ section {
   }
 }
 
-.end {
+/* .end {
   height: 1px;
   width: 100%;
-  background: linear-gradient(
-    45deg,
-    transparent,
-    var(--border),
-    var(--border-hover),
-    var(--border),
-    transparent
-  );
-}
-
-.social-links {
-  margin-top: 1rem;
-  display: flex;
-  gap: 15px;
-}
+  background: linear-gradient(45deg, transparent, var(--glass-border), transparent);
+} */
 
 .common {
   width: 100vw;
@@ -493,11 +490,13 @@ button:focus-visible {
   height: 30vh;
   width: 120%;
   border-radius: 50%;
+  opacity: 0.7;
   z-index: -88;
   transition: 5s linear;
   background: radial-gradient(var(--text-sec), transparent, transparent);
-  filter: blur(50px);
-  animation: updown 3s ease-in-out infinite alternate;
+  filter: blur(200px);
+  opacity: 0.8;
+  /* animation: updown 3s ease-in-out infinite alternate; */
 }
 
 @keyframes updown {
